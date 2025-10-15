@@ -1,0 +1,34 @@
+---
+title: "resources"
+format: html
+---
+
+<h1>this is an h1 element</h1>
+
+
+<h1 class="title">this is the title class</h1>
+
+<p class="orange-text>this paragraph is orange<p>
+
+<p class="center-text">this is centered<p>
+
+<p class="center-text orange-text"> this text is both centered and orange</p>
+
+---
+
+Here's where I'm describing [something fun]{.orange-text} that I enjoy doing
+
+
+[Here's a full line]{.orange-text}
+
+::: {.orange-text}
+here's one line
+
+Here's another line
+:::
+
+::: {.center-text}
+This is centered
+:::
+
+
