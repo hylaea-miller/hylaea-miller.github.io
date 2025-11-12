@@ -1,6 +1,24 @@
 ---
-title: "hylaea-miller.github.io"
+title: "Hylaea Miller"
+image: photo_sea.jpg
+
+about: 
+  template: trestles
+  image-shape: round
+  image-width: 17em
+  links: 
+    - text: LinkedIn
+      icon: Linkedin
+      href: https://www.linkedin.com/in/hylaea-miller/
+    - text: GitHub
+      icon: github
+      href: https://github.com/hylaea-miller
+    - text: Email
+      href: mailto:hylaea@ucsb.edu
 ---
 
-Hi, this is Hylaea!
+Hi there, I'm Hylaea Miller! Master’s student in Environmental Data Science at the Bren School of Environmental Science & Management, UCSB. Experienced in Geographic Information Systems (GIS) and Remote Sensing. Proficient in map development and technical documentation; beginner in programming with Python and R.
 
+## Education
+
+## Professional experience

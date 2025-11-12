@@ -3,20 +3,25 @@ project:
   output-dir: docs
 
 website:
-  title: "hylaea-miller.github.io"
+  title: "Hylaea Miller"
+  #favicon: images/favicom.png
   navbar:
-    left:
+    #logo: images/logo.png
+    #logo-alt: the name Hylaea with color
+    right:
       - href: index.qmd
         text: Home
       - about.qmd
+      - posts.qmd
+      - href: resources.qmd
+        text: Resources
 
 format:
   html:
-    theme:
-      - cosmo
-      - brand
-    css: styles.css
+    theme: styles.scss
     toc: true
+    page-layout: full
+    mainfont: Pathway Gothic One
 
 
 

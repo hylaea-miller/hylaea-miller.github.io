@@ -1,0 +1,12 @@
+# any options specified here will apply to all posts in the posts/ folder
+
+
+author: 
+  - name: Hylaea Miller
+    url: https://hylaea-miller.github.io/
+    affiliation: Bren School of Environmental Science & Management
+    orcid: 0009-0003-5381-004X
+
+title-block-banner: true
+
+freeze: auto

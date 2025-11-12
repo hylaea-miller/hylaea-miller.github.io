@@ -2,15 +2,57 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "hylaea-miller.github.io",
+    "title": "Hylaea Miller",
     "section": "",
-    "text": "Hi, this is Hylaea!"
+    "text": "Hi there, I’m Hylaea Miller! Master’s student in Environmental Data Science at the Bren School of Environmental Science & Management, UCSB. Experienced in Geographic Information Systems (GIS) and Remote Sensing. Proficient in map development and technical documentation; beginner in programming with Python and R."
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "Here’s where I describe what I do professionally"
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Hylaea Miller",
+    "section": "Education",
+    "text": "Education"
+  },
+  {
+    "objectID": "index.html#professional-experience",
+    "href": "index.html#professional-experience",
+    "title": "Hylaea Miller",
+    "section": "Professional experience",
+    "text": "Professional experience"
+  },
+  {
+    "objectID": "about.html#what-i-do-for-work",
+    "href": "about.html#what-i-do-for-work",
+    "title": "About",
+    "section": "",
+    "text": "Here’s where I describe what I do professionally"
+  },
+  {
+    "objectID": "about.html#what-i-do-for-fun",
+    "href": "about.html#what-i-do-for-fun",
+    "title": "About",
+    "section": "What I do for fun",
+    "text": "What I do for fun\nDescribe"
+  },
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "resources",
+    "section": "",
+    "text": "this is an h1 element\n\n\nthis is the title class\n\n&lt;p class=“orange-text&gt;this paragraph is orange\n\n\nthis is centered\n\n\nthis text is both centered and orange\n\n\nHere’s where I’m describing something fun that I enjoy doing\nHere’s a full line\n\nhere’s one line\nHere’s another line\n\n\nThis is centered"
+  },
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "Blog",
+    "section": "",
+    "text": "No matching items"
   }
 ]

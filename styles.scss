@@ -1,0 +1,51 @@
+/*-- scss:defaults --*/
+
+// colors
+$payne_gray: #666A86;
+$slate_gray: #788AA3;
+$cambridge_blue: #92B6B1;
+$platinum: #E0E1DD;
+$floral_white: #FFFCF2;
+
+
+// define quarto variables
+$body-bg: $floral_white;
+$navbar-bg: $cambridge_blue;
+$navbar-fg: $floral_white;
+$navbar-hl: $payne_gray;
+
+// import google font
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Pathway+Gothic+One&display=swap');
+
+// fonts
+$archivo_black: "Archivo Black", sans-serif;
+
+/*-- scss:rules --*/
+h1, h2, h3, h4{
+  font-family: $archivo_black;
+}
+
+.navbar-brand img {
+  max-height: 40px;
+  width: auto;
+}
+
+
+/*-- scss:rules --*/
+h1, h2 {
+  letter-spacing: 1px;
+  font-weight: 800;
+}
+
+.title {
+  color: $slate_gray;
+}
+  
+.center-text {
+  text-align: center;
+}
+
+.oreange-text {
+  color: orange;
+}
