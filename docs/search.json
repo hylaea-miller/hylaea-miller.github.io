@@ -47,5 +47,12 @@
     "title": "resources",
     "section": "",
     "text": "this is an h1 element\n\n\nthis is the title class\n\n&lt;p class=“orange-text&gt;this paragraph is orange\n\n\nthis is centered\n\n\nthis text is both centered and orange\n\n\nHere’s where I’m describing something fun that I enjoy doing\nHere’s a full line\n\nhere’s one line\nHere’s another line\n\n\nThis is centered"
+  },
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "Blog",
+    "section": "",
+    "text": "No matching items"
   }
 ]

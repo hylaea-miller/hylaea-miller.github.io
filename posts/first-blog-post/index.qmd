@@ -1,0 +1,27 @@
+---
+title: "My first blog post!"
+description: "a short desciption of this blog post"
+author: 
+  - name: Hylaea Miller
+    url: https://hylaea-miller.github.io/
+    affiliation: Bren School of Environmental Science & Management
+    orcid: 0009-0003-5381-004X
+date: 2025-11-12
+categories: [MEDS, R, data-viz]
+image: hello-world.jpg
+citation: 
+  url: https://hylaea-miller.github.io/posts/first-blog-post/
+draft: true
+draft-mode: linked
+bibliography: references.bib
+---
+
+This is where the body of my blog post begins! I'm going to add a footnote here[^1]. Here's an inline footnote[^2]
+
+[^1]: Here is some additional context that might be helpful
+
+[^2]: here's an inline footnote
+
+I'm going to cite myself here [@miller2025]
+
+Let's cite a paper using it's DOI \[[@genuino2023]\]
