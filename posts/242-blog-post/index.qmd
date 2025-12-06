@@ -1,0 +1,30 @@
+---
+title: "Outcome Reporting Biases: "
+format: html
+---
+
+## Case study of outcome reporting bias
+
+Background
+
+Considering the importance of a better and more effective dialogue between science and policy(Young et all, 2013)
+
+The outcome reporting is a potential type of bias when interpreting the data and results of a environmental research. It important to estimate the poorly reported, misinforming policy and practice.
+
+
+
+
+## References:
+
+Konno et al. Environmental Evidence (2024)
+
+
+https://www.thenewatlantis.com/publications/why-data-is-never-raw 
+
+
+
+Young et al. Improving the science-policy dialogue to meet
+the challenges of biodiversity conservation: having
+conversations rather than talking at one-another. DOI 10.1007/s10531-013-0607-0
+
+‌

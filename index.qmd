@@ -1,6 +1,6 @@
 ---
 title: "Hylaea Miller"
-image: photo_sea.jpg
+image: headshot_crop.JPEG
 
 about: 
   template: trestles

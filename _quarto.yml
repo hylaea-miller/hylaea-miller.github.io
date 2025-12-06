@@ -21,7 +21,7 @@ format:
     theme: styles.scss
     toc: true
     page-layout: full
-    mainfont: Pathway Gothic One
+    mainfont: Lora
 
 
 

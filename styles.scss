@@ -1,41 +1,36 @@
 /*-- scss:defaults --*/
-
 // colors
 $payne_gray: #666A86;
 $slate_gray: #788AA3;
 $cambridge_blue: #92B6B1;
 $platinum: #E0E1DD;
 $floral_white: #FFFCF2;
-
-
-// define quarto variables
-$body-bg: $floral_white;
-$navbar-bg: $cambridge_blue;
-$navbar-fg: $floral_white;
-$navbar-hl: $payne_gray;
+$fundo_branco: #FBFBFB;
 
 // import google font
-
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Pathway+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Archivo+Black&family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pathway+Gothic+One&display=swap');
 
 // fonts
 $archivo_black: "Archivo Black", sans-serif;
 
+// define quarto variables
+$body-bg: $fundo_branco;
+$navbar-bg: $cambridge_blue;
+$navbar-fg: $fundo_branco;
+$navbar-hl: $payne_gray;
+
+// Set headings font family
+$headings-font-family: $archivo_black;
+
 /*-- scss:rules --*/
 h1, h2, h3, h4{
-  font-family: $archivo_black;
+  letter-spacing: 1px;
+  font-weight: 800 !important;
 }
 
 .navbar-brand img {
   max-height: 40px;
   width: auto;
-}
-
-
-/*-- scss:rules --*/
-h1, h2 {
-  letter-spacing: 1px;
-  font-weight: 800;
 }
 
 .title {
@@ -46,6 +41,6 @@ h1, h2 {
   text-align: center;
 }
 
-.oreange-text {
+.orange-text {
   color: orange;
 }
