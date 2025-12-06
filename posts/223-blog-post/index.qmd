@@ -1,0 +1,23 @@
+---
+title: "Identifying the Impacts of Extreme Weather"
+description: "Analysis of Houston Blackouts and its socioeconomic impacts"
+author: 
+  - name: Hylaea Miller
+    url: https://hylaea-miller.github.io/
+    affiliation: Bren School of Environmental Science & Management
+    orcid: 0009-0003-5381-004X
+date: 2025-11-12
+categories: [GEOSPATIAL, R, data-viz]
+image: hello-world.jpg
+citation: 
+  url: https://github.com/hylaea-miller/Identifying-the-impacts-of-extreme-weather.git
+draft: true
+draft-mode: linked
+bibliography: references.bib
+---
+
+## Background
+
+Climate change is increasing the frequency and intensity of extreme weather events, with devastating impacts on infrastructure and communities. In February 2021, Texas experienced a major power crisis resulting from three severe winter storms that swept across the United States between February 10-20.
+
+In this assignment, I identify the impacts of these series of extreme winter storms by estimating the number of homes in the Houston metropolitan area that lost power and investigate whether these impacts were disproportionately felt by low-income populations.
