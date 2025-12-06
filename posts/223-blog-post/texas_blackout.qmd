@@ -13,13 +13,25 @@ citation:
 draft: false
 draft-mode: linked
 bibliography: references.bib
+execute: 
+  message: false
+  warning: false
+  output: false
+format:
+  html:
+    code-fold: true
 ---
+## Research Question
+
+To what extent did the February 2021 Texas winter storm blackouts disproportionately affect low-income communities in the Houston metropolitan area?
 
 ## Background
 
-Climate change is increasing the frequency and intensity of extreme weather events, with devastating impacts on infrastructure and communities. In February 2021, Texas experienced a major power crisis resulting from three severe winter storms that swept across the United States between February 10-20.
+Climate change is increasing the frequency and intensity of extreme weather events, with devastating impacts on infrastructure and communities. In February 2021, Texas experienced a major power crisis resulting from three severe winter storms that swept across the United States between February 10-20, leaving millions without power for days in freezing temperatures[^1].
 
-In this assignment, I identify the impacts of these series of extreme winter storms by estimating the number of homes in the Houston metropolitan area that lost power and investigate whether these impacts were disproportionately felt by low-income populations.
+In this blog post, I identify the impacts of these series of extreme winter storms by estimating the number of homes in the Houston metropolitan area that lost power and investigate whether these impacts were disproportionately felt by low-income populations.
+
+[^1]: 2021 Texas Power Grid Failure – a preventable disaster. DEITABASE. Last modified 2024, December 27. <https://limos.engin.umich.edu/deitabase/2024/12/27/2021-texas-power-grid-failure/>.
 
 ## Data
 
@@ -83,12 +95,13 @@ buildings <- st_read(here("data",
 
 
 # List layers of the socioeconomic data
-texas_layers <- st_layers("data/ACS_2019_5YR_TRACT_48_TEXAS.gdb")
+texas_layers <- st_layers(here("data/ACS_2019_5YR_TRACT_48_TEXAS.gdb"))
 
 # Read the layers holding the Texas geometry information
-texas_geom <- st_read("data/ACS_2019_5YR_TRACT_48_TEXAS.gdb",
+texas_geom <- st_read(here("data/ACS_2019_5YR_TRACT_48_TEXAS.gdb"),
                 layer = "ACS_2019_5YR_TRACT_48_TEXAS")
-texas_income <- st_read("data/ACS_2019_5YR_TRACT_48_TEXAS.gdb",
+
+texas_income <- st_read(here("data/ACS_2019_5YR_TRACT_48_TEXAS.gdb"),
                          layer = "X19_INCOME",
                          query = "SELECT B19013e1, GEOID FROM X19_INCOME") %>%
   mutate(GEOID_Data = GEOID)
@@ -402,7 +415,7 @@ ggplot() +
 
 ```
 
-## Reflection
+## Conclusion and Next Steps
 
 The results show that median household incomes are similar between census tracts that experienced blackouts and those that did not, suggesting that income level was not a strong factor in determining which areas lost power during the storm. However, we need to consider some limitations of this result, as they relate to the spatial scale and join methods used in our analysis. Some possible bias in the results may be related to the concentration of buildings in the central part of Houston affected by blackouts, as shown in the Homes Map, and the reliance on tract-level overlaps that generalize patterns and hide smaller spatial or demographic variations.
 
@@ -413,3 +426,5 @@ Home - LAADS DAAC. (2017, February 22). Nasa.gov. https://ladsweb.modaps.eosdis.
 Download OpenStreetMap for OpenStreetMap Data Extracts \| Geofabrik Download Server. (2025). Geofabrik Download Server. https://download.geofabrik.de/
 
 Bureau, U. C. (2025, September 29). American Community Survey (ACS). Census.gov. https://www.census.gov/programs-surveys/acs
+
+DEITABASE. (2024, December 27). 2021 Texas Power Grid Failure – a preventable disaster. DEITABASE - a Community Resource for Merging DEI and CEE Education. https://limos.engin.umich.edu/deitabase/2024/12/27/2021-texas-power-grid-failure/

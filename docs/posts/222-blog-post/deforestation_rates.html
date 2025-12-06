@@ -233,7 +233,6 @@ window.Quarto = {
   <li><a href="#statistical-model" id="toc-statistical-model" class="nav-link" data-scroll-target="#statistical-model">Statistical Model</a>
   <ul class="collapse">
   <li><a href="#simulate-data-according-to-the-model-assumptions" id="toc-simulate-data-according-to-the-model-assumptions" class="nav-link" data-scroll-target="#simulate-data-according-to-the-model-assumptions">Simulate Data According to the Model Assumptions</a></li>
-  <li><a href="#fit-the-model-to-the-simulated-data-and-show-parameter-recovery" id="toc-fit-the-model-to-the-simulated-data-and-show-parameter-recovery" class="nav-link" data-scroll-target="#fit-the-model-to-the-simulated-data-and-show-parameter-recovery">Fit the Model to the Simulated Data and Show Parameter Recovery</a></li>
   </ul></li>
   <li><a href="#inference" id="toc-inference" class="nav-link" data-scroll-target="#inference">Inference</a>
   <ul class="collapse">
@@ -287,8 +286,12 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="variable-relationship">Variable relationship</h3>
 <p><strong>Variable description</strong></p>
 <p>The following variables were used in this project:</p>
+<p><strong>Dependent Variable</strong></p>
 <ul>
-<li><p><strong>Deforestation</strong>: Annual sum of primary and secondary vegetation loss, measured in hectares.</p></li>
+<li><strong>Deforestation</strong>: Annual sum of primary and secondary vegetation loss, measured in hectares.</li>
+</ul>
+<p><strong>Independent variables</strong></p>
+<ul>
 <li><p><strong>Urban</strong>: Annual change in urban area, measured in hectares.</p></li>
 <li><p><strong>Farming:</strong> Annual change in the combined agricultural and livestock farming area, measured in hectares.</p></li>
 <li><p><strong>Mining:</strong> Annual change in mining area, measured in hectares.</p></li>
@@ -521,8 +524,8 @@ log(\mu) &amp;= \beta_0 + \beta_1 \text{Farming} + \beta_2 \text{Urban} + \beta_
 \]</span></p>
 <section id="simulate-data-according-to-the-model-assumptions" class="level3">
 <h3 class="anchored" data-anchor-id="simulate-data-according-to-the-model-assumptions">Simulate Data According to the Model Assumptions</h3>
-<p>The simulation serves as a validation step to make sure the Gamma regression model is correctly specified and capable of recovering known parameters.</p>
-<p>Choose parameters and predictors</p>
+<p>The simulation serves as a validation step to ensure the Gamma regression model is correctly specified and capable of recovering known parameters.</p>
+<p>Step 1: Choose parameters and predictors</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -541,7 +544,7 @@ log(\mu) &amp;= \beta_0 + \beta_1 \text{Farming} + \beta_2 \text{Urban} + \beta_
 <span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>farming <span class="ot">&lt;-</span> <span class="fu">runif</span>(n, <span class="at">min =</span> <span class="dv">0</span>, <span class="at">max =</span> <span class="dv">50</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<p>Use the <code>rgamma()</code> function to generate response values using the shape and scale parameters</p>
+<p>Step 2: Use the <code>rgamma()</code> function to generate response values using the shape and scale parameters</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -552,9 +555,7 @@ log(\mu) &amp;= \beta_0 + \beta_1 \text{Farming} + \beta_2 \text{Urban} + \beta_
 <span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>sim_data <span class="ot">&lt;-</span> <span class="fu">tibble</span>(deforestation_sim, farming)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-</section>
-<section id="fit-the-model-to-the-simulated-data-and-show-parameter-recovery" class="level3">
-<h3 class="anchored" data-anchor-id="fit-the-model-to-the-simulated-data-and-show-parameter-recovery">Fit the Model to the Simulated Data and Show Parameter Recovery</h3>
+<p>Step 3. Fit the model to the simulated data</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -564,7 +565,7 @@ log(\mu) &amp;= \beta_0 + \beta_1 \text{Farming} + \beta_2 \text{Urban} + \beta_
 <span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> sim_data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<p>Compare estimated vs true parameters</p>
+<p>Step 4. Compare estimated vs true parameters</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -578,7 +579,7 @@ log(\mu) &amp;= \beta_0 + \beta_1 \text{Farming} + \beta_2 \text{Urban} + \beta_
 <span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">estimated  =</span> <span class="fu">round</span>(est_params, <span class="dv">3</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<p>Create model parameter comparison table</p>
+<p>Step 5. Create comparison table</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -826,28 +827,28 @@ total_fire     -1.570257e-08 2.074489e-08</code></pre>
 <li><strong>Change in Farming (significant)</strong></li>
 </ul>
 <p><strong>Estimate:</strong> 1.123e-06 (p &lt; 0.001)</p>
-<p><strong>Interpretation:</strong> For every 1-hectare increase in farming area, deforestation increases by approximately 0.0001% (exp(1.123e-06) ≈ 1.000001)</p>
+<p><strong>Interpretation:</strong> For every 1 hectare increase in farming area, deforestation increases by approximately 0.0001% (exp(1.123e-06) ≈ 1.000001)</p>
 <p><strong>95% CI:</strong> [8.66e-07, 1.38e-06] (approximate)</p>
 <ul>
 <li><strong>Change in Urbanization (not significant)</strong></li>
 </ul>
 <p><strong>Estimate:</strong> 2.412e-05 (p = 0.444)</p>
-<p><strong>Interpretation:</strong> No statistically significant relationship between urban expansion and accumulated deforestation</p>
+<p><strong>Interpretation:</strong> No statistically significant relationship between urban expansion and vegetation suppression.</p>
 <ul>
 <li><strong>Change in Mining (not significant)</strong></li>
 </ul>
 <p><strong>Estimate:</strong> 8.425e-04 (p = 0.473)</p>
-<p><strong>Interpretation:</strong> No statistically significant relationship between mining expansion and accumulated deforestation</p>
+<p><strong>Interpretation:</strong> No statistically significant relationship between mining expansion and vegetation suppression</p>
 <ul>
 <li><strong>Total Burned Area (not significant)</strong></li>
 </ul>
 <p><strong>Estimate:</strong> 2.417e-09 (p = 0.795)</p>
-<p><strong>Interpretation:</strong> No statistically significant relationship between burned area and accumulated deforestation</p>
+<p><strong>Interpretation:</strong> No statistically significant relationship between burned area and vegetation suppression</p>
 </section>
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>The results provide strong evidence that farming expansion is the primary driver of deforestation in this model, whereas urban area change, mining, and fire showed no significant influence.</p>
+<p>The results provide evidence that farming expansion is the primary driver of deforestation in this model, whereas urban area change, mining, and fire showed no significant influence.</p>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
