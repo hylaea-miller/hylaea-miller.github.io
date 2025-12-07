@@ -1,7 +1,8 @@
 ---
 title: "Analyzing Deforestation Drivers in MATOPIBA, Brazil"
+description: This project uses MapBiomas data (1987-2024) and Gamma regression modeling to quantify native vegetation loss and identify key deforestation drivers including farming, fire, mining, and urbanization.
 author: "Hylaea Miller"
-date: 12/04/2025
+date: 12/06/2025
 format:
   html:
     code-fold: true
@@ -270,6 +271,7 @@ farming <- runif(n, min = 0, max = 50)
 ```
 
 Step 2: Use the `rgamma()` function to generate response values using the shape and scale parameters
+
 ```{r}
 # Simulate Gamma distributed response with log linear mean
 deforestation_sim <- rgamma(n, shape = phi, scale = exp(beta0 + beta1*farming)/phi)
@@ -280,6 +282,7 @@ sim_data <- tibble(deforestation_sim, farming)
 ```
 
 Step 3. Fit the model to the simulated data
+
 ```{r}
 # Fit Gamma GLM to simulated data
 fit <- glm(deforestation_sim ~ farming,
@@ -289,6 +292,7 @@ fit <- glm(deforestation_sim ~ farming,
 ```
 
 Step 4. Compare estimated vs true parameters
+
 ```{r}
 # Get the estimated and true parameters
 true_params <- c(beta0, beta1)
@@ -301,6 +305,7 @@ df_sim <- tibble(parameter = names(est_params),
 ```
 
 Step 5. Create comparison table
+
 ```{r}
 # Display comparison table 
 df_sim %>%
@@ -423,13 +428,13 @@ ggplot() +
 
 ## Table: Gamma Regression Model Results
 
-| Variable          | Estimate  | Std. Error | p-value  | 95% CI Lower | 95% CI Upper |  
+| Variable          | Estimate  | Std. Error | p-value  | 95% CI Lower | 95% CI Upper |     |
 |-----------|-----------|-----------|-----------|-----------|-----------|-----------|
-| Intercept         | 1.276e+01 | 1.343e-01  | \< 2e-16 | 1.250e+01    | 1.302e+01    | 
-| Change in Farming | 1.123e-06 | 1.310e-07  | 6.55e-10 | 8.732e-07    | 1.376e-06    | 
-| Change in Urban   | 2.412e-05 | 3.112e-05  | 0.444    | -3.558e-05   | 8.395e-05    | 
-| Change in Mining  | 8.425e-04 | 1.160e-03  | 0.473    | -1.387e-03   | 3.121e-03    | 
-| Total Fire        | 2.417e-09 | 9.236e-09  | 0.795    | -1.570e-08   | 2.074e-08    | 
+| Intercept         | 1.276e+01 | 1.343e-01  | \< 2e-16 | 1.250e+01    | 1.302e+01    |     |
+| Change in Farming | 1.123e-06 | 1.310e-07  | 6.55e-10 | 8.732e-07    | 1.376e-06    |     |
+| Change in Urban   | 2.412e-05 | 3.112e-05  | 0.444    | -3.558e-05   | 8.395e-05    |     |
+| Change in Mining  | 8.425e-04 | 1.160e-03  | 0.473    | -1.387e-03   | 3.121e-03    |     |
+| Total Fire        | 2.417e-09 | 9.236e-09  | 0.795    | -1.570e-08   | 2.074e-08    |     |
 
 ### Model Results Interpretation
 
