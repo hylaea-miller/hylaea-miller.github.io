@@ -1,6 +1,6 @@
 ---
 title: "Analyzing Deforestation Drivers in MATOPIBA, Brazil"
-description: This project uses MapBiomas data (1987-2024) and Gamma regression modeling to quantify native vegetation loss and identify key deforestation drivers including farming, fire, mining, and urbanization.
+description: Exploring Gamma regression modeling to quantify native vegetation loss and identify key deforestation drivers including farming, fire, mining, and urbanization.
 author: "Hylaea Miller"
 date: 12/06/2025
 format:
@@ -11,6 +11,7 @@ execute:
   echo: true
   message: false
   warning: false
+categories: [Statistics, R, data-viz]
 ---
 
 ## Background

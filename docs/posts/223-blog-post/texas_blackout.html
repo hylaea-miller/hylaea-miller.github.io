@@ -163,7 +163,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">GEOSPATIAL</div>
+                <div class="quarto-category">Geospatial</div>
                 <div class="quarto-category">R</div>
                 <div class="quarto-category">data-viz</div>
               </div>
@@ -244,11 +244,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="sources" class="level3">
 <h3 class="anchored" data-anchor-id="sources">Sources</h3>
 <p><strong>NIGHT LIGHTS DATA</strong></p>
-<p>Imagery from the Visible Infrared Imaging Radiometer Suite (VIIRS) distributed in 10x10 degree tiles in sinusoidal equal-area projection. Houston is included in two tiles: h08v05 and h08v06. We can access tiles through NASA’s <a href="https://ladsweb.modaps.eosdis.nasa.gov/">Level-1 and Atmospheric Archive &amp; Distribution System Distributed Active Archive Center (LAADS DAAC)</a></p>
+<p>Imagery from the Visible Infrared Imaging Radiometer Suite (VIIRS) distributed in 10x10 degree tiles in sinusoidal equal-area projection. Houston is included in two tiles: h08v05 and h08v06. We accessed tiles through NASA’s <a href="https://ladsweb.modaps.eosdis.nasa.gov/">Level-1 and Atmospheric Archive &amp; Distribution System Distributed Active Archive Center (LAADS DAAC)</a></p>
 <p><strong>ROADS DATA</strong></p>
-<p>OpenStreetMap highway data for Texas, accessed via <a href="https://download.geofabrik.de/">Geofabrik’s</a> download site was used to retrieve a shapefile of all highways in Texas, and a Geopackage (.gpkg file) was prepared containing only the subset of roads that intersect the Houston metropolitan area.</p>
+<p>OpenStreetMap highway data for Texas, accessed via <a href="https://download.geofabrik.de/">Geofabrik’s</a> download site, was used to retrieve a shapefile of all highways in Texas, and a Geopackage (.gpkg file) was prepared containing only the subset of roads that intersect the Houston metropolitan area.</p>
 <p><strong>BUILDING DATA</strong></p>
-<p>OpenStreetMap building data for Texas, accessed via <a href="https://download.geofabrik.de/">Geofabrik’s</a> download site was used to retrieve a shapefile of all houses in Texas, and a Geopackage (.gpkg file) was prepared containing only the subset of houses that intersect the Houston metropolitan area.</p>
+<p>OpenStreetMap building data for Texas, accessed via <a href="https://download.geofabrik.de/">Geofabrik’s</a> download site, was used to retrieve a shapefile of all houses in Texas, and a Geopackage (.gpkg file) was prepared containing only the subset of houses that intersect the Houston metropolitan area.</p>
 <p><strong>SOCIOECONOMIC DATA</strong></p>
 <p>From the U.S. Census Bureau’s American Community Survey for census tracts in 2019, which contains social, economic, housing, and demographic information across the 50 states of the U.S., the District of Columbia, and Puerto Rico. The dataset can be found here: <a href="https://www.census.gov/programs-surveys/acs">Census</a></p>
 </section>
@@ -275,46 +275,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(paletteer)</span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Read raster tiles for both dates</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Raster tile collected 2021-02-07 - before storm</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>rt_0705 <span class="ot">&lt;-</span> <span class="fu">read_stars</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"VNP46A1"</span>,</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>                           <span class="st">"VNP46A1.A2021038.h08v05.001.2021039064328.tif"</span>))</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>rt_0706 <span class="ot">&lt;-</span> <span class="fu">read_stars</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"VNP46A1"</span>, </span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>                           <span class="st">"VNP46A1.A2021038.h08v06.001.2021039064329.tif"</span>))</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Raster tile collected 2021-02-16  - after storm</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>rt_1605 <span class="ot">&lt;-</span> <span class="fu">read_stars</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"VNP46A1"</span>, </span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>                           <span class="st">"VNP46A1.A2021047.h08v05.001.2021048091106.tif"</span>))</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>rt_1606 <span class="ot">&lt;-</span> <span class="fu">read_stars</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"VNP46A1"</span>, </span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>                           <span class="st">"VNP46A1.A2021047.h08v06.001.2021048091105.tif"</span>))</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Read roads data</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>roads <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="fu">here</span>(<span class="st">"data"</span>,</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>       <span class="st">"gis_osm_roads_free_1.gpkg"</span>),</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  <span class="at">query =</span> <span class="st">"SELECT * FROM gis_osm_roads_free_1 WHERE fclass='motorway'"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_transform</span>(<span class="at">crs =</span> <span class="st">"epsg:3083"</span>)</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Read building data</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>buildings <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="fu">here</span>(<span class="st">"data"</span>,</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>                          <span class="st">"gis_osm_buildings_a_free_1.gpkg"</span>),</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>  <span class="at">query =</span> <span class="st">" SELECT *</span></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="st">    FROM gis_osm_buildings_a_free_1</span></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="st">    WHERE (type IS NULL AND name IS NULL)</span></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="st">      OR type IN ('residential', 'apartments', 'house', 'static_caravan', </span></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="st">  'detached')"</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>rt_0705 <span class="ot">&lt;-</span> <span class="fu">read_stars</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"VNP46A1"</span>,</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>                           <span class="st">"VNP46A1.A2021038.h08v05.001.2021039064328.tif"</span>))</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>rt_0706 <span class="ot">&lt;-</span> <span class="fu">read_stars</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"VNP46A1"</span>, </span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>                           <span class="st">"VNP46A1.A2021038.h08v06.001.2021039064329.tif"</span>))</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>rt_1605 <span class="ot">&lt;-</span> <span class="fu">read_stars</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"VNP46A1"</span>, </span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>                           <span class="st">"VNP46A1.A2021047.h08v05.001.2021048091106.tif"</span>))</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>rt_1606 <span class="ot">&lt;-</span> <span class="fu">read_stars</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"VNP46A1"</span>, </span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>                           <span class="st">"VNP46A1.A2021047.h08v06.001.2021048091105.tif"</span>))</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Read roads data</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>roads <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="fu">here</span>(<span class="st">"data"</span>,</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>       <span class="st">"gis_osm_roads_free_1.gpkg"</span>),</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="at">query =</span> <span class="st">"SELECT * FROM gis_osm_roads_free_1 WHERE fclass='motorway'"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_transform</span>(<span class="at">crs =</span> <span class="st">"epsg:3083"</span>)</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Read building data</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>buildings <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="fu">here</span>(<span class="st">"data"</span>,</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>                          <span class="st">"gis_osm_buildings_a_free_1.gpkg"</span>),</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  <span class="at">query =</span> <span class="st">" SELECT *</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="st">    FROM gis_osm_buildings_a_free_1</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="st">    WHERE (type IS NULL AND name IS NULL)</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="st">      OR type IN ('residential', 'apartments', 'house', 'static_caravan', </span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="st">  'detached')"</span>)</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Read the layers holding the Texas geometry information</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>texas_geom <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="fu">here</span>(<span class="st">"data/ACS_2019_5YR_TRACT_48_TEXAS.gdb"</span>),</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>                <span class="at">layer =</span> <span class="st">"ACS_2019_5YR_TRACT_48_TEXAS"</span>)</span>
 <span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="co"># List layers of the socioeconomic data</span></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>texas_layers <span class="ot">&lt;-</span> <span class="fu">st_layers</span>(<span class="fu">here</span>(<span class="st">"data/ACS_2019_5YR_TRACT_48_TEXAS.gdb"</span>))</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="co"># Read the layers holding the Texas geometry information</span></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>texas_geom <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="fu">here</span>(<span class="st">"data/ACS_2019_5YR_TRACT_48_TEXAS.gdb"</span>),</span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>                <span class="at">layer =</span> <span class="st">"ACS_2019_5YR_TRACT_48_TEXAS"</span>)</span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>texas_income <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="fu">here</span>(<span class="st">"data/ACS_2019_5YR_TRACT_48_TEXAS.gdb"</span>),</span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>                         <span class="at">layer =</span> <span class="st">"X19_INCOME"</span>,</span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>                         <span class="at">query =</span> <span class="st">"SELECT B19013e1, GEOID FROM X19_INCOME"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">GEOID_Data =</span> GEOID)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>texas_income <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="fu">here</span>(<span class="st">"data/ACS_2019_5YR_TRACT_48_TEXAS.gdb"</span>),</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>                         <span class="at">layer =</span> <span class="st">"X19_INCOME"</span>,</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>                         <span class="at">query =</span> <span class="st">"SELECT B19013e1, GEOID FROM X19_INCOME"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">GEOID_Data =</span> GEOID)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <section id="visualization-of-night-light-changes" class="level4">
@@ -365,7 +357,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>To isolate areas that truly experienced blackouts, I calculated the change in light intensity between these dates. Areas showing a drop greater than 200 nW cm⁻²sr⁻¹ were classified as experiencing power outages.</p>
+<p>To isolate areas that truly experienced blackouts, I calculated the change in light intensity between these dates. Areas showing a drop greater than 200 nW cm⁻²sr⁻¹ were classified as experiencing blackout.</p>
 <p>Calculate light intensity difference</p>
 <div class="cell">
 <details class="code-fold">
@@ -383,7 +375,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_as_sf</span>(<span class="at">crs =</span> <span class="st">'EPSG:3083'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<p>I then focused the analysis on the Houston metropolitan area and excluded highways, which typically remain lit even during residential outages, to ensure the results reflected actual residential impacts.</p>
+<p>I then focused the analysis on the Houston metropolitan area and excluded highways, which typically remain lit even during residential blackouts, to ensure the results reflected actual residential impacts.</p>
 <p>Selecting Houston Area</p>
 <div class="cell">
 <details class="code-fold">
@@ -417,8 +409,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># If not, print a warning and transform the second dataset to match the first.</span></span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="fu">st_crs</span>(cropped_blackout) <span class="sc">!=</span> <span class="fu">st_crs</span>(roads_buffer)){</span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">warning</span>(<span class="st">"coordinate reference systems do not match"</span>)</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  roads_buffer <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(roads_buffer, <span class="at">crs =</span> <span class="fu">st_crs</span>(cropped_blackout))</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  roads_buffer <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(roads_buffer, <span class="at">crs =</span> <span class="fu">st_crs</span>(cropped_blackout))}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <p>Extract blackout areas outside highways</p>
@@ -438,13 +429,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="co"># If not, print a warning and transform the second dataset to match the first.</span></span>
 <span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="fu">st_crs</span>(blackout_not_road) <span class="sc">!=</span> <span class="fu">st_crs</span>(buildings)){</span>
 <span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">warning</span>(<span class="st">"coordinate reference systems do not match"</span>)</span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  buildings <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(buildings, <span class="at">crs =</span> <span class="fu">st_crs</span>(blackout_not_road))</span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Select homes that overlap with blackout_not_road.</span></span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>homes_blackout <span class="ot">&lt;-</span> buildings[blackout_not_road, </span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>                     op <span class="ot">=</span> st_intersects, </span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>                     drop <span class="ot">=</span> <span class="cn">FALSE</span>] </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  buildings <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(buildings, <span class="at">crs =</span> <span class="fu">st_crs</span>(blackout_not_road))}</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Select homes that overlap with blackout_not_road.</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>homes_blackout <span class="ot">&lt;-</span> buildings[blackout_not_road, </span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>                     op <span class="ot">=</span> st_intersects, </span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>                     drop <span class="ot">=</span> <span class="cn">FALSE</span>] </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <p>Map of the homes in Houston that lost power</p>

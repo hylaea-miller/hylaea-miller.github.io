@@ -7,8 +7,8 @@ author:
     affiliation: Bren School of Environmental Science & Management
     orcid: 0009-0003-5381-004X
 date: 2025-11-12
-categories: [MEDS, R, data-viz]
-image: hello-world.jpg
+categories: [MEDS, data-viz]
+image: greet_function.png
 citation: 
   url: https://hylaea-miller.github.io/posts/first-blog-post/
 draft: true
