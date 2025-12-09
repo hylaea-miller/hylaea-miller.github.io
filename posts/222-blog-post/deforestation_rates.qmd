@@ -3,6 +3,7 @@ title: "Analyzing Deforestation Drivers in MATOPIBA, Brazil"
 description: Exploring Gamma regression modeling to quantify native vegetation loss and identify key deforestation drivers including farming, fire, mining, and urbanization.
 author: "Hylaea Miller"
 date: 12/06/2025
+page-hidden: true
 draft: true
 format:
   html:

@@ -11,6 +11,8 @@ execute:
   echo: true
   message: false
   warning: false
+image: "images/cerrado_deforestation.png"
+categories: [Statistics, R, data-viz]
 ---
 
 ## Background
