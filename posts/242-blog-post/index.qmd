@@ -1,31 +1,91 @@
 ---
-title: "Outcome Reporting Biases: "
+title: "Where We Look Determines What We Find: How Sampling Bias Threatens Steppe Bird Conservation"
 format: html
-draft: true
+draft: false
+author: "Hylaea Miller"
+date: 12/10/2025
+image: baixo_alentejo.png
+description: A case study analysis of how geographical sampling bias in bird habitat models leads to flawed conservation decisions, with practical solutions for addressing data bias in environmental science.
 ---
 
-## Case study of outcome reporting bias
+## Introduction
 
-Background
+Imagine conservation planners creating a nature reserve based on maps showing where endangered birds live, only to discover later that the maps were misleading, not because the science was wrong, but because researchers had accidentally surveyed the wrong places. This isn't a hypothetical scenario. It's a real problem affecting biodiversity conservation worldwide, and it comes from a subtle but widespread issue: geographical sampling bias.
 
-Considering the importance of a better and more effective dialogue between science and policy(Young et all, 2013)
-
-The outcome reporting is a potential type of bias when interpreting the data and results of a environmental research. It important to estimate the poorly reported, misinforming policy and practice.
+In the cereal steppes of southern Portugal, a team of researchers uncovered a troubling reality about how we collect and use data to protect bird species. Their findings reveal that where we choose to look for wildlife can distort our understanding of where animals actually live, with potentially serious consequences for conservation efforts. This case study examines how geographical sampling bias in habitat models led to misleading predictions about steppe bird distributions, and what it teaches us about the hidden pitfalls in environmental data collection.
 
 
+## The Case: 
 
+### Effects of geographical data sampling bias on habitat models of species distributions: a case study with steppe birds in southern Portugal
+
+#### The Data and the Problem
+
+Between March and June 2004, researchers led by Pedro Leitão surveyed 560 sites across the Baixo Alentejo region of southern Portugal, documenting nine species of steppe birds including the Great Bustard, Stone Curlew, and Calandra Lark. The researchers designed their sampling scheme carefully using stratified random sampling across the entire region to ensure balanced, unbiased coverage of different habitat types and geographical areas.
+
+After collecting this baseline dataset, considered to be as complete and unbiased as practically possible, the research team deliberately degraded their own data. They created multiple subsampled datasets that mimicked common real-world sampling biases, removing 80-90% of observations in patterns that reflected how field surveys typically occur. Some subsamples concentrated observations near road networks, and others near protected areas. These artificially biased datasets became experiments to test how geographical sampling bias affects the habitat models of species distributions
+
+#### Identifying the Bias
+
+The type of bias examined in this study is geographical sampling bias, specifically spatial clustering of observation points. This occurs when data collection is systematically concentrated in certain geographical areas while other areas remain undersampled. The researchers identified this bias through spatial analysis of their deliberately subsampled datasets, measuring both the spatial distribution of sampling points and the representation of environmental conditions in each biased dataset compared to the comprehensive baseline.
+
+When observations clustered near roads or protected areas, the resulting datasets failed to adequately represent the full range of environmental conditions present across the landscape. Agricultural areas far from roads, certain elevation ranges, and specific vegetation types became severely underrepresented.
+
+
+#### The Consequences
+
+When the team built habitat suitability models using these biased datasets, the predictions diverged considerably from those based on unbiased data. Road-biased models predicted high suitability in easily accessible areas while systematically underestimating habitat quality in remote locations. Protected area-biased models overemphasized characteristics found within reserves while missing important habitats elsewhere. These shifts in predicted bird occurrence patterns were substantial, yet the biased models often appeared statistically adequate, creating false confidence in fundamentally flawed results that would lead conservation efforts to prioritize the wrong areas for protection.
+
+
+## Reflection
+
+This case study shows a troubling pattern in environmental science: our data often reflects where we can easily collect observations rather than where observations should be collected to answer our questions. The Portugal steppe birds study demonstrates a form of selection bias, specifically, a bias arising from the process of selecting sampling locations based on convenience rather than representative coverage. As Frampton et al. (2022) and Konno et al. (2023) explain, selection biases occur when the way we choose what to measure systematically excludes certain populations or conditions. In this case, road-biased and protected area-biased sampling created datasets that fundamentally misrepresented the environmental conditions across the landscape.
+
+What makes geographical sampling bias particularly challenging is its invisibility. A biased dataset can look complete if you don't consider where observations are missing, the data can still produce models that are internally consistent and statistically well-behaved, while being systematically inaccurate because the underlying sample misrepresents the true population. This reflects what Olteanu et al. (2019) describe as the "population bias" inherent in many data collection efforts. Though they refer to social data contexts, it can be translated to environmental data, where the sampled population differs systematically from the target population we aim to understand. The steppe bird biased models achieved good fits to their training data, but predicted occurrence patterns that diverged from reality in unsampled areas.
+
+This case also raises questions about the political economy of scientific data collection and what Vera et al. (2019) term "extractive logic" in environmental data practices. Research funding, accessibility constraints, and institutional priorities shape where sampling occurs, often disconnecting data from the communities and landscapes most affected by conservation decisions. Similar patterns of geographic sampling bias have been documented in urban contexts, where Ellis-Soto et al. (2023) found that historically redlined neighborhoods in U.S. cities remain significantly undersampled for bird biodiversity data, demonstrating how structural inequities perpetuate sampling disparities across both rural and urban landscapes, where sites frequently sampled by citizen-science efforts may be in areas of low environmental justice concern. These patterns are rational responses to practical constraints, but they systematically bias our collective knowledge about biodiversity patterns while privileging certain voices and perspectives in conservation science.
+
+This connects directly to principles of environmental data justice, which calls for data practices that are participatory, transparent, and accountable to affected communities rather than extractive and disconnected from context (Vera et al., 2019). In the case of steppe bird conservation, the communities who live in and depend on these landscapes, particularly those in remote areas far from roads and research stations, are rendered invisible by sampling bias, their environments mischaracterized in the very models meant to protect shared biodiversity.
+
+
+## Solutions: 
+
+Some complementary approaches for addressing geographical sampling bias include:
+
+### Improved Sampling Design
+
+The most direct solution is better sampling design from the beginning. Stratified random sampling, as used in the baseline Portugal dataset, ensures balanced coverage across geographical space and environmental gradients. While true random sampling is the gold standard, it is often impractical given access constraints and resource limitations, so researchers can implement sampling schemes that deliberately counteract predictable biases.
+
+### Bias Characterization
+
+When working with existing datasets, characterizing the nature and extent of bias becomes critical. The Portugal researchers demonstrated that quantifying environmental bias, provides insight into how much the data might mislead model predictions. Tools like environmental space analysis can reveal whether sampling adequately covers the range of conditions relevant to the species.
+
+### Transparency and Uncertainty Communication
+
+One solution that works universally is the acknowledgment of sampling bias and its implications. When habitat models inform conservation decisions, transparent communication about data limitations should accompany predictions. Maps of sampling effort overlaid with prediction maps would show decision-makers where predictions are well-supported by data versus where they represent extrapolation from biased samples. Uncertainty estimates that account for sampling bias could guide risk-averse conservation strategies that hedge against model uncertainty.
+
+## Applicability to Other Cases
+
+These solutions can be applied across other environmental science contexts where spatial data guides decisions. Climate monitoring networks face similar biases, with weather stations concentrated in accessible, populated areas. Pollution monitoring suffers from systematic undersampling of disadvantaged communities, and biodiversity databases like GBIF and eBird contain multiple occurrence records with severe spatial bias toward well-studied regions, parks, and roadsides (Ellis-Soto et al., 2023).
+
+The sampling design solutions are universally relevant, as stratified approaches can improve data quality in many geographic contexts, as well as bias characterization. The emphasis on transparency and uncertainty communication should become standard practice whenever spatial data informs high-stakes decisions. However, the specific techniques require adaptation to each context. The analysis that revealed bias in bird habitat data, by examining whether sampling captured the full range of environmental conditions, might translate poorly to pollution monitoring, where the relevant environmental factors look different.
+
+## Conclusion
+
+The Portugal steppe birds study demonstrates a problem that permeates environmental science. By deliberately biasing their own dataset, the researchers showed how geographical sampling bias distorts habitat models and misleads conservation efforts. Their work reminds us that the reliability of our environmental knowledge depends on where we looked and where we didn't.
+
+As environmental data science increasingly shapes policy and management decisions, we must recognize the invisible biases in our data. The maps and models we build reflect the practical constraints, funding priorities, and accessibility patterns that determined where we collected observations. Acknowledging and accounting for this reality should become standard practice in environmental science.
 
 ## References:
 
-Konno et al. Environmental Evidence (2024)
+Ellis-Soto, D., Chapman, M. & Locke, D.H. Historical redlining is associated with increasing geographical disparities in bird biodiversity sampling in the United States. Nat Hum Behav 7, 1869–1877 (2023). https://doi.org/10.1038/s41562-023-01688-5
 
+Frampton, G., Whaley, P., Bennett, M. et al. Principles and framework for assessing the risk of bias for studies included in comparative quantitative environmental systematic reviews. Environ Evid 11, 12 (2022). https://doi.org/10.1186/s13750-022-00264-0
 
-https://www.thenewatlantis.com/publications/why-data-is-never-raw 
+Konno, K., Gibbons, J., Lewis, R. et al. Potential types of bias when estimating causal effects in environmental research and how to interpret them. Environ Evid 13, 1 (2024). https://doi.org/10.1186/s13750-024-00324-7
 
+Leitão, P. J., Moreira, F., & Osborne, P. E. (2011). Effects of geographical data sampling bias on habitat models of species distributions: a case study with steppe birds in southern Portugal. International Journal of Geographical Information Science, 25(3), 439–454. https://doi.org/10.1080/13658816.2010.531020
 
+Olteanu, A., Castillo, C., Diaz, F., & Kıcıman, E. (2019). Social data: Biases, methodological pitfalls, and ethical boundaries. Frontiers in Big Data, 2, 13. https://doi.org/10.3389/fdata.2019.00013
 
-Young et al. Improving the science-policy dialogue to meet
-the challenges of biodiversity conservation: having
-conversations rather than talking at one-another. DOI 10.1007/s10531-013-0607-0
-
-‌
+Vera, L. A., Walker, D., Murphy, M., Mansfield, B., Siad, L. M., & Ogden, J. (2019). When data justice and environmental justice meet: formulating a response to extractive logic through environmental data justice. Information, Communication & Society, 22(7), 1012–1028. https://doi.org/10.1080/1369118X.2019.1596293

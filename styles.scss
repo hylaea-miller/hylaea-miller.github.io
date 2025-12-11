@@ -6,7 +6,8 @@ $cambridge_blue: #92B6B1;
 $platinum: #E0E1DD;
 $floral_white: #FFFCF2;
 $fundo_branco: #FBFBFB;
-
+$black: #353535;
+$grey: #717171;
 // import google font
 @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Archivo+Black&family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pathway+Gothic+One&display=swap');
 
@@ -16,7 +17,7 @@ $archivo_black: "Archivo Black", sans-serif;
 // define quarto variables
 $body-bg: $fundo_branco;
 $navbar-bg: $cambridge_blue;
-$navbar-fg: $fundo_branco;
+$navbar-fg: $black;
 $navbar-hl: $payne_gray;
 
 // Set headings font family
