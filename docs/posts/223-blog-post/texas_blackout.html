@@ -78,7 +78,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-087cda0a64fa1b9bf2395677a2dc57a5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-499766b1ed5b0e89bfb6b31b1cb35d22.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -215,7 +215,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#analysis" id="toc-analysis" class="nav-link" data-scroll-target="#analysis">Analysis</a>
   <ul class="collapse">
   <li><a href="#step-1-identifying-blackout-locations" id="toc-step-1-identifying-blackout-locations" class="nav-link" data-scroll-target="#step-1-identifying-blackout-locations">Step 1: Identifying Blackout Locations</a></li>
-  <li><a href="#step-2-estimating-number-of-affected-homes" id="toc-step-2-estimating-number-of-affected-homes" class="nav-link" data-scroll-target="#step-2-estimating-number-of-affected-homes">Step 2: Estimating number of Affected Homes</a></li>
+  <li><a href="#step-2-estimating-the-number-of-affected-homes-in-houston" id="toc-step-2-estimating-the-number-of-affected-homes-in-houston" class="nav-link" data-scroll-target="#step-2-estimating-the-number-of-affected-homes-in-houston">Step 2: Estimating the Number of Affected Homes in Houston</a></li>
   <li><a href="#step-3-exploring-socioeconomic-patterns" id="toc-step-3-exploring-socioeconomic-patterns" class="nav-link" data-scroll-target="#step-3-exploring-socioeconomic-patterns">Step 3: Exploring Socioeconomic Patterns</a></li>
   </ul></li>
   <li><a href="#conclusion-and-next-steps" id="toc-conclusion-and-next-steps" class="nav-link" data-scroll-target="#conclusion-and-next-steps">Conclusion and Next Steps</a></li>
@@ -236,8 +236,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="background" class="level2">
 <h2 class="anchored" data-anchor-id="background">Background</h2>
-<p>Climate change is increasing the frequency and intensity of extreme weather events, with devastating impacts on infrastructure and communities. In February 2021, Texas experienced a major power crisis resulting from three severe winter storms that swept across the United States between February 10-20, leaving millions without power for days in freezing temperatures<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
-<p>In this blog post, I identify the impacts of these series of extreme winter storms by estimating the number of homes in the Houston metropolitan area that lost power and investigate whether these impacts were disproportionately felt by low-income populations.</p>
+<p>Climate change is increasing the frequency and intensity of extreme weather events, with devastating impacts on infrastructure and communities. In February 2021, Texas experienced a major power crisis resulting from three severe winter storms that swept across the United States between February 10-20, leaving millions without power for days in freezing temperatures<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. The storm brought record-breaking cold and extreme weather conditions that overwhelmed the state’s power infrastructure. As temperatures decreased, demand for electricity surged while nearly half the grid’s generating capacity failed <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
+<p>In this blog post, I identify the impacts of this series of extreme winter storms by estimating the number of homes in the Houston metropolitan area that lost power and investigate whether these impacts were disproportionately felt by low-income populations. Understanding where and who the blackout affected is important to determine infrastructure vulnerabilities and environmental justice concerns for future extreme weather events as well as recovery from the storm.</p>
 </section>
 <section id="data" class="level2">
 <h2 class="anchored" data-anchor-id="data">Data</h2>
@@ -357,6 +357,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+<p>The maps above show a side-by-side comparison of before and after the winter storm’s impact on Texas’s power infrastructure. Before the storm (February 7), the nighttime lights show dense and continuous illumination across major metropolitan areas. The yellow and white areas indicate high light intensity, representing normal electricity usage in urban centers.</p>
+<p>After the storm (February 16), there is a significant reduction in light intensity across the raster tile, with previously bright yellow regions now appearing in darker blue tones, confirming widespread power outages affecting residents.</p>
+<p>Notably, the spatial pattern suggests that blackouts were not uniformly distributed. This heterogeneous distribution of impacts makes it worthy of investigating whether certain communities were disproportionately affected by the power crisis.</p>
 <p>To isolate areas that truly experienced blackouts, I calculated the change in light intensity between these dates. Areas showing a drop greater than 200 nW cm⁻²sr⁻¹ were classified as experiencing blackout.</p>
 <p>Calculate light intensity difference</p>
 <div class="cell">
@@ -375,8 +378,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_as_sf</span>(<span class="at">crs =</span> <span class="st">'EPSG:3083'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
+</section>
+</section>
+<section id="step-2-estimating-the-number-of-affected-homes-in-houston" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-estimating-the-number-of-affected-homes-in-houston">Step 2: Estimating the Number of Affected Homes in Houston</h3>
 <p>I then focused the analysis on the Houston metropolitan area and excluded highways, which typically remain lit even during residential blackouts, to ensure the results reflected actual residential impacts.</p>
-<p>Selecting Houston Area</p>
+<p>To narrow the analysis to the Houston metropolitan region, I defined a bounding box encompassing the Houston area.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -397,7 +404,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_transform</span>(cropped_blackout, <span class="at">crs =</span> <span class="st">"epsg:3083"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<p>Removing highways</p>
+<p>To isolate residential blackout areas, I created a 200-meter buffer around all highways and removed these areas from the blackout mask. This step ensures that the analysis captures only areas where residential communities experienced power loss.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -412,7 +419,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  roads_buffer <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(roads_buffer, <span class="at">crs =</span> <span class="fu">st_crs</span>(cropped_blackout))}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<p>Extract blackout areas outside highways</p>
+<p>With highways excluded, I identified the residential areas that experienced blackouts by subtracting the highway buffers from the blackout mask. I then spatially intersected the blackout layer with the building data to identify individual homes that lost power during the storm.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -437,7 +444,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>                     drop <span class="ot">=</span> <span class="cn">FALSE</span>] </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<p>Map of the homes in Houston that lost power</p>
+<section id="map-of-homes-affected-by-the-blackout" class="level4">
+<h4 class="anchored" data-anchor-id="map-of-homes-affected-by-the-blackout">Map of Homes Affected by the Blackout</h4>
+<p>The following map displays the individual residential buildings that lost power during the storm. Each purple polygon represents a home identified through the spatial intersection of building footprints (from OpenStreetMap) with the blackout zones. This allows us to see which structures were affected, rather than just showing general blackout areas.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -465,10 +474,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>The map above shows the spatial distribution of affected homes, with a notable concentration in central Houston. This visualization helps us understand not just how many homes were impacted, but where the impacts were most severe.</p>
-</section>
-</section>
-<section id="step-2-estimating-number-of-affected-homes" class="level3">
-<h3 class="anchored" data-anchor-id="step-2-estimating-number-of-affected-homes">Step 2: Estimating number of Affected Homes</h3>
 <p>Using building data from OpenStreetMap, I identified residential structures within the blackout zones. The analysis revealed that approximately 157,970 homes lost power during the storm.</p>
 <div class="cell">
 <details class="code-fold">
@@ -480,6 +485,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>[1] 157970</code></pre>
 </div>
 </div>
+</section>
 </section>
 <section id="step-3-exploring-socioeconomic-patterns" class="level3">
 <h3 class="anchored" data-anchor-id="step-3-exploring-socioeconomic-patterns">Step 3: Exploring Socioeconomic Patterns</h3>
@@ -502,7 +508,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_transform</span>(houston_income, <span class="at">crs =</span> <span class="st">"epsg:3083"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<p>Map of the census tracts in Houston that lost power</p>
+<section id="map-of-the-census-tracts-in-houston-that-lost-power" class="level4">
+<h4 class="anchored" data-anchor-id="map-of-the-census-tracts-in-houston-that-lost-power">Map of the census tracts in Houston that lost power</h4>
+<p>To understand the socioeconomic characteristics of communities impacted by the power outage, we map the median household income for census tracts containing homes that experienced blackouts.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -519,7 +527,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tm_fill</span>(</span>
 <span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">col =</span> <span class="st">"B19013e1"</span>,</span>
 <span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">palette =</span> <span class="st">"Reds"</span>,              </span>
-<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Median Income"</span>) <span class="sc">+</span> </span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Median Income by census tract (dollars)"</span>) <span class="sc">+</span> </span>
 <span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a> <span class="fu">tm_basemap</span>(<span class="at">server =</span> <span class="st">"OpenStreetMap"</span>, <span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
 <span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a> <span class="fu">tm_graticules</span>() <span class="sc">+</span></span>
 <span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a> <span class="fu">tm_title</span>(<span class="at">text =</span> <span class="st">"Median Income by Census Tract for Houses</span></span>
@@ -549,7 +557,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<p>Visualize the distribution of median household income across census tracts to determine if the blackout disproportionately impacted certain socioeconomic groups.</p>
+<p>To examine whether the blackout disproportionately impacted certain socioeconomic groups, I visualized the distribution of median household income across census tracts in the Houston area and compared the income profiles of affected versus unaffected communities.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -563,7 +571,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#2955AA"</span>, <span class="st">"#F9cF66"</span>),</span>
 <span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>                    <span class="at">name =</span> <span class="st">"Blackout Status"</span>) <span class="sc">+</span></span>
 <span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Affected Status"</span>,</span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Median Income of Census Tract"</span>,</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Median Income of Census Tract (dollars)"</span>,</span>
 <span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"Distribution of Median Income in Areas Affected </span></span>
 <span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="st">       and Unaffected by Blackout in Houston"</span>) <span class="sc">+</span></span>
 <span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -576,7 +584,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>The boxplot reveals similar income distributions between areas that experienced blackouts and those that did not. The yellow box representing unaffected areas shows a slightly lower median income compared to the blue box representing blackout-affected census tracts.</p>
+<p>The boxplot reveals similar income distributions between areas that experienced blackouts and those that did not. Unexpectedly, the yellow box representing unaffected areas shows a slightly lower median income compared to the blue box representing blackout-affected census tracts. This finding contradicts the hypothesis that lower-income communities were disproportionately impacted by the power outages.</p>
+</section>
 </section>
 </section>
 <section id="conclusion-and-next-steps" class="level2">
@@ -586,10 +595,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
-<p>Home - LAADS DAAC. (2017, February 22). Nasa.gov. https://ladsweb.modaps.eosdis.nasa.gov/</p>
-<p>Download OpenStreetMap for OpenStreetMap Data Extracts | Geofabrik Download Server. (2025). Geofabrik Download Server. https://download.geofabrik.de/</p>
-<p>Bureau, U. C. (2025, September 29). American Community Survey (ACS). Census.gov. https://www.census.gov/programs-surveys/acs</p>
+<p>Bureau, U. C. (2019). American Community Survey (ACS). Census.gov. https://www.census.gov/programs-surveys/acs</p>
 <p>DEITABASE. (2024, December 27). 2021 Texas Power Grid Failure – a preventable disaster. DEITABASE - a Community Resource for Merging DEI and CEE Education. https://limos.engin.umich.edu/deitabase/2024/12/27/2021-texas-power-grid-failure/</p>
+<p>Geofabrik Download Server. (2025). Download OpenStreetMap Data Extracts. https://download.geofabrik.de/</p>
+<p>Krauss, C., Fernandez, M., Penn, I., &amp; Rojas, R. (2021, February 21). How Texas’ Drive for Energy Independence Set It Up for Disaster. The New York Times. https://www.nytimes.com/2021/02/21/us/texas-electricity-ercot-blackouts.html</p>
+<p>NASA LAADS DAAC. (2017). Level-1 and Atmospheric Archive &amp; Distribution System Distributed Active Archive Center. https://ladsweb.modaps.eosdis.nasa.gov/</p>
+<p>Oliver, R. (2025, November 25). Homework Assignment 3. Github.io. https://eds-223-geospatial.github.io/assignments/HW3.html</p>
 
 
 </section>
@@ -599,6 +610,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <ol>
 <li id="fn1"><p>2021 Texas Power Grid Failure – a preventable disaster. DEITABASE. Last modified 2024, December 27. <a href="https://limos.engin.umich.edu/deitabase/2024/12/27/2021-texas-power-grid-failure/" class="uri">https://limos.engin.umich.edu/deitabase/2024/12/27/2021-texas-power-grid-failure/</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Krauss, C., Fernandez, M., Penn, I., &amp; Rojas, R. (2021, February 21). How Texas’ Drive for Energy Independence Set It Up for Disaster. The New York Times. <a href="https://www.nytimes.com/2021/02/21/us/texas-electricity-ercot-blackouts.html" class="uri">https://www.nytimes.com/2021/02/21/us/texas-electricity-ercot-blackouts.html</a>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{miller2025,
   author = {Miller, Hylaea},
