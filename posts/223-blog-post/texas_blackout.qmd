@@ -22,6 +22,7 @@ format:
     code-fold: true
 image: "night_lights.png"
 ---
+
 ## Research Question
 
 To what extent did the February 2021 Texas winter storm blackouts disproportionately affect low-income communities in the Houston metropolitan area?
@@ -30,13 +31,11 @@ To what extent did the February 2021 Texas winter storm blackouts disproportiona
 
 Climate change is increasing the frequency and intensity of extreme weather events, with devastating impacts on infrastructure and communities. In February 2021, Texas experienced a major power crisis resulting from three severe winter storms that swept across the United States between February 10-20, leaving millions without power for days in freezing temperatures[^1]. The storm brought record-breaking cold and extreme weather conditions that overwhelmed the state's power infrastructure. As temperatures decreased, demand for electricity surged while nearly half the grid's generating capacity failed [^2].
 
-In this blog post, I identify the impacts of this series of extreme winter storms by estimating the number of homes in the Houston metropolitan area that lost power and investigate whether these impacts were disproportionately felt by low-income populations. Understanding where and who the blackout affected is important to determine infrastructure vulnerabilities and environmental justice concerns for future extreme weather events as well as recovery from the storm.
-
-
 [^1]: 2021 Texas Power Grid Failure – a preventable disaster. DEITABASE. Last modified 2024, December 27. <https://limos.engin.umich.edu/deitabase/2024/12/27/2021-texas-power-grid-failure/>.
 
-[^2]: Krauss, C., Fernandez, M., Penn, I., & Rojas, R. (2021, February 21). How Texas’ Drive for
-Energy Independence Set It Up for Disaster. The New York Times. <https://www.nytimes.com/2021/02/21/us/texas-electricity-ercot-blackouts.html>.
+[^2]: Krauss, C., Fernandez, M., Penn, I., & Rojas, R. (2021, February 21). How Texas’ Drive for Energy Independence Set It Up for Disaster. The New York Times. <https://www.nytimes.com/2021/02/21/us/texas-electricity-ercot-blackouts.html>.
+
+In this blog post, I identify the impacts of this series of extreme winter storms by estimating the number of homes in the Houston metropolitan area that lost power and investigate whether these impacts were disproportionately felt by low-income populations. Understanding where and who the blackout affected is important to determine infrastructure vulnerabilities and environmental justice concerns for future extreme weather events as well as recovery from the storm.
 
 ## Data
 
@@ -54,17 +53,17 @@ OpenStreetMap highway data for Texas, accessed via [Geofabrik’s](https://downl
 
 OpenStreetMap building data for Texas, accessed via [Geofabrik’s](https://download.geofabrik.de/) download site, was used to retrieve a shapefile of all houses in Texas, and a Geopackage (.gpkg file) was prepared containing only the subset of houses that intersect the Houston metropolitan area.
 
-**SOCIOECONOMIC DATA** 
+**SOCIOECONOMIC DATA**
 
 From the U.S. Census Bureau’s American Community Survey for census tracts in 2019, which contains social, economic, housing, and demographic information across the 50 states of the U.S., the District of Columbia, and Puerto Rico. The dataset can be found here: [Census](https://www.census.gov/programs-surveys/acs)
-
 
 ## Analysis
 
 To investigate the impact of the February 2021 winter storms on Houston, I analyzed satellite imagery and socioeconomic data through three main steps: identifying blackout locations, estimating affected homes, and examining socioeconomic patterns.
 
 ### Step 1: Identifying Blackout Locations
-I began by comparing nighttime light intensity before and after the storm using NASA's satellite data. 
+
+I began by comparing nighttime light intensity before and after the storm using NASA's satellite data.
 
 Load Packages and Import the datasets
 
@@ -117,7 +116,6 @@ texas_income <- st_read(here("data/ACS_2019_5YR_TRACT_48_TEXAS.gdb"),
 
 ```
 
-
 #### Visualization of Night Light Changes
 
 Maps comparing night light intensities before and after the storms
@@ -160,16 +158,17 @@ map_after <- tm_shape(mosaic_16) +
 tmap_arrange(map_before, map_after, nrow = 1)
 
 ```
+
 The maps above show a side-by-side comparison of before and after the winter storm's impact on Texas's power infrastructure. Before the storm (February 7), the nighttime lights show dense and continuous illumination across major metropolitan areas. The yellow and white areas indicate high light intensity, representing normal electricity usage in urban centers.
 
 After the storm (February 16), there is a significant reduction in light intensity across the raster tile, with previously bright yellow regions now appearing in darker blue tones, confirming widespread power outages affecting residents.
 
 Notably, the spatial pattern suggests that blackouts were not uniformly distributed. This heterogeneous distribution of impacts makes it worthy of investigating whether certain communities were disproportionately affected by the power crisis.
 
-
 To isolate areas that truly experienced blackouts, I calculated the change in light intensity between these dates. Areas showing a drop greater than 200 nW cm⁻²sr⁻¹ were classified as experiencing blackout.
 
 Calculate light intensity difference
+
 ```{r}
 # Subtract light intensity (February 7 - February 16)
 difference <- mosaic_7 - mosaic_16
@@ -225,7 +224,6 @@ if(st_crs(cropped_blackout) != st_crs(roads_buffer)){
 
 ```
 
-
 With highways excluded, I identified the residential areas that experienced blackouts by subtracting the highway buffers from the blackout mask. I then spatially intersected the blackout layer with the building data to identify individual homes that lost power during the storm.
 
 ```{r}
@@ -251,8 +249,6 @@ homes_blackout <- buildings[blackout_not_road,
                      drop = FALSE] 
 ```
 
-
-
 #### Map of Homes Affected by the Blackout
 
 The following map displays the individual residential buildings that lost power during the storm. Each purple polygon represents a home identified through the spatial intersection of building footprints (from OpenStreetMap) with the blackout zones. This allows us to see which structures were affected, rather than just showing general blackout areas.
@@ -277,7 +273,6 @@ map_homes_blackout
 ```
 
 The map above shows the spatial distribution of affected homes, with a notable concentration in central Houston. This visualization helps us understand not just how many homes were impacted, but where the impacts were most severe.
-
 
 Using building data from OpenStreetMap, I identified residential structures within the blackout zones. The analysis revealed that approximately 157,970 homes lost power during the storm.
 
@@ -309,7 +304,6 @@ st_make_valid() %>%
   st_transform(houston_income, crs = "epsg:3083")
 ```
 
-
 #### Map of the census tracts in Houston that lost power
 
 To understand the socioeconomic characteristics of communities impacted by the power outage, I map the median household income for census tracts containing homes that experienced blackouts.
@@ -335,11 +329,13 @@ tm_shape(homes_census_blackout) +
  tm_title(text = "Median Income by Census Tract for Houses
           Affected by the Blackout in Houston" )
 ```
+
 The map reveals the spatial distribution of median household income across census tracts affected by the blackout. The darker red areas indicate higher-income neighborhoods, while lighter shades represent lower-income areas.
 
 To quantify whether income played a role in blackout vulnerability, I compared all Houston census tracts, categorizing them by whether they experienced blackouts or not.
 
 Find census tracts that did not experience blackout
+
 ```{r}
 # Compare all Houston tracts against those identified with blackouts,
 # Remove geometry and select only income and status variables
@@ -370,8 +366,8 @@ ggplot() +
        and Unaffected by Blackout in Houston") +
   theme_minimal()
 ```
-The boxplot reveals similar income distributions between areas that experienced blackouts and those that did not. Unexpectedly, the yellow box representing unaffected areas shows a slightly lower median income compared to the blue box representing blackout-affected census tracts. This finding contradicts the hypothesis that lower-income communities were disproportionately impacted by the power outages.
 
+The boxplot reveals similar income distributions between areas that experienced blackouts and those that did not. Unexpectedly, the yellow box representing unaffected areas shows a slightly lower median income compared to the blue box representing blackout-affected census tracts. This finding contradicts the hypothesis that lower-income communities were disproportionately impacted by the power outages.
 
 ## Conclusion and Next Steps
 
@@ -379,17 +375,32 @@ The results show that median household incomes are similar between census tracts
 
 Future research should employ finer spatial resolution (e.g., block group or individual building level) and could incorporate additional socioeconomic variables beyond income, including housing age, renter vs. owner occupancy, and racial demographics.
 
-## References
+## GitHub
 
-Bureau, U. C. (2019). American Community Survey (ACS). Census.gov. https://www.census.gov/programs-surveys/acs
+The repository containing all of the code and data for this analysis can be found here: [Identifying the impacts of extreme weather](https://github.com/hylaea-miller/Identifying-the-impacts-of-extreme-weather.git)
+
+## References
 
 DEITABASE. (2024, December 27). 2021 Texas Power Grid Failure – a preventable disaster. DEITABASE - a Community Resource for Merging DEI and CEE Education. https://limos.engin.umich.edu/deitabase/2024/12/27/2021-texas-power-grid-failure/
 
-Geofabrik Download Server. (2025). Download OpenStreetMap Data Extracts. https://download.geofabrik.de/
-
 Krauss, C., Fernandez, M., Penn, I., & Rojas, R. (2021, February 21). How Texas' Drive for Energy Independence Set It Up for Disaster. The New York Times. https://www.nytimes.com/2021/02/21/us/texas-electricity-ercot-blackouts.html
+
+Oliver, R. (2025, November 25). Homework Assignment 3. Github.io. https://eds-223-geospatial.github.io/assignments/HW3.html
+
+### Data Sources
+
+**VIIRS Night Lights Data (VNP46A1)**
 
 NASA LAADS DAAC. (n.d). Level-1 and Atmospheric Archive & Distribution System Distributed Active Archive Center. https://ladsweb.modaps.eosdis.nasa.gov/
 
+**OpenStreetMap - Roads**
 
-Oliver, R. (2025, November 25). Homework Assignment 3. Github.io. https://eds-223-geospatial.github.io/assignments/HW3.html
+Geofabrik Download Server. (2025). Download OpenStreetMap Data Extracts. https://download.geofabrik.de/
+
+**OpenStreetMap - Buildings**
+
+Geofabrik Download Server. (2025). Download OpenStreetMap Data Extracts. https://download.geofabrik.de/
+
+**U.S. Census Bureau - American Community Survey (ACS)**
+
+Bureau, U. C. (2025). *American Community Survey (ACS)*. Census.gov. https://www.census.gov/programs-surveys/acs

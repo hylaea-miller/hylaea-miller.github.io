@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Hylaea Miller">
-<meta name="dcterms.date" content="2025-12-01">
+<meta name="dcterms.date" content="2025-12-12">
 <meta name="description" content="Exploring the effect of the Eaton and Palisades Fires on Elderly residents in Los Angeles County in 2025.">
 
 <title>Social dimensions of Eaton and Palisades fires – Hylaea Miller</title>
@@ -185,7 +185,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">December 1, 2025</p>
+        <p class="date">December 12, 2025</p>
       </div>
     </div>
     
@@ -214,10 +214,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#visualize-false-color-image-with-fire-perimeters" id="toc-visualize-false-color-image-with-fire-perimeters" class="nav-link" data-scroll-target="#visualize-false-color-image-with-fire-perimeters">Visualize false color image with fire perimeters</a></li>
   </ul></li>
   <li><a href="#prepare-eji-data" id="toc-prepare-eji-data" class="nav-link" data-scroll-target="#prepare-eji-data">Prepare EJI Data</a></li>
-  <li><a href="#visualize-eji-data" id="toc-visualize-eji-data" class="nav-link" data-scroll-target="#visualize-eji-data">Visualize EJI Data</a>
-  <ul class="collapse">
+  <li><a href="#visualize-eji-data" id="toc-visualize-eji-data" class="nav-link" data-scroll-target="#visualize-eji-data">Visualize EJI Data</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><strong>References:</strong></a></li>
-  </ul></li>
   </ul>
 </nav>
     </div>
@@ -233,6 +231,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The Palisades and Eaton fires started in Los Angeles County on Jan 7, 2025, burning more than 16,000 structures, forcing mass evacuations, and resulting in at least 28 fatalities (Phillips, 2025). Understanding the social dimensions of wildfire impacts is crucial for effective disaster response and recovery.</p>
 <p>This blog post analyzes the 2025 Eaton and Palisades Fires in Los Angeles County using Landsat 8 satellite imagery to create false-color composites that highlight burned areas and vegetation damage, and includes an analysis of the social impact on elderly residents using the Environmental Justice Index (EJI) dataset.</p>
 <p>The complete code and analysis for this project can be found here: <a href="https://github.com/hylaea-miller/eds220-hwk4.git">GitHub repository</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="social-dimensions_files/figure-html/e413e322-1-image.png" class="img-fluid figure-img"></p>
+<figcaption>Flames seen from Topanga Canyon near Pacific Palisades in Los Angeles on Thursday. <strong>Credit:</strong> Tayfun Coskun / Anadolu via Getty Image</figcaption>
+</figure>
+</div>
 <section id="highlights" class="level3">
 <h3 class="anchored" data-anchor-id="highlights"><strong>Highlights</strong></h3>
 <ul>
@@ -253,7 +257,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="setup-import-libraries-and-data" class="level3">
 <h3 class="anchored" data-anchor-id="setup-import-libraries-and-data">Setup: Import Libraries and Data</h3>
 <p>Load the necessary packages, and import Landsat bands, fire perimeters, and EJI data.</p>
-<div id="50170f3b" class="cell" data-execution_count="29">
+<div id="50170f3b" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Loading necessary libraries</span></span>
@@ -287,7 +291,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="prepare-landsat-data" class="level2">
 <h2 class="anchored" data-anchor-id="prepare-landsat-data">Prepare Landsat Data</h2>
 <p>This dataset does not currently have a CRS assigned, indicating it is not a geospatial object. To restore the geospatial information, we will use the <code>rio.write_crs()</code> function to assign the correct CRS to the dataset. The appropriate CRS for Landsat 8 data is EPSG:32611 (WGS 84 / UTM zone 11N), retrieved from the <code>spatial_ref</code> metadata attribute.</p>
-<div id="05e34aeb" class="cell" data-execution_count="30">
+<div id="05e34aeb" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Write the correct CRS</span></span>
@@ -295,7 +299,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 <p>It is important to check and handle any missing values (NaNs) in the data before creating the composite image. Missing values can lead to inaccuracies in the visualization and analysis, and in this case will give us warning messages when plotting the data.</p>
-<div id="a04c43ac" class="cell" data-execution_count="31">
+<div id="a04c43ac" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check for missing data in red, green, and blue bands</span></span>
@@ -320,7 +324,7 @@ Data variables:
 <section id="true-color-composite" class="level2">
 <h2 class="anchored" data-anchor-id="true-color-composite">True Color Composite</h2>
 <p>Before analyzing the fire impact, we will create a true color composite image using the red, green, and blue bands from the Landsat dataset. This composite will provide a visual representation of true colors as seen by the human eye of the area affected by the Eaton and Palisades fires.</p>
-<div id="33b9332e" class="cell" data-execution_count="32">
+<div id="33b9332e" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a true color image with robust scaling</span></span>
@@ -343,7 +347,7 @@ Data variables:
 <h2 class="anchored" data-anchor-id="false-color-composite">False Color Composite</h2>
 <p>False color composites are useful for highlighting specific features in satellite imagery that may not be as easily discernible in true color images.</p>
 <p>We are creating a false color image by assigning the short-wave infrared (swir22), near-infrared, and red bands to the red, green, and blue channels, respectively.</p>
-<div id="afa4595b" class="cell" data-execution_count="33">
+<div id="afa4595b" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot a false color image using SWIR, NIR, and Red bands</span></span>
@@ -362,7 +366,7 @@ Data variables:
 <section id="visualize-false-color-image-with-fire-perimeters" class="level3">
 <h3 class="anchored" data-anchor-id="visualize-false-color-image-with-fire-perimeters">Visualize false color image with fire perimeters</h3>
 <p>To visualize the impact of the Eaton and Palisades fires, we will overlay the fire perimeters on top of the false color composite image. This will require reprojecting the fire perimeter data to match the CRS of the Landsat data.</p>
-<div id="82353a64" class="cell" data-execution_count="34">
+<div id="82353a64" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Reproject the fire extends to the landsat dataset</span></span>
@@ -370,7 +374,7 @@ Data variables:
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>palisades <span class="op">=</span> palisades.to_crs(landsat.rio.crs)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<div id="61d274b9" class="cell" data-execution_count="35">
+<div id="61d274b9" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot false color image with fire perimeters</span></span>
@@ -400,7 +404,7 @@ Data variables:
 <h2 class="anchored" data-anchor-id="prepare-eji-data">Prepare EJI Data</h2>
 <p>The EJI dataset contains various socioeconomic and environmental variables at the census tract level. For this analysis, we will focus on the percentage of elderly residents (age 65 and older). We will reproject the EJI data to match the CRS of the Landsat data for accurate spatial analysis, and clip the EJI data to the extent of the fire perimeters to focus on the areas affected by the fires.</p>
 <p>Match the CRS of the EJI data to that of the Landsat data using the <code>.to_crs()</code> method.</p>
-<div id="1d9e693d" class="cell" data-execution_count="36">
+<div id="1d9e693d" class="cell" data-execution_count="8">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Match the CRS of the eji data to the fire perimeter</span></span>
@@ -408,7 +412,7 @@ Data variables:
 </details>
 </div>
 <p>Clip the EJI data to the extent of the fire perimeters using the <code>.clip()</code> method.</p>
-<div id="31210472" class="cell" data-execution_count="37">
+<div id="31210472" class="cell" data-execution_count="9">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Clip the census tracts to the Palisades fire perimeter using geopandas.clip()</span></span>
@@ -423,11 +427,11 @@ Data variables:
 <p>Social vulnerability varies significantly across communities affected by wildfires. To understand which affected areas face greater challenges during and after the fires, we visualize the EJI Indicator: Social Vulnerability, age 65 and older data for census tracts within both fire perimeters.</p>
 <p>In this analysis, we focus on the population aged 65 and older (<code>E_AGE65</code>). Older adults often face increased health risks from smoke exposure, have greater difficulty evacuating, and may experience longer recovery times after disasters. By comparing the spatial distribution of this demographic across the Palisades and Eaton fire areas, we can identify which communities may require additional support and resources.</p>
 <p>We create side-by-side maps showing the percentage of residents aged 65 and older in census tracts intersecting each fire perimeter, revealing whether one fire disproportionately affected communities with higher concentrations of vulnerable older residents.</p>
-<div id="0a22dfa6" class="cell" data-execution_count="44">
+<div id="0a22dfa6" class="cell" data-execution_count="25">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create blank figure with two subplots side by side</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>fig, (ax1, ax2) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">20</span>, <span class="dv">10</span>))</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>fig, (ax1, ax2) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">30</span>, <span class="dv">20</span>))</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Specify the EJI variable to plot</span></span>
 <span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>eji_variable <span class="op">=</span> <span class="st">'E_AGE65'</span></span>
@@ -443,7 +447,7 @@ Data variables:
 <span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>    legend<span class="op">=</span><span class="va">False</span>,</span>
 <span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>    ax<span class="op">=</span>ax1,</span>
 <span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>ax1.set_title(<span class="st">'Palisades Perimeter'</span>, fontsize<span class="op">=</span><span class="dv">22</span>)</span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>ax1.set_title(<span class="st">'Palisades Perimeter'</span>, fontsize<span class="op">=</span><span class="dv">38</span>)</span>
 <span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>ax1.axis(<span class="st">'off'</span>)</span>
 <span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot census tracts within Eaton perimeter</span></span>
@@ -453,20 +457,21 @@ Data variables:
 <span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a>    legend<span class="op">=</span><span class="va">False</span>,</span>
 <span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a>    ax<span class="op">=</span>ax2,</span>
 <span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">'Eaton Perimeter'</span>, fontsize<span class="op">=</span><span class="dv">22</span>)</span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">'Eaton Perimeter'</span>, fontsize<span class="op">=</span><span class="dv">38</span>)</span>
 <span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a>ax2.axis(<span class="st">'off'</span>)</span>
 <span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Add overall title</span></span>
-<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a>fig.suptitle(<span class="st">'Population Aged 65 and Older - Fire Areas Comparison '</span>, fontsize<span class="op">=</span><span class="dv">25</span>)</span>
-<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Add shared colorbar at the bottom</span></span>
-<span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a>sm <span class="op">=</span> plt.cm.ScalarMappable( norm<span class="op">=</span>plt.Normalize(vmin<span class="op">=</span>vmin, vmax<span class="op">=</span>vmax))</span>
-<span id="cb11-36"><a href="#cb11-36" aria-hidden="true" tabindex="-1"></a>cbar_ax <span class="op">=</span> fig.add_axes([<span class="fl">0.25</span>, <span class="fl">0.08</span>, <span class="fl">0.5</span>, <span class="fl">0.02</span>])  <span class="co"># [left, bottom, width, height]</span></span>
-<span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a>cbar <span class="op">=</span> fig.colorbar(sm, cax<span class="op">=</span>cbar_ax, orientation<span class="op">=</span><span class="st">'horizontal'</span>)</span>
-<span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a>cbar.set_label(<span class="st">'Population Aged 65 and Older (percentage)'</span>, fontsize<span class="op">=</span><span class="dv">22</span>)</span>
-<span id="cb11-39"><a href="#cb11-39" aria-hidden="true" tabindex="-1"></a>cbar.ax.tick_params(labelsize<span class="op">=</span><span class="dv">15</span>)</span>
-<span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-41"><a href="#cb11-41" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Add title</span></span>
+<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a>fig.suptitle(<span class="st">'Population Aged 65 and Older - Fire Areas Comparison'</span>,</span>
+<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a>             fontsize<span class="op">=</span><span class="dv">42</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>, y<span class="op">=</span><span class="fl">0.78</span>)</span>
+<span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Add shared colorbar at the bottom</span></span>
+<span id="cb11-36"><a href="#cb11-36" aria-hidden="true" tabindex="-1"></a>sm <span class="op">=</span> plt.cm.ScalarMappable( norm<span class="op">=</span>plt.Normalize(vmin<span class="op">=</span>vmin, vmax<span class="op">=</span>vmax))</span>
+<span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a>cbar_ax <span class="op">=</span> fig.add_axes([<span class="fl">0.25</span>, <span class="fl">0.2</span>, <span class="fl">0.5</span>, <span class="fl">0.02</span>])</span>
+<span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a>cbar <span class="op">=</span> fig.colorbar(sm, cax<span class="op">=</span>cbar_ax, orientation<span class="op">=</span><span class="st">'horizontal'</span>)</span>
+<span id="cb11-39"><a href="#cb11-39" aria-hidden="true" tabindex="-1"></a>cbar.set_label(<span class="st">'Population Aged 65 and Older (percentage)'</span>, fontsize<span class="op">=</span><span class="dv">38</span>)</span>
+<span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a>cbar.ax.tick_params(labelsize<span class="op">=</span><span class="dv">38</span>)</span>
+<span id="cb11-41"><a href="#cb11-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-42"><a href="#cb11-42" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-display">
 <div>
@@ -478,8 +483,10 @@ Data variables:
 </div>
 <p><strong>Figure Interpretation</strong></p>
 <p>The variable Population Aged 65 and Older (E_AGE65) shows a different distribution across the two fire perimeters. In the Palisades fire perimeter, there is a higher concentration of census tracts with elevated percentage of elderly residents compared to the Eaton fire perimeter. This suggests that the Palisades area have a larger proportion of older adults who could face greater challenges during wildfire events, such as mobility issues and health vulnerabilities. Consequently, wildfire relief efforts in the Palisades area may need to prioritize resources for evacuation assistance, medical support, and community outreach tailored to the needs of elderly residents. In contrast, the Eaton fire perimeter may require different strategies focused on other demographic factors present in that area.</p>
-<section id="references" class="level3">
-<h3 class="anchored" data-anchor-id="references"><strong>References:</strong></h3>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references"><strong>References:</strong></h2>
+<p>Butterworth, M., &amp; Chow, D. (2025, January 9). California wildfires in photos: Images show the catastrophic scale in Los Angeles and the Palisades. NBC News. https://www.nbcnews.com/news/us-news/photos-los-angeles-palisades-scale-california-fires-rcna186941 [Accessed: December 12, 2025]</p>
 <p>Microsoft Planetary Computer. (2025). Landsat Collection 2 Level-2. https://planetarycomputer.microsoft.com/dataset/landsat-c2-l2. [Accessed: November 19, 2025]</p>
 <p>National Interagency Fire Center (NIFC). (2025). Palisades and Eaton Fire Perimeters [Dataset]. Los Angeles GeoHub. https://geohub.lacity.org/maps/ad51845ea5fb4eb483bc2a7c38b2370c/about [Accessed: November 19, 2025]‌</p>
 <p>NASA Earth Observatory. (2014, March 14). Why is that Forest Red and that Cloud Blue? How to Interpret a False-Color Satellite Image. NASA Science. https://science.nasa.gov/earth/earth-observatory/how-to-interpret-a-false-color-satellite-image/ [Accessed: November 20, 2025]</p>
@@ -487,7 +494,6 @@ Data variables:
 <p>‌</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

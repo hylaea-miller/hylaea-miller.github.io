@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Hylaea Miller">
-<meta name="dcterms.date" content="2025-12-06">
+<meta name="dcterms.date" content="2025-12-12">
 <meta name="description" content="Analysis of Houston Blackouts and its socioeconomic impacts">
 
 <title>Identifying the Impacts of Extreme Weather – Hylaea Miller</title>
@@ -190,7 +190,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">December 6, 2025</p>
+        <p class="date">December 12, 2025</p>
       </div>
     </div>
     
@@ -219,7 +219,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#step-3-exploring-socioeconomic-patterns" id="toc-step-3-exploring-socioeconomic-patterns" class="nav-link" data-scroll-target="#step-3-exploring-socioeconomic-patterns">Step 3: Exploring Socioeconomic Patterns</a></li>
   </ul></li>
   <li><a href="#conclusion-and-next-steps" id="toc-conclusion-and-next-steps" class="nav-link" data-scroll-target="#conclusion-and-next-steps">Conclusion and Next Steps</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#github" id="toc-github" class="nav-link" data-scroll-target="#github">GitHub</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a>
+  <ul class="collapse">
+  <li><a href="#data-sources" id="toc-data-sources" class="nav-link" data-scroll-target="#data-sources">Data Sources</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -510,7 +514,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <section id="map-of-the-census-tracts-in-houston-that-lost-power" class="level4">
 <h4 class="anchored" data-anchor-id="map-of-the-census-tracts-in-houston-that-lost-power">Map of the census tracts in Houston that lost power</h4>
-<p>To understand the socioeconomic characteristics of communities impacted by the power outage, we map the median household income for census tracts containing homes that experienced blackouts.</p>
+<p>To understand the socioeconomic characteristics of communities impacted by the power outage, I map the median household income for census tracts containing homes that experienced blackouts.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -593,16 +597,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The results show that median household incomes are similar between census tracts that experienced blackouts and those that did not, suggesting that income level was not a strong factor in determining which areas lost power during the storm. However, we need to consider some limitations of this result, as they relate to the spatial scale and join methods used in our analysis. Some possible bias in the results may be related to the concentration of buildings in the central part of Houston affected by blackouts, as shown in the Homes Map, and the reliance on tract-level overlaps that generalize patterns and hide smaller spatial or demographic variations.</p>
 <p>Future research should employ finer spatial resolution (e.g., block group or individual building level) and could incorporate additional socioeconomic variables beyond income, including housing age, renter vs.&nbsp;owner occupancy, and racial demographics.</p>
 </section>
+<section id="github" class="level2">
+<h2 class="anchored" data-anchor-id="github">GitHub</h2>
+<p>The repository containing all of the code and data for this analysis can be found here: <a href="https://github.com/hylaea-miller/Identifying-the-impacts-of-extreme-weather.git">Identifying the impacts of extreme weather</a></p>
+</section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
-<p>Bureau, U. C. (2019). American Community Survey (ACS). Census.gov. https://www.census.gov/programs-surveys/acs</p>
 <p>DEITABASE. (2024, December 27). 2021 Texas Power Grid Failure – a preventable disaster. DEITABASE - a Community Resource for Merging DEI and CEE Education. https://limos.engin.umich.edu/deitabase/2024/12/27/2021-texas-power-grid-failure/</p>
-<p>Geofabrik Download Server. (2025). Download OpenStreetMap Data Extracts. https://download.geofabrik.de/</p>
 <p>Krauss, C., Fernandez, M., Penn, I., &amp; Rojas, R. (2021, February 21). How Texas’ Drive for Energy Independence Set It Up for Disaster. The New York Times. https://www.nytimes.com/2021/02/21/us/texas-electricity-ercot-blackouts.html</p>
-<p>NASA LAADS DAAC. (2017). Level-1 and Atmospheric Archive &amp; Distribution System Distributed Active Archive Center. https://ladsweb.modaps.eosdis.nasa.gov/</p>
 <p>Oliver, R. (2025, November 25). Homework Assignment 3. Github.io. https://eds-223-geospatial.github.io/assignments/HW3.html</p>
+<section id="data-sources" class="level3">
+<h3 class="anchored" data-anchor-id="data-sources">Data Sources</h3>
+<p><strong>VIIRS Night Lights Data (VNP46A1)</strong></p>
+<p>NASA LAADS DAAC. (n.d). Level-1 and Atmospheric Archive &amp; Distribution System Distributed Active Archive Center. https://ladsweb.modaps.eosdis.nasa.gov/</p>
+<p><strong>OpenStreetMap - Roads</strong></p>
+<p>Geofabrik Download Server. (2025). Download OpenStreetMap Data Extracts. https://download.geofabrik.de/</p>
+<p><strong>OpenStreetMap - Buildings</strong></p>
+<p>Geofabrik Download Server. (2025). Download OpenStreetMap Data Extracts. https://download.geofabrik.de/</p>
+<p><strong>U.S. Census Bureau - American Community Survey (ACS)</strong></p>
+<p>Bureau, U. C. (2025). <em>American Community Survey (ACS)</em>. Census.gov. https://www.census.gov/programs-surveys/acs</p>
 
 
+</section>
 </section>
 
 
@@ -615,13 +631,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{miller2025,
   author = {Miller, Hylaea},
   title = {Identifying the {Impacts} of {Extreme} {Weather}},
-  date = {2025-12-06},
+  date = {2025-12-12},
   url = {https://github.com/hylaea-miller/Identifying-the-impacts-of-extreme-weather.git},
   langid = {en}
 }
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-miller2025" class="csl-entry quarto-appendix-citeas" role="listitem">
 Miller, Hylaea. 2025. <span>“Identifying the Impacts of Extreme
-Weather.”</span> December 6, 2025. <a href="https://github.com/hylaea-miller/Identifying-the-impacts-of-extreme-weather.git">https://github.com/hylaea-miller/Identifying-the-impacts-of-extreme-weather.git</a>.
+Weather.”</span> December 12, 2025. <a href="https://github.com/hylaea-miller/Identifying-the-impacts-of-extreme-weather.git">https://github.com/hylaea-miller/Identifying-the-impacts-of-extreme-weather.git</a>.
 </div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
