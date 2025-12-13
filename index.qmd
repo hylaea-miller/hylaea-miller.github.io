@@ -17,8 +17,41 @@ about:
       href: mailto:hylaea@ucsb.edu
 ---
 
+## Profile
+
 Hi there, I'm Hylaea Miller! Master’s student in Environmental Data Science at the Bren School of Environmental Science & Management, UCSB. Experienced in Geographic Information Systems (GIS) and Remote Sensing. Proficient in map development and technical documentation; beginner in programming with Python and R.
 
 ## Education
 
-## Professional experience
+**Master of Environmental Data Science**  
+Bren School of Environmental Science & Management, University of California, Santa Barbara (UCSB)  
+*August 2025 - June 2026*
+
+**Bachelor of Science in Environmental Sciences**  
+University of Brasília (UnB), Brazil  
+*January 2020 - July 2024*
+
+
+## Professional Experience
+
+**Environmental Temporary Agent**  
+Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)  
+*January 2024 - July 2025 | Brasília, Brazil*
+
+- Supported socioenvironmental and scientific activities, conservation projects, sustainable use initiatives, and environmental protection programs
+
+**GIS Intern**  
+Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)  
+*June 2023 - December 2023 | Brasília, Brazil*
+
+- Developed geoprocessing activities, mapping, and georeferencing for degraded area recovery processes
+- Conducted environmental licensing, integrated fire management, monitoring, and inspection activities within the Planalto Central Environmental Protection Area (APA)
+- Applied remote sensing techniques for environmental monitoring and analysis
+
+**Research Intern**  
+Instituto de Pesquisa e Estatística do Distrito Federal (IPEDF)  
+*March 2023 - April 2023 | Brasília, Brazil*
+
+- Supported research on cartography, remote sensing, GIS, environmental planning, and urban development in the Brasília Metropolitan Area
+- Contributed to reports on traditional communities, climate change, carbon sequestration, carbon credits, alternative energy sources, water management, solid waste, landscape ecology, and ecological restoration
+- Organized tabular data and assisted in developing environmental indicators using Excel and data analysis tools

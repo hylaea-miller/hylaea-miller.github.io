@@ -39,8 +39,6 @@ In this blog post, I identify the impacts of this series of extreme winter storm
 
 ## Data
 
-### Sources
-
 **NIGHT LIGHTS DATA**
 
 Imagery from the Visible Infrared Imaging Radiometer Suite (VIIRS) distributed in 10x10 degree tiles in sinusoidal equal-area projection. Houston is included in two tiles: h08v05 and h08v06. We accessed tiles through NASA’s [Level-1 and Atmospheric Archive & Distribution System Distributed Active Archive Center (LAADS DAAC)](https://ladsweb.modaps.eosdis.nasa.gov/)

@@ -6,6 +6,7 @@ author: "Hylaea Miller"
 date: 12/10/2025
 image: baixo_alentejo.png
 description: A case study analysis of how geographical sampling bias in bird habitat models leads to flawed conservation decisions, with practical solutions for addressing data bias in environmental science.
+draft: true
 ---
 
 ## Introduction
