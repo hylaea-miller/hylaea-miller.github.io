@@ -136,7 +136,8 @@ map_before <- tm_shape(mosaic_7) +
   tm_raster(palette = pal_lights,
             style = "quantile", 
             title = "Light Intensity(nW cm⁻²sr⁻¹)") +
-  tm_title(text = "Night Lights\nFebruary 07, 2021 (Before storm)", size = 0.7)+
+  tm_title(text = "Night Lights\nFebruary 07, 2021 (Before storm)",
+           size = 0.7)+
   tm_graticules()+
   tm_layout(inner.margins = c(0.001, 0.001, 0.001, 0.001),
             component.autoscale = FALSE,
@@ -148,7 +149,8 @@ map_after <- tm_shape(mosaic_16) +
   tm_raster(palette = pal_lights,
             style = "quantile", 
             title = "Light Intensity(nW cm⁻²sr⁻¹)") +
-  tm_title(text = "Night Lights\nFebruary 16, 2021 (After storm)", size = 0.7)+
+  tm_title(text = "Night Lights\nFebruary 16, 2021 (After storm)",
+           size = 0.7)+
   tm_graticules() +
   tm_layout(inner.margins = c(0.001, 0.001, 0.001, 0.001),
             component.autoscale = FALSE,
@@ -310,7 +312,9 @@ To understand the socioeconomic characteristics of communities impacted by the p
 
 ```{r}
 #| output: true
-# Verify that both datasets use the same CRS and add a stop error if they don't
+
+# Verify that both datasets use the same CRS
+# Add a stop error if the CRS don't match
 if(st_crs(houston_income) != st_crs(homes_blackout)){
     stop("coordinate reference systems must match to join datasets")}
 
@@ -381,26 +385,28 @@ The repository containing all of the code and data for this analysis can be foun
 
 ## References
 
-DEITABASE. (2024, December 27). 2021 Texas Power Grid Failure – a preventable disaster. DEITABASE - a Community Resource for Merging DEI and CEE Education. https://limos.engin.umich.edu/deitabase/2024/12/27/2021-texas-power-grid-failure/
+Monahan, A., Baldwin, O., Guzman, L., & Nix, A. (2024, December 27). *2021 Texas Power Grid Failure – a preventable disaster*. DEITABASE. https://limos.engin.umich.edu/deitabase/2024/12/27/2021-texas-power-grid-failure/
 
-Krauss, C., Fernandez, M., Penn, I., & Rojas, R. (2021, February 21). How Texas' Drive for Energy Independence Set It Up for Disaster. The New York Times. https://www.nytimes.com/2021/02/21/us/texas-electricity-ercot-blackouts.html
+Krauss, C., Fernandez, M., Penn, I., & Rojas, R. (2021, February 21). *How Texas' Drive for Energy Independence Set It Up for Disaster.* The New York Times. https://www.nytimes.com/2021/02/21/us/texas-electricity-ercot-blackouts.html
 
-Oliver, R. (2025, November 25). Homework Assignment 3. Github.io. https://eds-223-geospatial.github.io/assignments/HW3.html
+Oliver, R. (2025, November 25). *Homework Assignment 3*. Geospatial Analysis & Remote Sensing. https://eds-223-geospatial.github.io/assignments/HW3.html
 
 ### Data Sources
 
 **VIIRS Night Lights Data (VNP46A1)**
 
-NASA LAADS DAAC. (n.d). Level-1 and Atmospheric Archive & Distribution System Distributed Active Archive Center. https://ladsweb.modaps.eosdis.nasa.gov/
+NASA LAADS DAAC. (n.d). L*evel-1 and Atmospheric Archive & Distribution System Distributed Active Archive Center*. EARTHDATA. https://ladsweb.modaps.eosdis.nasa.gov/
 
 **OpenStreetMap - Roads**
 
-Geofabrik Download Server. (2025). Download OpenStreetMap Data Extracts. https://download.geofabrik.de/
+‌OpenStreetMap(2025). *OpenStreetMap Data Extracts.* Geofabrik Download. https://download.geofabrik.de/
 
 **OpenStreetMap - Buildings**
 
-Geofabrik Download Server. (2025). Download OpenStreetMap Data Extracts. https://download.geofabrik.de/
+‌OpenStreetMap (2025). *OpenStreetMap Data Extracts.* Geofabrik Download. https://download.geofabrik.de/
 
 **U.S. Census Bureau - American Community Survey (ACS)**
 
 Bureau, U. C. (2025). *American Community Survey (ACS)*. Census.gov. https://www.census.gov/programs-surveys/acs
+
+‌
