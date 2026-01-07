@@ -1,7 +1,6 @@
 ---
 title: "Where We Look Determines What We Find: How Sampling Bias Threatens Steppe Bird Conservation"
 format: html
-draft: false
 author: "Hylaea Miller"
 date: 12/10/2025
 image: baixo_alentejo.png
