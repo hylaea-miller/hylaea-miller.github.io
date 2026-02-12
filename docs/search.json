@@ -299,5 +299,19 @@
     "title": "Where We Look Determines What We Find: How Sampling Bias Threatens Steppe Bird Conservation",
     "section": "References:",
     "text": "References:\nEllis-Soto, D., Chapman, M. & Locke, D.H. Historical redlining is associated with increasing geographical disparities in bird biodiversity sampling in the United States. Nat Hum Behav 7, 1869–1877 (2023). https://doi.org/10.1038/s41562-023-01688-5\nFrampton, G., Whaley, P., Bennett, M. et al. Principles and framework for assessing the risk of bias for studies included in comparative quantitative environmental systematic reviews. Environ Evid 11, 12 (2022). https://doi.org/10.1186/s13750-022-00264-0\nKonno, K., Gibbons, J., Lewis, R. et al. Potential types of bias when estimating causal effects in environmental research and how to interpret them. Environ Evid 13, 1 (2024). https://doi.org/10.1186/s13750-024-00324-7\nLeitão, P. J., Moreira, F., & Osborne, P. E. (2011). Effects of geographical data sampling bias on habitat models of species distributions: a case study with steppe birds in southern Portugal. International Journal of Geographical Information Science, 25(3), 439–454. https://doi.org/10.1080/13658816.2010.531020\nOlteanu, A., Castillo, C., Diaz, F., & Kıcıman, E. (2019). Social data: Biases, methodological pitfalls, and ethical boundaries. Frontiers in Big Data, 2, 13. https://doi.org/10.3389/fdata.2019.00013\nVera, L. A., Walker, D., Murphy, M., Mansfield, B., Siad, L. M., & Ogden, J. (2019). When data justice and environmental justice meet: formulating a response to extractive logic through environmental data justice. Information, Communication & Society, 22(7), 1012–1028. https://doi.org/10.1080/1369118X.2019.1596293"
+  },
+  {
+    "objectID": "posts/first-blog-post/index.html",
+    "href": "posts/first-blog-post/index.html",
+    "title": "My first blog post!",
+    "section": "",
+    "text": "This is where the body of my blog post begins! I’m going to add a footnote here1. Here’s an inline footnote2\nI’m going to cite myself here (Miller 2025)\nLet’s cite a paper using it’s DOI [(Genuino et al. 2023)]"
+  },
+  {
+    "objectID": "posts/first-blog-post/index.html#footnotes",
+    "href": "posts/first-blog-post/index.html#footnotes",
+    "title": "My first blog post!",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nHere is some additional context that might be helpful↩︎\nhere’s an inline footnote↩︎"
   }
 ]

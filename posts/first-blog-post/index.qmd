@@ -14,6 +14,7 @@ citation:
 draft: true
 draft-mode: linked
 bibliography: references.bib
+published: false
 ---
 
 This is where the body of my blog post begins! I'm going to add a footnote here[^1]. Here's an inline footnote[^2]
