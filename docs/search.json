@@ -128,9 +128,9 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "About Me",
     "section": "",
-    "text": "Here’s where I describe what I do professionally"
+    "text": "Brazil to USA\n\n\n2020-2024: Bachelor’s\n2025-Present: Master’s\n\n\n\nMy path in environmental science began in Brasília and brought me to UC Santa Barbara’s Bren School.\nMy journey started at the University of Brasília (UnB), where I earned my Bachelor’s in Environmental Science from 2020 to 2024.\nDuring my undergraduate years, I discovered my passion for geospatial analysis and remote sensing.\nIn 2025, I joined the Master’s program in Environmental Data Science at UCSB’s Bren School."
   },
   {
     "objectID": "about.html#what-i-do-for-work",
@@ -242,7 +242,7 @@
     "href": "posts.html",
     "title": "Projects",
     "section": "",
-    "text": "Social dimensions of Eaton and Palisades fires\n\n\n\nGeospatial\n\nPython\n\n\n\nExploring the effect of the Eaton and Palisades Fires on Elderly residents in Los Angeles County in 2025.\n\n\n\nHylaea Miller\n\n\nDec 12, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nIdentifying the Impacts of Extreme Weather\n\n\n\nGeospatial\n\nR\n\ndata-viz\n\n\n\nAnalysis of Houston Blackouts and its socioeconomic impacts\n\n\n\nHylaea Miller\n\n\nDec 12, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhere We Look Determines What We Find: How Sampling Bias Threatens Steppe Bird Conservation\n\n\nA case study analysis of how geographical sampling bias in bird habitat models leads to flawed conservation decisions, with practical solutions for addressing data bias in…\n\n\n\nHylaea Miller\n\n\nDec 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnalyzing Deforestation Drivers in MATOPIBA, Brazil\n\n\n\nStatistics\n\nR\n\ndata-viz\n\n\n\nExploring Gamma regression modeling to quantify native vegetation loss and identify key deforestation drivers including farming, fire, mining, and urbanization.\n\n\n\nHylaea Miller\n\n\nDec 4, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nMy first blog post!\n\n\n\nMEDS\n\ndata-viz\n\n\n\na short desciption of this blog post\n\n\n\nHylaea Miller\n\n\nNov 12, 2025\n\n\n\n\n\n\nNo matching items"
+    "text": "Social dimensions of Eaton and Palisades fires\n\n\n\nGeospatial\n\nPython\n\n\n\nExploring the effect of the Eaton and Palisades Fires on Elderly residents in Los Angeles County in 2025.\n\n\n\nHylaea Miller\n\n\nDec 12, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nIdentifying the Impacts of Extreme Weather\n\n\n\nGeospatial\n\nR\n\ndata-viz\n\n\n\nAnalysis of Houston Blackouts and its socioeconomic impacts\n\n\n\nHylaea Miller\n\n\nDec 12, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnalyzing Deforestation Drivers in MATOPIBA, Brazil\n\n\n\nStatistics\n\nR\n\ndata-viz\n\n\n\nExploring Gamma regression modeling to quantify native vegetation loss and identify key deforestation drivers including farming, fire, mining, and urbanization.\n\n\n\nHylaea Miller\n\n\nDec 4, 2025\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/242-blog-post/index.html",
@@ -301,17 +301,73 @@
     "text": "References:\nEllis-Soto, D., Chapman, M. & Locke, D.H. Historical redlining is associated with increasing geographical disparities in bird biodiversity sampling in the United States. Nat Hum Behav 7, 1869–1877 (2023). https://doi.org/10.1038/s41562-023-01688-5\nFrampton, G., Whaley, P., Bennett, M. et al. Principles and framework for assessing the risk of bias for studies included in comparative quantitative environmental systematic reviews. Environ Evid 11, 12 (2022). https://doi.org/10.1186/s13750-022-00264-0\nKonno, K., Gibbons, J., Lewis, R. et al. Potential types of bias when estimating causal effects in environmental research and how to interpret them. Environ Evid 13, 1 (2024). https://doi.org/10.1186/s13750-024-00324-7\nLeitão, P. J., Moreira, F., & Osborne, P. E. (2011). Effects of geographical data sampling bias on habitat models of species distributions: a case study with steppe birds in southern Portugal. International Journal of Geographical Information Science, 25(3), 439–454. https://doi.org/10.1080/13658816.2010.531020\nOlteanu, A., Castillo, C., Diaz, F., & Kıcıman, E. (2019). Social data: Biases, methodological pitfalls, and ethical boundaries. Frontiers in Big Data, 2, 13. https://doi.org/10.3389/fdata.2019.00013\nVera, L. A., Walker, D., Murphy, M., Mansfield, B., Siad, L. M., & Ogden, J. (2019). When data justice and environmental justice meet: formulating a response to extractive logic through environmental data justice. Information, Communication & Society, 22(7), 1012–1028. https://doi.org/10.1080/1369118X.2019.1596293"
   },
   {
-    "objectID": "posts/first-blog-post/index.html",
-    "href": "posts/first-blog-post/index.html",
+    "objectID": "post_draft/first-blog-post/index.html",
+    "href": "post_draft/first-blog-post/index.html",
     "title": "My first blog post!",
     "section": "",
     "text": "This is where the body of my blog post begins! I’m going to add a footnote here1. Here’s an inline footnote2\nI’m going to cite myself here (Miller 2025)\nLet’s cite a paper using it’s DOI [(Genuino et al. 2023)]"
   },
   {
-    "objectID": "posts/first-blog-post/index.html#footnotes",
-    "href": "posts/first-blog-post/index.html#footnotes",
+    "objectID": "post_draft/first-blog-post/index.html#footnotes",
+    "href": "post_draft/first-blog-post/index.html#footnotes",
     "title": "My first blog post!",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nHere is some additional context that might be helpful↩︎\nhere’s an inline footnote↩︎"
+  },
+  {
+    "objectID": "about.html#from-brazil-to-california",
+    "href": "about.html#from-brazil-to-california",
+    "title": "About Me",
+    "section": "",
+    "text": "Brazil to USA\n\n\n2020-2024: Bachelor’s\n2025-Present: Master’s\n\n\n\nMy path in environmental science began in Brasília and brought me to UC Santa Barbara’s Bren School.\nMy journey started at the University of Brasília (UnB), where I earned my Bachelor’s in Environmental Science from 2020 to 2024.\nDuring my undergraduate years, I discovered my passion for geospatial analysis and remote sensing.\nIn 2025, I joined the Master’s program in Environmental Data Science at UCSB’s Bren School."
+  },
+  {
+    "objectID": "about.html#building-technical-skills",
+    "href": "about.html#building-technical-skills",
+    "title": "About Me",
+    "section": "Building Technical Skills",
+    "text": "Building Technical Skills\n\n\nKey Skills\n\nGIS & Remote Sensing\nPython & R\nData Visualization\nDatabase Management\nSpatial Analysis\n\n\n\n\nGIS became my primary tool for understanding environmental patterns across protected areas in Central Brazil.\nRemote Sensing allowed me to analyze satellite data, monitoring changes across large areas.\nProgramming with Python and R opened new doors for automation and reproducible workflows.\nData visualization helps me communicate complex findings to diverse audiences."
+  },
+  {
+    "objectID": "about.html#research-experience",
+    "href": "about.html#research-experience",
+    "title": "About Me",
+    "section": "Research Experience",
+    "text": "Research Experience\n\n\nPIBIC Research\nSep 2023 - Aug 2024\nUniversity of Brasília\nSatellite Rainfall Data Accuracy in Central Brazil\n\n\n\nMy PIBIC research project evaluated satellite rainfall data accuracy in Central Brazil.\nThis work involved extracting data from multiple satellite sources and performing statistical analyses.\nThe findings helped assess which satellite products are most reliable for the Cerrado region."
+  },
+  {
+    "objectID": "about.html#icmbio-experience",
+    "href": "about.html#icmbio-experience",
+    "title": "About Me",
+    "section": "ICMBio Experience",
+    "text": "ICMBio Experience\n\n\nICMBio Positions\nEnvironmental Agent\nJan 2024 - Jul 2025\nGIS Intern\nJun 2023 - Dec 2023\nPlanalto Central APA\n\n\n\nAs Environmental Agent, I supported geoprocessing activities for preservation projects.\nAs GIS Intern, I organized georeferenced information for the entire APA territory.\nMy responsibilities included producing maps and maintaining spatial databases.\nThis experience taught me how spatial data informs conservation policy."
+  },
+  {
+    "objectID": "about.html#urban-planning-project",
+    "href": "about.html#urban-planning-project",
+    "title": "About Me",
+    "section": "Urban Planning Project",
+    "text": "Urban Planning Project\n\n\nExtension Project\nApr - Dec 2022\nUnB\nMobility Analysis in Paranoá & UN SDGs\n\n\n\nI analyzed mobility in Paranoá Administrative Region and its alignment with UN 2030 SDGs.\nI conducted surveys, transferred data to databases, and digitized urban roads.\nThis work revealed how spatial configuration affects accessibility and social equity.\nThe project demonstrated how GIS tools address real community needs."
+  },
+  {
+    "objectID": "about.html#government-research",
+    "href": "about.html#government-research",
+    "title": "About Me",
+    "section": "Government Research",
+    "text": "Government Research\n\n\nIPEDF Internship\nMar - May 2023\nInstitute of Research and Statistics\nEnvironmental Research in Brasília Metro Area\n\n\n\nAt IPEDF, I assisted in studies related to cartography, remote sensing, and urban planning.\nWorking with government data taught me the importance of accuracy and documentation.\nThis experience bridged technical skills with real-world environmental challenges."
+  },
+  {
+    "objectID": "about.html#bren-school",
+    "href": "about.html#bren-school",
+    "title": "About Me",
+    "section": "Bren School",
+    "text": "Bren School\n\n\nUCSB Bren School\nMaster’s in Environmental Data Science\n2025 - Present\nLeading Environmental Program\n\n\n\nThe Master’s program combines environmental science with advanced computational methods.\nThe program focuses on data science, machine learning, and statistical modeling for environmental challenges.\nI’m learning to build reproducible workflows and apply machine learning to environmental datasets.\nThis training prepares graduates for careers in consulting, government, NGOs, and research.\nMy goal is to apply these skills to environmental protection and policy."
+  },
+  {
+    "objectID": "about.html#looking-forward",
+    "href": "about.html#looking-forward",
+    "title": "About Me",
+    "section": "Looking Forward",
+    "text": "Looking Forward\n\n\nFuture Goals\n\nEnvironmental data analysis\nProject tracking\nDatabase management\nPolicy support\n\n\n\n\nMy path forward combines technical skills with commitment to environmental protection.\nI’m interested in positions using data to track progress and support cleanup projects.\nThe combination of Brazilian experience and California training positions me to bridge analysis with impact."
   }
 ]

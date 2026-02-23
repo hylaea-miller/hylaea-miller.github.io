@@ -1,11 +1,209 @@
 ---
-title: "About"
+title: "About Me"
+format: 
+  closeread-html:
+    css: custom-style.css
 ---
 
-## What i do for work
 
-Here's where I describe what I do professionally
+## From Brazil to California {.section}
 
-## What I do for fun
+:::{.sticky-col}
+::: {.sticky-panel}
+![Brazil to USA](https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/320px-Flag_of_Brazil.svg.png)
 
-Describe
+**2020-2024**: Bachelor's  
+**2025-Present**: Master's
+:::
+:::
+
+:::{.narrative-col}
+
+My path in environmental science began in Brasília and brought me to UC Santa Barbara's Bren School.
+
+[My journey started at the University of Brasília (UnB)]{.focus-text}, where I earned my Bachelor's in Environmental Science from 2020 to 2024.
+
+[During my undergraduate years]{.focus-text}, I discovered my passion for geospatial analysis and remote sensing.
+
+[In 2025, I joined the Master's program]{.focus-text} in Environmental Data Science at UCSB's Bren School.
+
+:::
+
+## Building Technical Skills {.section}
+
+:::{.sticky-col}
+::: {.sticky-panel}
+### Key Skills
+
+- GIS & Remote Sensing
+- Python & R
+- Data Visualization
+- Database Management
+- Spatial Analysis
+:::
+:::
+
+:::{.narrative-col}
+
+[**GIS**]{.focus-text} became my primary tool for understanding environmental patterns across protected areas in Central Brazil.
+
+[**Remote Sensing**]{.focus-text} allowed me to analyze satellite data, monitoring changes across large areas.
+
+[**Programming**]{.focus-text} with Python and R opened new doors for automation and reproducible workflows.
+
+[**Data visualization**]{.focus-text} helps me communicate complex findings to diverse audiences.
+
+:::
+
+## Research Experience {.section}
+
+:::{.sticky-col}
+::: {.sticky-panel}
+### PIBIC Research
+
+**Sep 2023 - Aug 2024**
+
+University of Brasília
+
+*Satellite Rainfall Data Accuracy in Central Brazil*
+:::
+:::
+
+:::{.narrative-col}
+
+[My PIBIC research project]{.focus-text} evaluated satellite rainfall data accuracy in Central Brazil.
+
+[This work involved]{.focus-text} extracting data from multiple satellite sources and performing statistical analyses.
+
+[The findings]{.focus-text} helped assess which satellite products are most reliable for the Cerrado region.
+
+:::
+
+## ICMBio Experience {.section}
+
+:::{.sticky-col}
+::: {.sticky-panel}
+### ICMBio Positions
+
+**Environmental Agent**  
+Jan 2024 - Jul 2025
+
+**GIS Intern**  
+Jun 2023 - Dec 2023
+
+*Planalto Central APA*
+:::
+:::
+
+:::{.narrative-col}
+
+[As Environmental Agent]{.focus-text}, I supported geoprocessing activities for preservation projects.
+
+[As GIS Intern]{.focus-text}, I organized georeferenced information for the entire APA territory.
+
+[My responsibilities]{.focus-text} included producing maps and maintaining spatial databases.
+
+[This experience]{.focus-text} taught me how spatial data informs conservation policy.
+
+:::
+
+## Urban Planning Project {.section}
+
+:::{.sticky-col}
+::: {.sticky-panel}
+### Extension Project
+
+**Apr - Dec 2022**
+
+UnB
+
+*Mobility Analysis in Paranoá & UN SDGs*
+:::
+:::
+
+:::{.narrative-col}
+
+[I analyzed mobility]{.focus-text} in Paranoá Administrative Region and its alignment with UN 2030 SDGs.
+
+[I conducted surveys]{.focus-text}, transferred data to databases, and digitized urban roads.
+
+[This work revealed]{.focus-text} how spatial configuration affects accessibility and social equity.
+
+[The project demonstrated]{.focus-text} how GIS tools address real community needs.
+
+:::
+
+## Government Research {.section}
+
+:::{.sticky-col}
+::: {.sticky-panel}
+### IPEDF Internship
+
+**Mar - May 2023**
+
+Institute of Research and Statistics
+
+*Environmental Research in Brasília Metro Area*
+:::
+:::
+
+:::{.narrative-col}
+
+[At IPEDF]{.focus-text}, I assisted in studies related to cartography, remote sensing, and urban planning.
+
+[Working with government data]{.focus-text} taught me the importance of accuracy and documentation.
+
+[This experience]{.focus-text} bridged technical skills with real-world environmental challenges.
+
+:::
+
+## Bren School {.section}
+
+:::{.sticky-col}
+::: {.sticky-panel}
+### UCSB Bren School
+
+**Master's in Environmental Data Science**
+
+2025 - Present
+
+*Leading Environmental Program*
+:::
+:::
+
+:::{.narrative-col}
+
+[The Master's program]{.focus-text} combines environmental science with advanced computational methods.
+
+[The program focuses]{.focus-text} on data science, machine learning, and statistical modeling for environmental challenges.
+
+[I'm learning]{.focus-text} to build reproducible workflows and apply machine learning to environmental datasets.
+
+[This training]{.focus-text} prepares graduates for careers in consulting, government, NGOs, and research.
+
+[My goal]{.focus-text} is to apply these skills to environmental protection and policy.
+
+:::
+
+## Looking Forward {.section}
+
+:::{.sticky-col}
+::: {.sticky-panel}
+### Future Goals
+
+- Environmental data analysis
+- Project tracking
+- Database management
+- Policy support
+:::
+:::
+
+:::{.narrative-col}
+
+[My path forward]{.focus-text} combines technical skills with commitment to environmental protection.
+
+[I'm interested]{.focus-text} in positions using data to track progress and support cleanup projects.
+
+[The combination]{.focus-text} of Brazilian experience and California training positions me to bridge analysis with impact.
+
+:::
