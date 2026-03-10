@@ -20,7 +20,7 @@ execute:
 format:
   html:
     code-fold: true
-image: "night_lights.png"
+image: "Houston.jpg"
 ---
 
 ## Research Question

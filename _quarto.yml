@@ -13,8 +13,8 @@ website:
         text: Home
       #- about.qmd
       - href: posts.qmd
-      - href: resources.qmd
-        text: Resources
+      #- href: resources.qmd
+        text: Projects
 
 format:
   html:
