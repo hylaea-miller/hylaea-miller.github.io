@@ -1,10 +1,9 @@
 data/
 
-post/fist-blog-post
-
 posts/220-blog-post/data
 posts/222-blog-post/data
 posts/223-blog-post/data
+posts/241-blog-post
 .Rproj.user
 .Rhistory
 .Rdata
