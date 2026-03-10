@@ -8,25 +8,43 @@ $floral_white: #FFFCF2;
 $fundo_branco: #FBFBFB;
 $black: #353535;
 $grey: #717171;
+$off_white: #FAFAFA;
+$text_dark: #2A2A2A;
+$skin: #F8F9FA;
+$photo: #764039;
+$back: #4D5664;
+$payne2: #606F84;
+$cream: #C6C9C8;
+
 // import google font
 @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Archivo+Black&family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pathway+Gothic+One&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
 // fonts
 $archivo_black: "Archivo Black", sans-serif;
+$font-family-sans-serif: "Inter", -apple-system, sans-serif;
+$font-family-serif: "Lora", Georgia, serif;
+// Set headings font family
+$headings-font-family: "EB Garamond", serif;
 
 // define quarto variables
-$body-bg: $fundo_branco;
-$navbar-bg: $cambridge_blue;
-$navbar-fg: $black;
-$navbar-hl: $payne_gray;
+$body-bg: $off_white;
+$navbar-bg: $payne2;
+$navbar-fg: $text_dark;
+$navbar-hl: $back;
+$link-color: $payne_gray;
+$body-color: $text_dark;
+$headings-color: $payne2;
 
-// Set headings font family
-$headings-font-family: $archivo_black;
+
 
 /*-- scss:rules --*/
 h1, h2, h3, h4{
   letter-spacing: 1px;
-  font-weight: 800 !important;
+  font-weight: 600 !important;
 }
 
 .navbar-brand img {
@@ -35,7 +53,8 @@ h1, h2, h3, h4{
 }
 
 .title {
-  color: $slate_gray;
+  color: $payne2;
+  font-weight: 600;
 }
   
 .center-text {
