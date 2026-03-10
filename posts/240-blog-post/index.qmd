@@ -15,7 +15,7 @@ execute:
   echo: true
   message: false
   warning: false
-image: "images/mine-pit.png"
+image: "images/mine-pit.jpg"
 categories: [R, data-viz]
 ---
 
