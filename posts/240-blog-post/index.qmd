@@ -55,7 +55,7 @@ All colors were chosen from a warm, earthy palette inspired by soil and mineral 
 
 **Typography**
 
-I used *Cormorant Garamond and EB Garamond* for titles and subtitles and *Caveat* for annotations and labels. Both fonts fit the field-notebook aesthetic, *Garamond* brings an scientific feel while *Caveat* adds a hand-drawn style to the narrative elements. Text weight and size hierarchy guide the reader from title → section heading → annotation → data label.
+I used *Cormorant Garamond* and *EB Garamond* for titles and subtitles, and *Caveat* for annotations and labels. Both fonts fit the field-notebook aesthetic, *Garamond* brings an scientific feel while *Caveat* adds a hand-drawn style to the narrative elements. Text weight and size hierarchy guide the reader from title → section heading → annotation → data label.
 
 **General design and primary message**
 

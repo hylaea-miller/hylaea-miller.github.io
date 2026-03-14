@@ -1,6 +1,7 @@
 ---
 title: "Hylaea Miller"
 image: headshot_crop.JPEG
+toc: false
 
 about: 
   template: trestles
@@ -17,41 +18,36 @@ about:
       href: mailto:hylaea@ucsb.edu
 ---
 
-## Profile
+### Profile
 
 Hi there, I'm Hylaea Miller! I’m a Master’s student in Environmental Data Science at the Bren School of Environmental Science & Management at UCSB. I have experience in GIS, Remote Sensing, Environmental Systems Modeling, technical documentation, data visualization, and programming in Python and R.
 
-## Education
+::: panel-tabset
+### Education
 
-**Master of Environmental Data Science**  
-Bren School of Environmental Science & Management, University of California, Santa Barbara (UCSB)  
-*August 2025 - June 2026*
+**Master, Environmental Data Science** (June 2026) \| Bren School of Environmental Science & Management \| University of California, Santa Barbara (UCSB)
 
-**Bachelor of Science in Environmental Sciences**  
-University of Brasília (UnB), Brazil  
-*January 2020 - July 2024*
+**Bachelor in Environmental Sciences** (October 2024) \| University of Brasília (UnB), Brazil
 
+### Professional Experience
 
-## Professional Experience
+**Environmental Temporary Agent**\
+Chico Mendes Institute for Biodiversity Conservation (ICMBio)\
+*January 2024 - July 2025 \| Brasília, Brazil*
 
-**Environmental Temporary Agent**  
-Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)  
-*January 2024 - July 2025 | Brasília, Brazil*
+**GIS Intern**\
+Chico Mendes Institute for Biodiversity Conservation (ICMBio)\
+*June 2023 - December 2023 \| Brasília, Brazil*
 
-- Supported socioenvironmental and scientific activities, conservation projects, sustainable use initiatives, and environmental protection programs
+**Environmental Research Intern**\
+Institute of Research and Statistics of the Federal District (IPEDF)\
+*March 2023 - April 2023 \| Brasília, Brazil*
 
-**GIS Intern**  
-Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)  
-*June 2023 - December 2023 | Brasília, Brazil*
+### Project/Research
 
-- Developed geoprocessing activities, mapping, and georeferencing for degraded area recovery processes
-- Conducted environmental licensing, integrated fire management, monitoring, and inspection activities within the Planalto Central Environmental Protection Area (APA)
-- Applied remote sensing techniques for environmental monitoring and analysis
+**Turning Data into Action. An R Package for the Wildfire Resilience Index** \| Master’s Capstone (Current) \| Collaborators: National Center for Ecological Analysis and Synthesis (NCEAS) \| [Repository](https://github.com/ignitR-package)
 
-**Research Intern**  
-Instituto de Pesquisa e Estatística do Distrito Federal (IPEDF)  
-*March 2023 - April 2023 | Brasília, Brazil*
+**Detection of changes in land use in the AMACRO and MATOPIBA special territories** \| Undergraduate Thesis \| [Revista Brasileira de Geomática(RBGEO)](https://periodicos.utfpr.edu.br/rbgeo/article/view/19946) \| Advisor: Gustavo Macedo de Mello Baptista, PhD.
 
-- Supported research on cartography, remote sensing, GIS, environmental planning, and urban development in the Brasília Metropolitan Area
-- Contributed to reports on traditional communities, climate change, carbon sequestration, carbon credits, alternative energy sources, water management, solid waste, landscape ecology, and ecological restoration
-- Organized tabular data and assisted in developing environmental indicators using Excel and data analysis tools
+**Analysis of Satellite‑Derived Rainfall Data in Watersheds of the Cerrado Biome** \| Undergraduate Research Fellowship (2024) \| Advisor: Rejane Ennes Cicerelli, Ph.D.
+:::
