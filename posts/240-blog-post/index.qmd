@@ -21,7 +21,7 @@ categories: [R, data-viz]
 
 Brazil holds vast mineral reserves. The Cerrado, Atlantic Forest, and Amazon, three of the country’s most biodiverse biomes, together cover about 85% of its territory, and beneath them lie minerals essential to global development. Over the past four decades, mining has expanded, leaving an increasing footprint on these ecosystems. I wanted to understand not only how much land has been converted to mining, but also where, which minerals, and how their composition has changed over time. My questions were:
 
--   How has mined area grown across each biome since 1985?
+-   How has the mined area grown across each biome since 1985?
 
 -   What are the differences in mineral composition in each biome’s extraction in 2024?
 
@@ -33,7 +33,7 @@ The data comes from MapBiomas Brasil[^1], which provides annual land‑use and l
 
     ‌
 
-![](images/Infographic_hylaea2.png){fig-alt="Infographic showing mining expansion across Brazil's Cerrado, Atlantic Forest, and Amazon biomes from 1985 to 2024. Includes area charts per biome, stacked bar charts of mineral composition in 2024, and an alluvial chart comparing mineral composition between 1985 and 2024. The Amazon shows the sharpest growth, and Iron and Aluminum together account for 46% of all mined area by 2024"}
+![](images/Infographic_hylaea2-01.png){fig-alt="Infographic showing mining expansion across Brazil's Cerrado, Atlantic Forest, and Amazon biomes from 1985 to 2024. Includes area charts per biome, stacked bar charts of mineral composition in 2024, and an alluvial chart comparing mineral composition between 1985 and 2024. The Amazon shows the sharpest growth, and Iron and Aluminum together account for 46% of all mined area by 2024"}
 
 ## Design Decisions
 
