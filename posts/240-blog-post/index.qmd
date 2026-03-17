@@ -33,7 +33,7 @@ The data comes from MapBiomas Brasil[^1], which provides annual land‑use and l
 
     ‌
 
-![](images/Infographic_hylaea.png){fig-alt="Infographic showing mining expansion across Brazil's Cerrado, Atlantic Forest, and Amazon biomes from 1985 to 2024. Includes area charts per biome, stacked bar charts of mineral composition in 2024, and an alluvial chart comparing mineral composition between 1985 and 2024. The Amazon shows the sharpest growth, and Iron and Aluminum together account for 46% of all mined area by 2024"}
+![](images/Infographic_hylaea2.png){fig-alt="Infographic showing mining expansion across Brazil's Cerrado, Atlantic Forest, and Amazon biomes from 1985 to 2024. Includes area charts per biome, stacked bar charts of mineral composition in 2024, and an alluvial chart comparing mineral composition between 1985 and 2024. The Amazon shows the sharpest growth, and Iron and Aluminum together account for 46% of all mined area by 2024"}
 
 ## Design Decisions
 
