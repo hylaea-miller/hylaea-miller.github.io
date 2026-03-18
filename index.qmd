@@ -1,12 +1,12 @@
 ---
 title: "Hylaea Miller"
-image: headshot_crop.JPEG
+image: images/image_park.JPEG
 toc: false
 
 about: 
   template: trestles
   image-shape: round
-  image-width: 17em
+  image-width: 26em
   links: 
     - text: LinkedIn
       icon: Linkedin
