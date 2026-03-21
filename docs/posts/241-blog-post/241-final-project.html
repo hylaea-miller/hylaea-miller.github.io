@@ -316,8 +316,45 @@ Y_{it} = \alpha_i + \gamma_t + \beta * HSR_i + X_i\delta + \epsilon_i
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">region =</span> <span class="fu">as.factor</span>(region),</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">lat_band =</span> <span class="fu">as.factor</span>(lat_band),</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">city_scale =</span> <span class="fu">as.factor</span>(city_scale),</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">hsr_open_year =</span> <span class="fu">na_if</span>(hsr_open_year, <span class="cn">Inf</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">hsr_open_year =</span> <span class="fu">na_if</span>(hsr_open_year, <span class="cn">Inf</span>))</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(hsr_data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 5,643
+Columns: 32
+$ city_id                    &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…
+$ year                       &lt;dbl&gt; 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2…
+$ region                     &lt;fct&gt; East, East, East, East, East, East, East, E…
+$ province_id                &lt;dbl&gt; 16, 11, 21, 12, 14, 22, 22, 23, 22, 10, 8, …
+$ longitude                  &lt;dbl&gt; 115.3685, 115.3685, 115.3685, 115.3685, 115…
+$ latitude                   &lt;dbl&gt; 33.58173, 33.58173, 33.58173, 33.58173, 33.…
+$ lat_band                   &lt;fct&gt; Middle, Middle, Middle, Middle, Middle, Mid…
+$ urbanization               &lt;dbl&gt; 0.4561922, 0.4561922, 0.4561922, 0.4561922,…
+$ city_scale                 &lt;fct&gt; SmallMed_TypeII, SmallMed_TypeII, SmallMed_…
+$ hsr_open_year              &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
+$ treated_city               &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+$ hsr_open                   &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+$ hsr                        &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+$ event_time                 &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
+$ gdp_growth_pct             &lt;dbl&gt; 17.478207, 4.134449, 8.066696, -2.208690, 1…
+$ share_primary_pct          &lt;dbl&gt; 11.234107, 10.776536, 16.307881, 21.665077,…
+$ share_secondary_pct        &lt;dbl&gt; 41.49615, 60.74571, 56.43363, 58.80396, 30.…
+$ population_10k             &lt;dbl&gt; 163.33633, 476.97134, 317.67522, 282.45103,…
+$ urban_road_10k_m2          &lt;dbl&gt; 311.0096, 840.5922, NA, 195.3256, 2710.7530…
+$ pm25                       &lt;dbl&gt; 36.01086, 31.90835, 56.64050, 33.62142, 29.…
+$ green_coverage_pct         &lt;dbl&gt; 38.70042, 15.82521, 32.79725, 45.60479, 42.…
+$ wind_speed                 &lt;dbl&gt; 1.386235, 2.205834, 2.281157, 2.122216, 2.4…
+$ precip_mm                  &lt;dbl&gt; 1567.2956, 1082.6532, 778.5542, 1331.5457, …
+$ humidity_pct               &lt;dbl&gt; 51.30022, 55.13911, 65.77864, 72.68315, 79.…
+$ temperature_c              &lt;dbl&gt; 21.14684, 19.26411, 15.94478, 10.78163, 20.…
+$ H                          &lt;dbl&gt; 1.0582321, 1.1587507, 1.7682046, 1.0430431,…
+$ light                      &lt;dbl&gt; 3.0665473, 2.2543940, 2.3329006, 10.0784202…
+$ passenger_flow_10m         &lt;dbl&gt; 0.7427747, 0.0000000, 13.7673256, 9.5306086…
+$ species_richness_level     &lt;dbl&gt; 337.9585, 337.9585, 337.9585, 337.9585, 337…
+$ avian_increment_ratio_natl &lt;dbl&gt; 0.15184283, 0.25087155, 0.38388109, 0.03301…
+$ avian_increment_count      &lt;dbl&gt; NA, 10, 8, 13, 2, 9, 2, 11, 7, 3, 5, 6, 6, …
+$ avian_increment_ratio_prov &lt;dbl&gt; NA, 0.29316210, 0.36112894, NA, 0.36457653,…</code></pre>
+</div>
 </div>
 <p>We begin by preparing the dataset to ensure that all variables are correctly formatted for analysis. Variables such as region, latitude band, and city scale are converted to factors, as they represent categorical groupings rather than continuous values. This step is important for both accurate modeling and proper interpretation of results. We also address data quality issues by replacing any infinite values in the HSR opening year variable with missing values (NA). This prevents errors in later steps and ensures that the dataset can be processed reliably during model estimation. Finally, we use the <code>glimpse()</code> function to inspect the structure of the dataset. This allows us to verify that variables have the expected types and formats, providing a quick quality check before proceeding with the analysis.</p>
 </section>
@@ -327,45 +364,45 @@ Y_{it} = \alpha_i + \gamma_t + \beta * HSR_i + X_i\delta + \epsilon_i
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Column 1: Economic controls</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>m1 <span class="ot">&lt;-</span> <span class="fu">feols</span>(</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  avian_increment_ratio_natl <span class="sc">~</span> hsr <span class="sc">+</span> gdp_growth_pct <span class="sc">+</span> share_primary_pct <span class="sc">+</span> share_secondary_pct <span class="sc">|</span> city_id <span class="sc">+</span> year,</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> hsr_data,</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">cluster =</span> <span class="sc">~</span>city_id</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Column 2: Add demographic control</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>m2 <span class="ot">&lt;-</span> <span class="fu">feols</span>(</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  avian_increment_ratio_natl <span class="sc">~</span> hsr <span class="sc">+</span> gdp_growth_pct <span class="sc">+</span> share_primary_pct <span class="sc">+</span> share_secondary_pct <span class="sc">+</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    population_10k <span class="sc">|</span> city_id <span class="sc">+</span> year,</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> hsr_data,</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">cluster =</span> <span class="sc">~</span>city_id</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Column 3: Add infrastructure control</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>m3 <span class="ot">&lt;-</span> <span class="fu">feols</span>(</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  avian_increment_ratio_natl <span class="sc">~</span> hsr <span class="sc">+</span> gdp_growth_pct <span class="sc">+</span> share_primary_pct <span class="sc">+</span> share_secondary_pct <span class="sc">+</span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    population_10k <span class="sc">+</span> urban_road_10k_m2 <span class="sc">|</span> city_id <span class="sc">+</span> year,</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> hsr_data,</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>  <span class="at">cluster =</span> <span class="sc">~</span>city_id</span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Column 4: Add environmental controls</span></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>m4 <span class="ot">&lt;-</span> <span class="fu">feols</span>(</span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>  avian_increment_ratio_natl <span class="sc">~</span> hsr <span class="sc">+</span> gdp_growth_pct <span class="sc">+</span> share_primary_pct <span class="sc">+</span> share_secondary_pct <span class="sc">+</span></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>    population_10k <span class="sc">+</span> urban_road_10k_m2 <span class="sc">+</span> pm25 <span class="sc">+</span> green_coverage_pct <span class="sc">|</span> city_id <span class="sc">+</span> year,</span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> hsr_data,</span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>  <span class="at">cluster =</span> <span class="sc">~</span>city_id</span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Column 5: Full model with weather controls</span></span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>m5 <span class="ot">&lt;-</span> <span class="fu">feols</span>(</span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>  avian_increment_ratio_natl <span class="sc">~</span> hsr <span class="sc">+</span> gdp_growth_pct <span class="sc">+</span> share_primary_pct <span class="sc">+</span> share_secondary_pct <span class="sc">+</span></span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>    population_10k <span class="sc">+</span> urban_road_10k_m2 <span class="sc">+</span> pm25 <span class="sc">+</span> green_coverage_pct <span class="sc">+</span></span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>    wind_speed <span class="sc">+</span> precip_mm <span class="sc">+</span> humidity_pct <span class="sc">+</span> temperature_c <span class="sc">|</span> city_id <span class="sc">+</span> year,</span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> hsr_data,</span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>  <span class="at">cluster =</span> <span class="sc">~</span>city_id</span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Column 1: Economic controls</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>m1 <span class="ot">&lt;-</span> <span class="fu">feols</span>(</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  avian_increment_ratio_natl <span class="sc">~</span> hsr <span class="sc">+</span> gdp_growth_pct <span class="sc">+</span> share_primary_pct <span class="sc">+</span> share_secondary_pct <span class="sc">|</span> city_id <span class="sc">+</span> year,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> hsr_data,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">cluster =</span> <span class="sc">~</span>city_id</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Column 2: Add demographic control</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>m2 <span class="ot">&lt;-</span> <span class="fu">feols</span>(</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  avian_increment_ratio_natl <span class="sc">~</span> hsr <span class="sc">+</span> gdp_growth_pct <span class="sc">+</span> share_primary_pct <span class="sc">+</span> share_secondary_pct <span class="sc">+</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    population_10k <span class="sc">|</span> city_id <span class="sc">+</span> year,</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> hsr_data,</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">cluster =</span> <span class="sc">~</span>city_id</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Column 3: Add infrastructure control</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>m3 <span class="ot">&lt;-</span> <span class="fu">feols</span>(</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>  avian_increment_ratio_natl <span class="sc">~</span> hsr <span class="sc">+</span> gdp_growth_pct <span class="sc">+</span> share_primary_pct <span class="sc">+</span> share_secondary_pct <span class="sc">+</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    population_10k <span class="sc">+</span> urban_road_10k_m2 <span class="sc">|</span> city_id <span class="sc">+</span> year,</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> hsr_data,</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>  <span class="at">cluster =</span> <span class="sc">~</span>city_id</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Column 4: Add environmental controls</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>m4 <span class="ot">&lt;-</span> <span class="fu">feols</span>(</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>  avian_increment_ratio_natl <span class="sc">~</span> hsr <span class="sc">+</span> gdp_growth_pct <span class="sc">+</span> share_primary_pct <span class="sc">+</span> share_secondary_pct <span class="sc">+</span></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>    population_10k <span class="sc">+</span> urban_road_10k_m2 <span class="sc">+</span> pm25 <span class="sc">+</span> green_coverage_pct <span class="sc">|</span> city_id <span class="sc">+</span> year,</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> hsr_data,</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>  <span class="at">cluster =</span> <span class="sc">~</span>city_id</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Column 5: Full model with weather controls</span></span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>m5 <span class="ot">&lt;-</span> <span class="fu">feols</span>(</span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>  avian_increment_ratio_natl <span class="sc">~</span> hsr <span class="sc">+</span> gdp_growth_pct <span class="sc">+</span> share_primary_pct <span class="sc">+</span> share_secondary_pct <span class="sc">+</span></span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>    population_10k <span class="sc">+</span> urban_road_10k_m2 <span class="sc">+</span> pm25 <span class="sc">+</span> green_coverage_pct <span class="sc">+</span></span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>    wind_speed <span class="sc">+</span> precip_mm <span class="sc">+</span> humidity_pct <span class="sc">+</span> temperature_c <span class="sc">|</span> city_id <span class="sc">+</span> year,</span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> hsr_data,</span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>  <span class="at">cluster =</span> <span class="sc">~</span>city_id</span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <p>Model 1 includes only economic control variables, providing a baseline specification for the analysis. Models 2 through 5 progressively incorporate additional sets of controls, including demographic, infrastructure, environmental, and weather variables. This stepwise approach allows us to assess how sensitive the estimated effect of HSR is to the inclusion of different factors, and closely mirrors the original study’s strategy for testing robustness across model specifications.</p>
@@ -375,32 +412,32 @@ Y_{it} = \alpha_i + \gamma_t + \beta * HSR_i + X_i\delta + \epsilon_i
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>results_tab <span class="ot">&lt;-</span> <span class="fu">etable</span>(</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  m1, m2, m3, m4, m5,</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">keep =</span> <span class="st">"hsr"</span>,</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">headers =</span> <span class="fu">c</span>(<span class="st">"Economic"</span>, <span class="st">"+ Demographic"</span>, <span class="st">"+ Infrastructure"</span>, </span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>              <span class="st">"+ Environmental"</span>, <span class="st">"+ Weather"</span>),</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">digits =</span> <span class="dv">4</span>,</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">fitstat =</span> <span class="fu">c</span>(<span class="st">"n"</span>, <span class="st">"r2"</span>),</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">tex =</span> <span class="cn">FALSE</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Format with kableExtra</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>results_tab <span class="sc">%&gt;%</span></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kbl</span>(</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Replication of Table 5: Effect of HSR on Bird Species Richness"</span>,</span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">align =</span> <span class="st">"c"</span></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(</span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">full_width =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">position =</span> <span class="st">"center"</span>,</span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">bootstrap_options =</span> <span class="fu">c</span>(<span class="st">"striped"</span>, <span class="st">"hover"</span>, <span class="st">"condensed"</span>)</span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_header_above</span>(<span class="fu">c</span>(<span class="st">" "</span> <span class="ot">=</span> <span class="dv">1</span>, <span class="st">"Model Specifications"</span> <span class="ot">=</span> <span class="dv">5</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">footnote</span>(</span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">general =</span> <span class="st">"All models include city and year fixed effects. Standard errors are clustered at the city level."</span>,</span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">general_title =</span> <span class="st">"Note:"</span></span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>results_tab <span class="ot">&lt;-</span> <span class="fu">etable</span>(</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  m1, m2, m3, m4, m5,</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">keep =</span> <span class="st">"hsr"</span>,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">headers =</span> <span class="fu">c</span>(<span class="st">"Economic"</span>, <span class="st">"+ Demographic"</span>, <span class="st">"+ Infrastructure"</span>, </span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>              <span class="st">"+ Environmental"</span>, <span class="st">"+ Weather"</span>),</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">digits =</span> <span class="dv">4</span>,</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">fitstat =</span> <span class="fu">c</span>(<span class="st">"n"</span>, <span class="st">"r2"</span>),</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">tex =</span> <span class="cn">FALSE</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Format with kableExtra</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>results_tab <span class="sc">%&gt;%</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kbl</span>(</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Replication of Table 5: Effect of HSR on Bird Species Richness"</span>,</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">align =</span> <span class="st">"c"</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">full_width =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">position =</span> <span class="st">"center"</span>,</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">bootstrap_options =</span> <span class="fu">c</span>(<span class="st">"striped"</span>, <span class="st">"hover"</span>, <span class="st">"condensed"</span>)</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_header_above</span>(<span class="fu">c</span>(<span class="st">" "</span> <span class="ot">=</span> <span class="dv">1</span>, <span class="st">"Model Specifications"</span> <span class="ot">=</span> <span class="dv">5</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">footnote</span>(</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">general =</span> <span class="st">"All models include city and year fixed effects. Standard errors are clustered at the city level."</span>,</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">general_title =</span> <span class="st">"Note:"</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <table class="table table-striped table-hover table-condensed caption-top table-sm small">
@@ -552,10 +589,10 @@ Model Specifications
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>sd_outcome <span class="ot">&lt;-</span> <span class="fu">sd</span>(hsr_data<span class="sc">$</span>avian_increment_ratio_natl, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>effect_size <span class="ot">&lt;-</span> <span class="fu">coef</span>(m5)[<span class="st">"hsr"</span>] <span class="sc">/</span> sd_outcome</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Effect size (col 5):"</span>, <span class="fu">round</span>(<span class="fu">abs</span>(effect_size) <span class="sc">*</span> <span class="dv">100</span>, <span class="dv">1</span>), <span class="st">"% of 1 SD</span><span class="sc">\n</span><span class="st">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>sd_outcome <span class="ot">&lt;-</span> <span class="fu">sd</span>(hsr_data<span class="sc">$</span>avian_increment_ratio_natl, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>effect_size <span class="ot">&lt;-</span> <span class="fu">coef</span>(m5)[<span class="st">"hsr"</span>] <span class="sc">/</span> sd_outcome</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Effect size (col 5):"</span>, <span class="fu">round</span>(<span class="fu">abs</span>(effect_size) <span class="sc">*</span> <span class="dv">100</span>, <span class="dv">1</span>), <span class="st">"% of 1 SD</span><span class="sc">\n</span><span class="st">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Effect size (col 5): 16.6 % of 1 SD</code></pre>
@@ -577,13 +614,13 @@ Model Specifications
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>hsr_es <span class="ot">&lt;-</span> hsr_data <span class="sc">%&gt;%</span> </span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">event_time_binned =</span> <span class="fu">case_when</span>(</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">is.na</span>(event_time) <span class="sc">~</span> <span class="cn">NA_real_</span>,    <span class="co"># control cities stay as NA</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    event_time <span class="sc">&lt;</span> <span class="sc">-</span><span class="dv">6</span>   <span class="sc">~</span> <span class="sc">-</span><span class="dv">6</span>,          <span class="co"># bin anything 6+ years before</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    event_time <span class="sc">&gt;</span>  <span class="dv">6</span>   <span class="sc">~</span>  <span class="dv">6</span>,          <span class="co"># bin anything 6+ years after</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span>              <span class="sc">~</span> event_time</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  ))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>hsr_es <span class="ot">&lt;-</span> hsr_data <span class="sc">%&gt;%</span> </span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">event_time_binned =</span> <span class="fu">case_when</span>(</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">is.na</span>(event_time) <span class="sc">~</span> <span class="cn">NA_real_</span>,    <span class="co"># control cities stay as NA</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    event_time <span class="sc">&lt;</span> <span class="sc">-</span><span class="dv">6</span>   <span class="sc">~</span> <span class="sc">-</span><span class="dv">6</span>,          <span class="co"># bin anything 6+ years before</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    event_time <span class="sc">&gt;</span>  <span class="dv">6</span>   <span class="sc">~</span>  <span class="dv">6</span>,          <span class="co"># bin anything 6+ years after</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span>              <span class="sc">~</span> event_time</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  ))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <p>Instead of a single <code>hsr</code> dummy (0 or 1), <code>i(event_time_binned, ref = -6)</code> automatically creates one dummy per relative year. Instead of asking “what is the average effect of HSR across all post-treatment years?”, we are asking “what is the effect specifically at year -5, at year-4, at year-3..”etc.. The <code>ref = -6</code> argument drops year −6 from the regression, making it our baseline that all other years are compared against. This is necessary because not all dummies can be simultaneously estimated, one must be turned off.</p>
@@ -591,25 +628,25 @@ Model Specifications
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>es_model <span class="ot">&lt;-</span> <span class="fu">feols</span>(</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  avian_increment_ratio_natl <span class="sc">~</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">i</span>(event_time_binned, <span class="at">ref =</span> <span class="sc">-</span><span class="dv">6</span>) <span class="sc">+</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    gdp_growth_pct <span class="sc">+</span> share_primary_pct <span class="sc">+</span> share_secondary_pct <span class="sc">+</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    population_10k <span class="sc">+</span> urban_road_10k_m2 <span class="sc">+</span> pm25 <span class="sc">+</span> green_coverage_pct <span class="sc">+</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    wind_speed <span class="sc">+</span> precip_mm <span class="sc">+</span> humidity_pct <span class="sc">+</span> temperature_c <span class="sc">|</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co"># the two-way fixed effects</span></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    city_id <span class="sc">+</span> year,</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">data    =</span> hsr_es,</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">cluster =</span> <span class="sc">~</span>city_id</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract coefficients with tidy</span></span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>es_coefs <span class="ot">&lt;-</span> <span class="fu">tidy</span>(es_model, <span class="at">conf.int =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(term, <span class="st">"event_time_binned"</span>)) <span class="sc">%&gt;%</span>  <span class="co"># only want event-time coefficients </span></span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a> <span class="co"># regex pattern help extra negative value to use on x-axis</span></span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">event_time =</span> <span class="fu">as.numeric</span>(<span class="fu">str_extract</span>(term, <span class="st">"-?</span><span class="sc">\\</span><span class="st">d+"</span>))) <span class="sc">%&gt;%</span> </span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_rows</span>(<span class="fu">tibble</span>(<span class="at">event_time =</span> <span class="sc">-</span><span class="dv">6</span>, <span class="at">estimate =</span> <span class="dv">0</span>, <span class="at">conf.low =</span> <span class="dv">0</span>, <span class="at">conf.high =</span> <span class="dv">0</span>)) <span class="sc">%&gt;%</span> </span>
-<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(event_time)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>es_model <span class="ot">&lt;-</span> <span class="fu">feols</span>(</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  avian_increment_ratio_natl <span class="sc">~</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">i</span>(event_time_binned, <span class="at">ref =</span> <span class="sc">-</span><span class="dv">6</span>) <span class="sc">+</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    gdp_growth_pct <span class="sc">+</span> share_primary_pct <span class="sc">+</span> share_secondary_pct <span class="sc">+</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    population_10k <span class="sc">+</span> urban_road_10k_m2 <span class="sc">+</span> pm25 <span class="sc">+</span> green_coverage_pct <span class="sc">+</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    wind_speed <span class="sc">+</span> precip_mm <span class="sc">+</span> humidity_pct <span class="sc">+</span> temperature_c <span class="sc">|</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co"># the two-way fixed effects</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    city_id <span class="sc">+</span> year,</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">data    =</span> hsr_es,</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">cluster =</span> <span class="sc">~</span>city_id</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract coefficients with tidy</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>es_coefs <span class="ot">&lt;-</span> <span class="fu">tidy</span>(es_model, <span class="at">conf.int =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(term, <span class="st">"event_time_binned"</span>)) <span class="sc">%&gt;%</span>  <span class="co"># only want event-time coefficients </span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a> <span class="co"># regex pattern help extra negative value to use on x-axis</span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">event_time =</span> <span class="fu">as.numeric</span>(<span class="fu">str_extract</span>(term, <span class="st">"-?</span><span class="sc">\\</span><span class="st">d+"</span>))) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_rows</span>(<span class="fu">tibble</span>(<span class="at">event_time =</span> <span class="sc">-</span><span class="dv">6</span>, <span class="at">estimate =</span> <span class="dv">0</span>, <span class="at">conf.low =</span> <span class="dv">0</span>, <span class="at">conf.high =</span> <span class="dv">0</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(event_time)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </section>
@@ -620,35 +657,35 @@ Model Specifications
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>es_coefs <span class="sc">%&gt;%</span> </span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> event_time, <span class="at">y =</span> estimate)) <span class="sc">+</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"rect"</span>, <span class="at">xmin =</span> <span class="sc">-</span><span class="fl">5.5</span>, <span class="at">xmax =</span> <span class="sc">-</span><span class="fl">0.5</span>,</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">ymin =</span> <span class="sc">-</span><span class="cn">Inf</span>, <span class="at">ymax =</span> <span class="cn">Inf</span>, <span class="at">alpha =</span> <span class="fl">0.04</span>, <span class="at">fill =</span> <span class="st">"steelblue"</span>) <span class="sc">+</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"grey50"</span>) <span class="sc">+</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="sc">-</span><span class="fl">0.5</span>, <span class="at">linetype =</span> <span class="st">"dotted"</span>,</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>             <span class="at">color =</span> <span class="st">"steelblue"</span>, <span class="at">linewidth =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> conf.low, <span class="at">ymax =</span> conf.high),</span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>              <span class="at">alpha =</span> <span class="fl">0.2</span>, <span class="at">fill =</span> <span class="st">"steelblue"</span>) <span class="sc">+</span></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">color =</span> <span class="st">"steelblue"</span>, <span class="at">linewidth =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"steelblue"</span>, <span class="at">size =</span> <span class="fl">2.5</span>) <span class="sc">+</span></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="sc">-</span><span class="dv">6</span>, <span class="at">y =</span> <span class="fu">max</span>(es_coefs<span class="sc">$</span>conf.high) <span class="sc">*</span> <span class="fl">0.15</span>,</span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>           <span class="at">label =</span> <span class="st">"ref"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">color =</span> <span class="st">"grey40"</span>) <span class="sc">+</span></span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="fl">0.2</span>, <span class="at">y =</span> <span class="fu">max</span>(es_coefs<span class="sc">$</span>conf.high) <span class="sc">*</span> <span class="fl">0.85</span>,</span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>           <span class="at">label =</span> <span class="st">"← HSR opens at zero"</span>, <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">size =</span> <span class="fl">3.5</span>, <span class="at">color =</span> <span class="st">"steelblue"</span>) <span class="sc">+</span></span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="sc">-</span><span class="dv">5</span><span class="sc">:</span><span class="dv">5</span>) <span class="sc">+</span></span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">title    =</span> <span class="st">"Event Study: Effect of HSR on Bird Species Increment"</span>,</span>
-<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Pre-treatment coefficients near zero support the parallel trends assumption"</span>,</span>
-<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">x        =</span> <span class="st">"Years Relative to HSR Opening"</span>,</span>
-<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">y        =</span> <span class="st">"Avian Increment Ratio (National)"</span>,</span>
-<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption  =</span> <span class="st">"Two-way FE (city + year), full controls, SEs clustered at city level."</span></span>
-<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">13</span>) <span class="sc">+</span></span>
-<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
-<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title       =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>),</span>
-<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.subtitle    =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"grey40"</span>, <span class="at">size =</span> <span class="dv">10</span>),</span>
-<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>()</span>
-<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>es_coefs <span class="sc">%&gt;%</span> </span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> event_time, <span class="at">y =</span> estimate)) <span class="sc">+</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"rect"</span>, <span class="at">xmin =</span> <span class="sc">-</span><span class="fl">5.5</span>, <span class="at">xmax =</span> <span class="sc">-</span><span class="fl">0.5</span>,</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">ymin =</span> <span class="sc">-</span><span class="cn">Inf</span>, <span class="at">ymax =</span> <span class="cn">Inf</span>, <span class="at">alpha =</span> <span class="fl">0.04</span>, <span class="at">fill =</span> <span class="st">"steelblue"</span>) <span class="sc">+</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"grey50"</span>) <span class="sc">+</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="sc">-</span><span class="fl">0.5</span>, <span class="at">linetype =</span> <span class="st">"dotted"</span>,</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>             <span class="at">color =</span> <span class="st">"steelblue"</span>, <span class="at">linewidth =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> conf.low, <span class="at">ymax =</span> conf.high),</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>              <span class="at">alpha =</span> <span class="fl">0.2</span>, <span class="at">fill =</span> <span class="st">"steelblue"</span>) <span class="sc">+</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">color =</span> <span class="st">"steelblue"</span>, <span class="at">linewidth =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"steelblue"</span>, <span class="at">size =</span> <span class="fl">2.5</span>) <span class="sc">+</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="sc">-</span><span class="dv">6</span>, <span class="at">y =</span> <span class="fu">max</span>(es_coefs<span class="sc">$</span>conf.high) <span class="sc">*</span> <span class="fl">0.15</span>,</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>           <span class="at">label =</span> <span class="st">"ref"</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">color =</span> <span class="st">"grey40"</span>) <span class="sc">+</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="fl">0.2</span>, <span class="at">y =</span> <span class="fu">max</span>(es_coefs<span class="sc">$</span>conf.high) <span class="sc">*</span> <span class="fl">0.85</span>,</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>           <span class="at">label =</span> <span class="st">"← HSR opens at zero"</span>, <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">size =</span> <span class="fl">3.5</span>, <span class="at">color =</span> <span class="st">"steelblue"</span>) <span class="sc">+</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="sc">-</span><span class="dv">5</span><span class="sc">:</span><span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">title    =</span> <span class="st">"Event Study: Effect of HSR on Bird Species Increment"</span>,</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Pre-treatment coefficients near zero support the parallel trends assumption"</span>,</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">x        =</span> <span class="st">"Years Relative to HSR Opening"</span>,</span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">y        =</span> <span class="st">"Avian Increment Ratio (National)"</span>,</span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption  =</span> <span class="st">"Two-way FE (city + year), full controls, SEs clustered at city level."</span></span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">13</span>) <span class="sc">+</span></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title       =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.subtitle    =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"grey40"</span>, <span class="at">size =</span> <span class="dv">10</span>),</span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>()</span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div>
