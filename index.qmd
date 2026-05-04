@@ -16,6 +16,9 @@ about:
       href: https://github.com/hylaea-miller
     - text: Email
       href: mailto:hylaea@ucsb.edu
+      
+markdown_extensions:
+  - attr_list
 ---
 
 ### Profile
@@ -49,5 +52,5 @@ Institute of Research and Statistics of the Federal District (IPEDF)\
 
 **Detection of changes in land use in the AMACRO and MATOPIBA special territories** \| Undergraduate Thesis \| [Revista Brasileira de Geomática(RBGEO)](https://periodicos.utfpr.edu.br/rbgeo/article/view/19946) \| Advisor: Gustavo Macedo de Mello Baptista, PhD.
 
-**Analysis of Satellite‑Derived Rainfall Data in Watersheds of the Cerrado Biome** \| Undergraduate Research Fellowship (2024) \| Advisor: Rejane Ennes Cicerelli, Ph.D.
+**Analysis of Satellite‑Derived Rainfall Data in Watersheds of the Cerrado Biome** \| Undergraduate Research Fellowship (2024) \| [Scientific Initiation Congress](https://www.plic.app.br/evento/cicdf/edicao/cicdf/publicacoes/511) \| Advisor: Rejane Ennes Cicerelli, Ph.D. \| [certification](https://drive.google.com/file/d/1xIu2v4bYL6e4-_VF6_hqOhIq7omaT99R/view?usp=sharing)
 :::
