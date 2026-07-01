@@ -22,8 +22,7 @@ markdown_extensions:
 ---
 
 ### Profile
-
-Hi there, I'm Hylaea Miller! I’m a Master’s student in Environmental Data Science at the Bren School of Environmental Science & Management at UCSB. I have experience in GIS, Remote Sensing, Environmental Systems Modeling, technical documentation, data visualization, and programming in Python and R.
+Hi there, I'm Hylaea a Master of Environmental Data Science (Bren School of Environmental Science & Management - UC Santa Barbara) who turns messy environmental and remote-sensing data into reproducible insights, interactive visualizations, and actionable maps. I use R and Python to build spatial workflows, Shiny apps, and data products that support research and decision-making. I have experience in GIS, Remote Sensing, Environmental Systems Modeling and technical documentation.
 
 ::: panel-tabset
 ### Education
@@ -48,7 +47,7 @@ Institute of Research and Statistics of the Federal District (IPEDF)\
 
 ### Project/Research
 
-**Turning Data into Action. An R Package for the Wildfire Resilience Index** \| Master’s Capstone (Current) \| Collaborators: National Center for Ecological Analysis and Synthesis (NCEAS) \| [Repository](https://github.com/ignitR-package)
+**Turning Data into Action. An R Package for the Wildfire Resilience Index** \| Master’s Capstone \| Collaborators: National Center for Ecological Analysis and Synthesis (NCEAS) \| [Repository](https://github.com/ignitR-package)
 
 **Detection of changes in land use in the AMACRO and MATOPIBA special territories** \| Undergraduate Thesis \| [Revista Brasileira de Geomática(RBGEO)](https://periodicos.utfpr.edu.br/rbgeo/article/view/19946) \| Advisor: Gustavo Macedo de Mello Baptista, PhD.
 
