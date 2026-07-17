@@ -22,7 +22,7 @@ markdown_extensions:
 ---
 
 ### Profile
-Hi there, I'm Hylaea a Master of Environmental Data Science (Bren School of Environmental Science & Management - UC Santa Barbara) who turns messy environmental and remote-sensing data into reproducible insights, interactive visualizations, and actionable maps. I use R and Python to build spatial workflows, Shiny apps, and data products that support research and decision-making. I have experience in GIS, Remote Sensing, Environmental Systems Modeling and technical documentation.
+Hi there, I'm Hylaea, a Master of Environmental Data Science (Bren School, UC Santa Barbara). I turn data into reproducible insights, interactive visualizations, and actionable maps. I use R and Python to build spatial workflows, data pipelines, and data products that support research and decision-making. Experienced in GIS, remote sensing, statistical analysis, and machine learning applied to environmental problems.
 
 ::: panel-tabset
 ### Education
