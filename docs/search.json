@@ -198,9 +198,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Hylaea Miller",
+    "title": "Understanding our planet through spatial data.",
     "section": "",
-    "text": "Profile\nHi there, I’m Hylaea, a Master of Environmental Data Science (Bren School, UC Santa Barbara). I turn data into reproducible insights, interactive visualizations, and actionable maps. I use R and Python to build spatial workflows, data pipelines, and data products that support research and decision-making. Experienced in GIS, remote sensing, statistical analysis, and machine learning applied to environmental problems.\n\nEducationProfessional ExperienceProject/Research\n\n\nMaster, Environmental Data Science (June 2026) | Bren School of Environmental Science & Management | University of California, Santa Barbara (UCSB)\nBachelor in Environmental Sciences (October 2024) | University of Brasília (UnB), Brazil\n\n\nEnvironmental Temporary Agent\nChico Mendes Institute for Biodiversity Conservation (ICMBio)\nJanuary 2024 - July 2025 | Brasília, Brazil\nGIS Intern\nChico Mendes Institute for Biodiversity Conservation (ICMBio)\nJune 2023 - December 2023 | Brasília, Brazil\nEnvironmental Research Intern\nInstitute of Research and Statistics of the Federal District (IPEDF)\nMarch 2023 - April 2023 | Brasília, Brazil\n\n\nTurning Data into Action. An R Package for the Wildfire Resilience Index | Master’s Capstone | Collaborators: National Center for Ecological Analysis and Synthesis (NCEAS) | Repository\nDetection of changes in land use in the AMACRO and MATOPIBA special territories | Undergraduate Thesis | Revista Brasileira de Geomática(RBGEO) | Advisor: Gustavo Macedo de Mello Baptista, PhD.\nAnalysis of Satellite‑Derived Rainfall Data in Watersheds of the Cerrado Biome | Undergraduate Research Fellowship (2024) | Scientific Initiation Congress | Advisor: Rejane Ennes Cicerelli, Ph.D. | certification"
+    "text": "GEOSPATIAL SCIENCE · ENVIRONMENT · DATA\n\n\n\n\n\n\n\nI turn data into reproducible insights, interactive visualizations, and actionable maps. My work combines GIS, remote sensing, spatial analysis, R, Python, and statistical modeling to support environmental research and decision-making.\n\nLinkedIn ↗ GitHub ↗ Email ↗\n\nExplore my work ↓\n\n\n\nUNIVERSITY OF CALIFORNIA, SANTA BARBARA · GOLETA, CALIFORNIA\n\n\n34°24′48″ N · 119°50′50″ W WGS 84"
   },
   {
     "objectID": "index.html#profile",
@@ -635,5 +635,54 @@
     "title": "Replicating the Causal Estimate of a Staggered Difference-In-Difference: Effects of High Speed Railway Opening on Urban Avian Biodiversity",
     "section": "References",
     "text": "References\nXie, J., & Zhu, M. (2025). Exploring the ecological impacts of high-speed rail on urban avian biodiversity. Journal of Cleaner Production, 502, 145351. https://doi.org/10.1016/j.jclepro.2025.145351"
+  },
+  {
+    "objectID": "index.html#more-information",
+    "href": "index.html#more-information",
+    "title": "Hylaea Miller",
+    "section": "More Information",
+    "text": "More Information\nExplore selected geospatial applications, research outputs and project resources.\n\n\n01 / INTERACTIVE GIS\n\nInteractive ArcGIS Map\nExplore my interactive map application developed with Esri ArcGIS.\nOpen interactive map ↗\n\n\n\n02 / GEOGRAPHIC STORYTELLING\n\nArcGIS StoryMap\nExplore a geographic narrative combining maps, spatial information and visual storytelling.\nRead the StoryMap ↗\n\n\n\n03 / RESEARCH & CODE\n\nWildfire Resilience Data Package\nExplore the R package developed for the Wildfire Resilience Index in collaboration with NCEAS.\nView GitHub repository ↗\n\n\n\n04 / PUBLICATION\n\nLand Use and Land Cover Research\nRead my undergraduate research on land-use changes in AMACRO and MATOPIBA.\nRead the publication ↗"
+  },
+  {
+    "objectID": "index.html#selected-experience-research",
+    "href": "index.html#selected-experience-research",
+    "title": "Hylaea Miller",
+    "section": "Selected experience & research",
+    "text": "Selected experience & research\n\nEducationProfessional ExperienceProject/Research\n\n\nMaster, Environmental Data Science (June 2026) | Bren School of Environmental Science & Management | University of California, Santa Barbara (UCSB)\nBachelor in Environmental Sciences (October 2024) | University of Brasília (UnB), Brazil\n\n\nEnvironmental Temporary Agent\nChico Mendes Institute for Biodiversity Conservation (ICMBio)\nJanuary 2024 - July 2025 | Brasília, Brazil\nGIS Intern\nChico Mendes Institute for Biodiversity Conservation (ICMBio)\nJune 2023 - December 2023 | Brasília, Brazil\nEnvironmental Research Intern\nInstitute of Research and Statistics of the Federal District (IPEDF)\nMarch 2023 - April 2023 | Brasília, Brazil\n\n\nTurning Data into Action: An R Package for the Wildfire Resilience Index | Master’s Capstone | Collaborators: National Center for Ecological Analysis and Synthesis (NCEAS) | Repository\nDetection of changes in land use in the AMACRO and MATOPIBA special territories | Undergraduate Thesis | Revista Brasileira de Geomática (RBGEO) | Advisor: Gustavo Macedo de Mello Baptista, PhD.\nAnalysis of Satellite-Derived Rainfall Data in Watersheds of the Cerrado Biome | Undergraduate Research Fellowship (2024) | Scientific Initiation Congress | Advisor: Rejane Ennes Cicerelli, PhD. | Certification"
+  },
+  {
+    "objectID": "index.html#about-me",
+    "href": "index.html#about-me",
+    "title": "Understanding our planet through spatial data.",
+    "section": "Let’s connect!",
+    "text": "Let’s connect!"
+  },
+  {
+    "objectID": "index.html#Selected-projects",
+    "href": "index.html#Selected-projects",
+    "title": "Understanding our planet through spatial data.",
+    "section": "Selected Projects",
+    "text": "Selected Projects\nExplore selected geospatial applications, research outputs and project resources.\n\n\n01 / INTERACTIVE GIS\n\nInteractive ArcGIS Map\nExplore my interactive map application developed with Esri ArcGIS.\nOpen interactive map ↗\n\n\n\n02 / GEOGRAPHIC STORYTELLING\n\nArcGIS StoryMap\nExplore a geographic narrative combining maps, spatial information and visual storytelling.\nRead the StoryMap ↗\n\n\n\n03 / RESEARCH & CODE\n\nWildfire Resilience Data Package\nExplore the R package developed for the Wildfire Resilience Index in collaboration with NCEAS.\nView GitHub repository ↗\n\n\n\n04 / PUBLICATION\n\nLand Use and Land Cover Research\nRead my undergraduate research on land-use changes in AMACRO and MATOPIBA.\nRead the publication ↗"
+  },
+  {
+    "objectID": "index.html#more-experience",
+    "href": "index.html#more-experience",
+    "title": "Understanding our planet through spatial data.",
+    "section": "More Experience",
+    "text": "More Experience\n\nEducationProfessional ExperienceProject/Research\n\n\nMaster, Environmental Data Science | Bren School of Environmental Science & Management | University of California, Santa Barbara (UCSB)\nBachelor in Environmental Sciences | University of Brasília (UnB), Brazil\n\n\nEnvironmental Temporary Agent\nChico Mendes Institute for Biodiversity Conservation (ICMBio)\nJanuary 2024 - July 2025 | Brasília, Brazil\nGIS Intern\nChico Mendes Institute for Biodiversity Conservation (ICMBio)\nJune 2023 - December 2023 | Brasília, Brazil\nEnvironmental Research Intern\nInstitute of Research and Statistics of the Federal District (IPEDF)\nMarch 2023 - April 2023 | Brasília, Brazil\n\n\nTurning Data into Action: An R Package for the Wildfire Resilience Index | Master’s Capstone | Collaborators: National Center for Ecological Analysis and Synthesis (NCEAS) | Repository\nDetection of changes in land use in the AMACRO and MATOPIBA special territories | Undergraduate Thesis | Revista Brasileira de Geomática (RBGEO) | Advisor: Gustavo Macedo de Mello Baptista, PhD.\nAnalysis of Satellite-Derived Rainfall Data in Watersheds of the Cerrado Biome | Undergraduate Research Fellowship (2024) | Scientific Initiation Congress | Advisor: Rejane Ennes Cicerelli, PhD. | Certification"
+  },
+  {
+    "objectID": "index.html#through-spatial-data.",
+    "href": "index.html#through-spatial-data.",
+    "title": "Hylaea Miller",
+    "section": "",
+    "text": "Environmental science, geospatial analysis, remote sensing, and data science.\nExplore my work ↗\n\nUNIVERSITY OF CALIFORNIA, SANTA BARBARA · GOLETA, CALIFORNIA"
+  },
+  {
+    "objectID": "index.html#connect",
+    "href": "index.html#connect",
+    "title": "Understanding our planet through spatial data.",
+    "section": "Let’s connect!",
+    "text": "Let’s connect!\n\nLinkedIn ↗ Email ↗"
   }
 ]

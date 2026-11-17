@@ -1,55 +1,126 @@
 ---
-title: "Hylaea Miller"
-image: images/image_park.JPEG
 toc: false
-
-about: 
-  template: trestles
-  image-shape: round
-  image-width: 26em
-  links: 
-    - text: LinkedIn
-      icon: Linkedin
-      href: https://www.linkedin.com/in/hylaea-miller/
-    - text: GitHub
-      icon: github
-      href: https://github.com/hylaea-miller
-    - text: Email
-      href: mailto:hylaea@ucsb.edu
-      
-markdown_extensions:
-  - attr_list
 ---
+:::: {.hero}
+<span class="hero-kicker">GEOSPATIAL SCIENCE · ENVIRONMENT · DATA</span>
 
-### Profile
-Hi there, I'm Hylaea, a Master of Environmental Data Science (Bren School, UC Santa Barbara). I turn data into reproducible insights, interactive visualizations, and actionable maps. I use R and Python to build spatial workflows, data pipelines, and data products that support research and decision-making. Experienced in GIS, remote sensing, statistical analysis, and machine learning applied to environmental problems.
+# Understanding our planet *through spatial data.*
+
+:::: {.more-about-grid}
+
+::: {.more-about-photo}
+![](images/image_park.JPEG){.profile-photo}
+:::
+
+::: {.more-about-content}
+
+I turn data into reproducible insights, interactive visualizations, and actionable maps. My work combines GIS, remote sensing, spatial analysis, R, Python, and statistical modeling to support environmental research and decision-making.
+
+<div class="contact-links">
+  <a href="https://www.linkedin.com/in/hylaea-miller/" target="_blank" rel="noopener">LinkedIn ↗</a>
+  <a href="https://github.com/hylaea-miller" target="_blank" rel="noopener">GitHub ↗</a>
+  <a href="mailto:hylaea@ucsb.edu">Email ↗</a>
+</div> [Explore my work ↓](#Selected-projects){.hero-project-link}
+:::
+
+::::
+
+
+<p class="hero-coordinate-note">
+  UNIVERSITY OF CALIFORNIA, SANTA BARBARA · GOLETA, CALIFORNIA
+</p>
+
+<div class="geo-meta">
+  <span>34°24′48″ N · 119°50′50″ W</span>
+  <span>WGS 84 </span>
+</div>
+::::
+
+
+## Selected Projects {#Selected-projects}
+
+Explore selected geospatial applications, research outputs and project resources.
+
+::: {.more-info-grid}
+
+::: {.more-info-card}
+<span class="more-info-number">01 / INTERACTIVE GIS</span>
+
+### Interactive ArcGIS Map
+
+Explore my interactive map application developed with Esri ArcGIS.
+
+[Open interactive map ↗](https://www.arcgis.com/apps/instant/basic/index.html?appid=d2efde3709bc4fd8bb07dac0821ceb00){.more-info-link target="_blank" rel="noopener"}
+:::
+
+::: {.more-info-card}
+<span class="more-info-number">02 / GEOGRAPHIC STORYTELLING</span>
+
+### ArcGIS StoryMap
+
+Explore a geographic narrative combining maps, spatial information and visual storytelling.
+
+[Read the StoryMap ↗](https://storymaps.arcgis.com/stories/46c36f8dceb14bbf9a2b3040c043bbf7){.more-info-link target="_blank" rel="noopener"}
+:::
+
+::: {.more-info-card}
+<span class="more-info-number">03 / RESEARCH & CODE</span>
+
+### Wildfire Resilience Data Package
+
+Explore the R package developed for the Wildfire Resilience Index in collaboration with NCEAS.
+
+[View GitHub repository ↗](https://github.com/ignitR-package){.more-info-link target="_blank" rel="noopener"}
+:::
+
+::: {.more-info-card}
+<span class="more-info-number">04 / PUBLICATION</span>
+
+### Land Use and Land Cover Research
+
+Read my undergraduate research on land-use changes in AMACRO and MATOPIBA.
+
+[Read the publication ↗](https://periodicos.utfpr.edu.br/rbgeo/article/view/19946){.more-info-link target="_blank" rel="noopener"}
+:::
+
+:::
+
+
+## More Experience
 
 ::: panel-tabset
 ### Education
 
-**Master, Environmental Data Science** (June 2026) \| Bren School of Environmental Science & Management \| University of California, Santa Barbara (UCSB)
+**Master, Environmental Data Science** | Bren School of Environmental Science & Management | University of California, Santa Barbara (UCSB)
 
-**Bachelor in Environmental Sciences** (October 2024) \| University of Brasília (UnB), Brazil
+**Bachelor in Environmental Sciences** | University of Brasília (UnB), Brazil
 
 ### Professional Experience
 
-**Environmental Temporary Agent**\
-Chico Mendes Institute for Biodiversity Conservation (ICMBio)\
-*January 2024 - July 2025 \| Brasília, Brazil*
+**Environmental Temporary Agent**  
+Chico Mendes Institute for Biodiversity Conservation (ICMBio)  
+*January 2024 - July 2025 | Brasília, Brazil*
 
-**GIS Intern**\
-Chico Mendes Institute for Biodiversity Conservation (ICMBio)\
-*June 2023 - December 2023 \| Brasília, Brazil*
+**GIS Intern**  
+Chico Mendes Institute for Biodiversity Conservation (ICMBio)  
+*June 2023 - December 2023 | Brasília, Brazil*
 
-**Environmental Research Intern**\
-Institute of Research and Statistics of the Federal District (IPEDF)\
-*March 2023 - April 2023 \| Brasília, Brazil*
+**Environmental Research Intern**  
+Institute of Research and Statistics of the Federal District (IPEDF)  
+*March 2023 - April 2023 | Brasília, Brazil*
 
 ### Project/Research
 
-**Turning Data into Action. An R Package for the Wildfire Resilience Index** \| Master’s Capstone \| Collaborators: National Center for Ecological Analysis and Synthesis (NCEAS) \| [Repository](https://github.com/ignitR-package)
+**Turning Data into Action: An R Package for the Wildfire Resilience Index** | Master’s Capstone | Collaborators: National Center for Ecological Analysis and Synthesis (NCEAS) | [Repository](https://github.com/ignitR-package)
 
-**Detection of changes in land use in the AMACRO and MATOPIBA special territories** \| Undergraduate Thesis \| [Revista Brasileira de Geomática(RBGEO)](https://periodicos.utfpr.edu.br/rbgeo/article/view/19946) \| Advisor: Gustavo Macedo de Mello Baptista, PhD.
+**Detection of changes in land use in the AMACRO and MATOPIBA special territories** | Undergraduate Thesis | [Revista Brasileira de Geomática (RBGEO)](https://periodicos.utfpr.edu.br/rbgeo/article/view/19946) | Advisor: Gustavo Macedo de Mello Baptista, PhD.
 
-**Analysis of Satellite‑Derived Rainfall Data in Watersheds of the Cerrado Biome** \| Undergraduate Research Fellowship (2024) \| [Scientific Initiation Congress](https://www.plic.app.br/evento/cicdf/edicao/cicdf/publicacoes/511) \| Advisor: Rejane Ennes Cicerelli, Ph.D. \| [certification](https://drive.google.com/file/d/1xIu2v4bYL6e4-_VF6_hqOhIq7omaT99R/view?usp=sharing)
+**Analysis of Satellite-Derived Rainfall Data in Watersheds of the Cerrado Biome** | Undergraduate Research Fellowship (2024) | [Scientific Initiation Congress](https://www.plic.app.br/evento/cicdf/edicao/cicdf/publicacoes/511) | Advisor: Rejane Ennes Cicerelli, PhD. | [Certification](https://drive.google.com/file/d/1xIu2v4bYL6e4-_VF6_hqOhIq7omaT99R/view?usp=sharing)
 :::
+
+## Let's connect! {#connect}
+
+<div class="contact-links">
+  <a href="https://www.linkedin.com/in/hylaea-miller/" target="_blank" rel="noopener">LinkedIn ↗</a>
+  <a href="mailto:hylaea@ucsb.edu">Email ↗</a>
+
