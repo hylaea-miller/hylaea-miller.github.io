@@ -200,7 +200,7 @@
     "href": "index.html",
     "title": "Understanding our planet through spatial data.",
     "section": "",
-    "text": "GEOSPATIAL SCIENCE · ENVIRONMENT · DATA\n\n\n\n\n\n\n\nI turn data into reproducible insights, interactive visualizations, and actionable maps. My work combines GIS, remote sensing, spatial analysis, R, Python, and statistical modeling to support environmental research and decision-making.\n\nLinkedIn ↗ GitHub ↗ Email ↗\n\nExplore my work ↓\n\n\n\nUNIVERSITY OF CALIFORNIA, SANTA BARBARA · GOLETA, CALIFORNIA\n\n\n34°24′48″ N · 119°50′50″ W WGS 84"
+    "text": "GEOSPATIAL SCIENCE · ENVIRONMENT · DATA\n\n34°24′48″ N · 119°50′50″ W WGS 84\n\n\n\n\n\n\n\n\nI work at the intersection of environmental science, geospatial analysis, and data science. I use GIS, remote sensing, statistical modeling, and programming to investigate environmental change and transform complex spatial data into reproducible insights and accessible visualizations.\n\nLinkedIn ↗ GitHub ↗ Email ↗\n\n\nExplore my work ↓"
   },
   {
     "objectID": "index.html#profile",
@@ -682,7 +682,35 @@
     "objectID": "index.html#connect",
     "href": "index.html#connect",
     "title": "Understanding our planet through spatial data.",
-    "section": "Let’s connect!",
-    "text": "Let’s connect!\n\nLinkedIn ↗ Email ↗"
+    "section": "Let’s Connect",
+    "text": "Let’s Connect\nI’m interested in opportunities involving environmental data science, geospatial analysis, remote sensing, and reproducible data workflows.\n\nLinkedIn ↗ GitHub ↗ Email ↗"
+  },
+  {
+    "objectID": "index.html#selected-projects",
+    "href": "index.html#selected-projects",
+    "title": "Understanding our planet through spatial data.",
+    "section": "Selected Projects",
+    "text": "Selected Projects\nA selection of research and applied projects exploring environmental change, spatial patterns, and geospatial data workflows.\n\n\n01 / GEOSPATIAL DATA ENGINEERING\n\nWildfire Resilience Data Package\nThe project provides programmatic access to 82 wildfire resilience raster layers, with metadata discovery and spatial data retrieval.\n\nRSTACGDALCloud-Optimized GeoTIFFsGitHub\n\nExplore the project ↗\n\n\n\n02 / WILDFIRE & ENVIRONMENTAL JUSTICE\n\nEaton and Palisades Fires Analysis\nThe analysis combines fire-related imagery and environmental justice indicators to examine the geographic and social dimensions of wildfire impacts.\n\nPythonRemote SensingLandsatEnvironmental Justice\n\nView GitHub repository ↗\n\n\n\n03 / BIODIVERSITY & REMOTE SENSING\n\nBiodiversity Intactness in Phoenix, Arizona\nA spatial assessment of changes in biodiversity intactness across Phoenix, Arizona, using raster data from Microsoft Planetary Computer.\n\nPythonSTACRaster AnalysisPlanetary Computer\n\nView GitHub repository ↗\n\n\n\n04 / MARINE SPATIAL ANALYSIS\n\nPrioritizing Potential Aquaculture Areas\nA geospatial suitability analysis integrating raster and vector datasets to identify potential areas for aquaculture.\n\nRQGISRaster AnalysisMap Algebra\n\nView GitHub repository ↗\n\n\n\n05 / EXTREME WEATHER & SOCIOECONOMIC IMPACTS\n\nIdentifying the Impacts of Extreme Weather\nA spatial analysis of the February 2021 power outages in Houston. The project combines satellite nighttime lights, road networks, building data, and socioeconomic indicators to investigate the geographic distribution of impacts.\n\nRGISVIIRSOpenStreetMapCensus Data\n\nRead project analysis ↗\n\n\n\n06 / LAND-COVER CHANGE & STATISTICAL MODELING\n\nAnalyzing Deforestation Drivers in MATOPIBA\nThe project applies statistical modeling to investigate relationships between vegetation loss and human activities using MapBiomas data.\n\nRMapBiomasGamma RegressionStatistics\n\nRead project analysis ↗"
+  },
+  {
+    "objectID": "index.html#publications",
+    "href": "index.html#publications",
+    "title": "Understanding our planet through spatial data.",
+    "section": "Publication",
+    "text": "Publication\n\nDetection of Changes in Land Use and Land Cover in AMACRO and MATOPIBA\n\nLand-Cover ChangeRemote SensingMapBiomasGIS\n\nRead the published article ↗"
+  },
+  {
+    "objectID": "index.html#experience",
+    "href": "index.html#experience",
+    "title": "Understanding our planet through spatial data.",
+    "section": "More Experience",
+    "text": "More Experience\n\nEducationProfessional ExperienceResearch & Academic Projects\n\n\nMaster of Environmental Data Science\nBren School of Environmental Science & Management, University of California, Santa Barbara\nBachelor of Environmental Science\nUniversity of Brasília, Brazil\n\n\nTemporary Environmental Agent\nChico Mendes Institute for Biodiversity Conservation (ICMBio)\nJanuary 2024 – July 2025 | Brasília, Brazil\nEnvironmental GIS Intern\nChico Mendes Institute for Biodiversity Conservation (ICMBio)\nJune 2023 – December 2023 | Brasília, Brazil\nEnvironmental Research Intern\nInstitute of Research and Statistics of the Federal District (IPEDF)\nMarch 2023 – May 2023 | Brasília, Brazil\n\n\nWildfire Resilience Data Package\nMaster’s Capstone | National Center for Ecological Analysis and Synthesis\nDetection of Changes in Land Use and Land Cover in AMACRO and MATOPIBA\nUndergraduate research | Revista Brasileira de Geomática\nAnalysis of Satellite-Derived Rainfall Data in Watersheds of the Cerrado Biome\nScientific Initiation Research Fellowship | University of Brasília\nScientific Initiation Congress"
+  },
+  {
+    "objectID": "index.html#vis",
+    "href": "index.html#vis",
+    "title": "Understanding our planet through spatial data.",
+    "section": "Visualization & Communication:",
+    "text": "Visualization & Communication:\n\nInteractive ArcGIS Map - Houston Winter Storm Blackouts\nAn interactive application part of a geospatial data science project investigating the socioeconomic impacts of the February 2021 Texas winter storm blackouts in Houston.\n\nArcGIS OnlineWeb GISCartography\n\nOpen interactive map ↗\n\n\nArcGIS StoryMap - Wildfire Resilience Index Data Package\nHow firex was built. Follow the journey from a 25 GB wildfire-resilience archive to a lightweight R interface for retrieving only the spatial data a user needs.\n\nArcGIS StoryMapsGISStorytelling\n\nExplore the StoryMap ↗\n\n\nComparing Mining Activity Across Brazil’s Largest Biomes\nThis project uses MapBiomas time-series data to explore the spatial and temporal patterns of mining expansion across Brazil’s largest biomes.\n\nRMapBiomasData VisualizationLand-Cover Change\n\nRead project analysis ↗"
   }
 ]

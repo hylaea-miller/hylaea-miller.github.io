@@ -1,8 +1,14 @@
+
 ---
 toc: false
 ---
+
 :::: {.hero}
-<span class="hero-kicker">GEOSPATIAL SCIENCE · ENVIRONMENT · DATA</span>
+
+<span class="hero-kicker">GEOSPATIAL SCIENCE · ENVIRONMENT · DATA</span> <div class="geo-meta">
+  <span>34°24′48″ N · 119°50′50″ W</span>
+  <span>WGS 84</span>
+</div>
 
 # Understanding our planet *through spatial data.*
 
@@ -14,113 +20,253 @@ toc: false
 
 ::: {.more-about-content}
 
-I turn data into reproducible insights, interactive visualizations, and actionable maps. My work combines GIS, remote sensing, spatial analysis, R, Python, and statistical modeling to support environmental research and decision-making.
+I work at the intersection of environmental science, geospatial analysis, and data science. I use GIS, remote sensing, statistical modeling, and programming to investigate environmental change and transform complex spatial data into reproducible insights and accessible visualizations.
 
 <div class="contact-links">
   <a href="https://www.linkedin.com/in/hylaea-miller/" target="_blank" rel="noopener">LinkedIn ↗</a>
   <a href="https://github.com/hylaea-miller" target="_blank" rel="noopener">GitHub ↗</a>
   <a href="mailto:hylaea@ucsb.edu">Email ↗</a>
-</div> [Explore my work ↓](#Selected-projects){.hero-project-link}
+ 
+  </a>
+</div> [Explore my work ↓](#selected-projects){.hero-project-link}
+
+
 :::
 
 ::::
 
 
-<p class="hero-coordinate-note">
-  UNIVERSITY OF CALIFORNIA, SANTA BARBARA · GOLETA, CALIFORNIA
-</p>
-
-<div class="geo-meta">
-  <span>34°24′48″ N · 119°50′50″ W</span>
-  <span>WGS 84 </span>
-</div>
 ::::
 
 
-## Selected Projects {#Selected-projects}
+## Selected Projects {#selected-projects}
 
-Explore selected geospatial applications, research outputs and project resources.
+A selection of research and applied projects exploring environmental change, spatial patterns, and geospatial data workflows.
 
 ::: {.more-info-grid}
 
-::: {.more-info-card}
-<span class="more-info-number">01 / INTERACTIVE GIS</span>
-
-### Interactive ArcGIS Map
-
-Explore my interactive map application developed with Esri ArcGIS.
-
-[Open interactive map ↗](https://www.arcgis.com/apps/instant/basic/index.html?appid=d2efde3709bc4fd8bb07dac0821ceb00){.more-info-link target="_blank" rel="noopener"}
-:::
-
-::: {.more-info-card}
-<span class="more-info-number">02 / GEOGRAPHIC STORYTELLING</span>
-
-### ArcGIS StoryMap
-
-Explore a geographic narrative combining maps, spatial information and visual storytelling.
-
-[Read the StoryMap ↗](https://storymaps.arcgis.com/stories/46c36f8dceb14bbf9a2b3040c043bbf7){.more-info-link target="_blank" rel="noopener"}
-:::
-
-::: {.more-info-card}
-<span class="more-info-number">03 / RESEARCH & CODE</span>
+::: {.more-info-card data-href="https://github.com/ignitR-package"}
+<span class="more-info-number">01 / GEOSPATIAL DATA ENGINEERING</span>
 
 ### Wildfire Resilience Data Package
 
-Explore the R package developed for the Wildfire Resilience Index in collaboration with NCEAS.
+The project provides programmatic access to 82 wildfire resilience raster layers, with metadata discovery and spatial data retrieval.
 
-[View GitHub repository ↗](https://github.com/ignitR-package){.more-info-link target="_blank" rel="noopener"}
+<div class="project-tags">
+  <span>R</span><span>STAC</span><span>GDAL</span><span>Cloud-Optimized GeoTIFFs</span><span>GitHub</span>
+</div>
+
+[Explore the project ↗](https://github.com/ignitR-package){.more-info-link target="_blank" rel="noopener"}
 :::
 
-::: {.more-info-card}
-<span class="more-info-number">04 / PUBLICATION</span>
+::: {.more-info-card data-href="https://github.com/hylaea-miller/Eaton-and-Palisades-Fires-Analysis"}
+<span class="more-info-number">02 / WILDFIRE & ENVIRONMENTAL JUSTICE</span>
 
-### Land Use and Land Cover Research
+### Eaton and Palisades Fires Analysis
 
-Read my undergraduate research on land-use changes in AMACRO and MATOPIBA.
+The analysis combines fire-related imagery and environmental justice indicators to examine the geographic and social dimensions of wildfire impacts.
 
-[Read the publication ↗](https://periodicos.utfpr.edu.br/rbgeo/article/view/19946){.more-info-link target="_blank" rel="noopener"}
+<div class="project-tags">
+  <span>Python</span><span>Remote Sensing</span><span>Landsat</span><span>Environmental Justice</span>
+</div>
+
+[View GitHub repository ↗](https://github.com/hylaea-miller/Eaton-and-Palisades-Fires-Analysis){.more-info-link target="_blank" rel="noopener"}
 :::
 
+::: {.more-info-card data-href="https://github.com/hylaea-miller/Biodiversity-Intactness-Index-change-in-Phoenix-AZ"}
+<span class="more-info-number">03 / BIODIVERSITY & REMOTE SENSING</span>
+
+### Biodiversity Intactness in Phoenix, Arizona
+
+A spatial assessment of changes in biodiversity intactness across Phoenix, Arizona, using raster data from Microsoft Planetary Computer.
+
+<div class="project-tags">
+  <span>Python</span><span>STAC</span><span>Raster Analysis</span><span>Planetary Computer</span>
+</div>
+
+[View GitHub repository ↗](https://github.com/hylaea-miller/Biodiversity-Intactness-Index-change-in-Phoenix-AZ){.more-info-link target="_blank" rel="noopener"}
+:::
+
+::: {.more-info-card data-href="https://github.com/hylaea-miller/Prioritizing-potential-aquaculture"}
+<span class="more-info-number">04 / MARINE SPATIAL ANALYSIS</span>
+
+### Prioritizing Potential Aquaculture Areas
+
+A geospatial suitability analysis integrating raster and vector datasets to identify potential areas for aquaculture.
+
+<div class="project-tags">
+  <span>R</span><span>QGIS</span><span>Raster Analysis</span><span>Map Algebra</span>
+</div>
+
+[View GitHub repository ↗](https://github.com/hylaea-miller/Prioritizing-potential-aquaculture){.more-info-link target="_blank" rel="noopener"}
+:::
+
+::: {.more-info-card data-href="posts/223-blog-post/texas_blackout.html"}
+<span class="more-info-number">05 / EXTREME WEATHER & SOCIOECONOMIC IMPACTS</span>
+
+### Identifying the Impacts of Extreme Weather
+
+A spatial analysis of the February 2021 power outages in Houston. The project combines satellite nighttime lights, road networks, building data, and socioeconomic indicators to investigate the geographic distribution of impacts.
+
+<div class="project-tags">
+  <span>R</span><span>GIS</span><span>VIIRS</span><span>OpenStreetMap</span><span>Census Data</span>
+</div>
+
+[Read project analysis ↗](posts/223-blog-post/texas_blackout.html){.more-info-link}
+:::
+
+::: {.more-info-card data-href="posts/222-blog-post/index.html"}
+<span class="more-info-number">06 / LAND-COVER CHANGE & STATISTICAL MODELING</span>
+
+### Analyzing Deforestation Drivers in MATOPIBA
+
+The project applies statistical modeling to investigate relationships between vegetation loss and human activities using MapBiomas data.
+
+<div class="project-tags">
+  <span>R</span><span>MapBiomas</span><span>Gamma Regression</span><span>Statistics</span>
+</div>
+
+[Read project analysis ↗](posts/222-blog-post/index.html){.more-info-link}
 :::
 
 
-## More Experience
+:::
+
+
+
+## Visualization & Communication: {#vis}
+
+::: {.more-info-card .clickable-card data-href="https://www.arcgis.com/apps/instant/basic/index.html?appid=d2efde3709bc4fd8bb07dac0821ceb00"}
+
+### Interactive ArcGIS Map - Houston Winter Storm Blackouts
+
+An interactive application part of a geospatial data science project investigating the socioeconomic impacts of the February 2021 Texas winter storm blackouts in Houston.
+
+<div class="project-tags">
+  <span>ArcGIS Online</span><span>Web GIS</span><span>Cartography</span>
+</div>
+
+[Open interactive map ↗](https://www.arcgis.com/apps/instant/basic/index.html?appid=d2efde3709bc4fd8bb07dac0821ceb00){.more-info-link target="_blank" rel="noopener"}
+
+:::
+
+::: {.more-info-card .clickable-card data-href="https://storymaps.arcgis.com/stories/46c36f8dceb14bbf9a2b3040c043bbf7"}
+
+### ArcGIS StoryMap - Wildfire Resilience Index Data Package
+
+How firex was built. Follow the journey from a 25 GB wildfire-resilience archive to a lightweight R interface for retrieving only the spatial data a user needs.
+
+<div class="project-tags">
+  <span>ArcGIS StoryMaps</span><span>GIS</span><span>Storytelling</span>
+</div>
+
+[Explore the StoryMap ↗](https://storymaps.arcgis.com/stories/46c36f8dceb14bbf9a2b3040c043bbf7){.more-info-link target="_blank" rel="noopener"}
+
+:::
+
+::: {.more-info-card .clickable-card data-href="posts/240-blog-post/index.html"}
+
+
+### Comparing Mining Activity Across Brazil's Largest Biomes
+
+This project uses MapBiomas time-series data to explore the spatial and temporal patterns of mining expansion across Brazil's largest biomes.
+
+<div class="project-tags">
+  <span>R</span><span>MapBiomas</span><span>Data Visualization</span><span>Land-Cover Change</span>
+</div>
+
+[Read project analysis ↗](posts/240-blog-post/index.html){.more-info-link}
+
+:::
+
+
+
+
+## Publication {#publications}
+
+
+::: {.publication-card .clickable-card data-href="https://periodicos.utfpr.edu.br/rbgeo/article/view/19946"}
+#### Detection of Changes in Land Use and Land Cover in AMACRO and MATOPIBA
+
+<div class="project-tags">
+  <span>Land-Cover Change</span><span>Remote Sensing</span><span>MapBiomas</span><span>GIS</span>
+</div>
+
+[Read the published article ↗](https://periodicos.utfpr.edu.br/rbgeo/article/view/19946){.more-info-link target="_blank" rel="noopener"}
+:::
+
+
+
+## More Experience {#experience}
 
 ::: panel-tabset
+
 ### Education
 
-**Master, Environmental Data Science** | Bren School of Environmental Science & Management | University of California, Santa Barbara (UCSB)
+**Master of Environmental Data Science**  
+Bren School of Environmental Science & Management, University of California, Santa Barbara
 
-**Bachelor in Environmental Sciences** | University of Brasília (UnB), Brazil
+**Bachelor of Environmental Science**  
+University of Brasília, Brazil
 
 ### Professional Experience
 
-**Environmental Temporary Agent**  
+**Temporary Environmental Agent**  
 Chico Mendes Institute for Biodiversity Conservation (ICMBio)  
-*January 2024 - July 2025 | Brasília, Brazil*
+*January 2024 – July 2025 | Brasília, Brazil*
 
-**GIS Intern**  
+**Environmental GIS Intern**  
 Chico Mendes Institute for Biodiversity Conservation (ICMBio)  
-*June 2023 - December 2023 | Brasília, Brazil*
+*June 2023 – December 2023 | Brasília, Brazil*
 
 **Environmental Research Intern**  
 Institute of Research and Statistics of the Federal District (IPEDF)  
-*March 2023 - April 2023 | Brasília, Brazil*
+*March 2023 – May 2023 | Brasília, Brazil*
 
-### Project/Research
+### Research & Academic Projects
 
-**Turning Data into Action: An R Package for the Wildfire Resilience Index** | Master’s Capstone | Collaborators: National Center for Ecological Analysis and Synthesis (NCEAS) | [Repository](https://github.com/ignitR-package)
+**Wildfire Resilience Data Package**  
+Master's Capstone | National Center for Ecological Analysis and Synthesis
 
-**Detection of changes in land use in the AMACRO and MATOPIBA special territories** | Undergraduate Thesis | [Revista Brasileira de Geomática (RBGEO)](https://periodicos.utfpr.edu.br/rbgeo/article/view/19946) | Advisor: Gustavo Macedo de Mello Baptista, PhD.
+**Detection of Changes in Land Use and Land Cover in AMACRO and MATOPIBA**  
+Undergraduate research | Revista Brasileira de Geomática
 
-**Analysis of Satellite-Derived Rainfall Data in Watersheds of the Cerrado Biome** | Undergraduate Research Fellowship (2024) | [Scientific Initiation Congress](https://www.plic.app.br/evento/cicdf/edicao/cicdf/publicacoes/511) | Advisor: Rejane Ennes Cicerelli, PhD. | [Certification](https://drive.google.com/file/d/1xIu2v4bYL6e4-_VF6_hqOhIq7omaT99R/view?usp=sharing)
+**Analysis of Satellite-Derived Rainfall Data in Watersheds of the Cerrado Biome**  
+Scientific Initiation Research Fellowship | University of Brasília  
+[Scientific Initiation Congress](https://www.plic.app.br/evento/cicdf/edicao/cicdf/publicacoes/511)
+
 :::
 
-## Let's connect! {#connect}
+
+## Let's Connect {#connect}
+
+I'm interested in opportunities involving environmental data science, geospatial analysis, remote sensing, and reproducible data workflows.
 
 <div class="contact-links">
   <a href="https://www.linkedin.com/in/hylaea-miller/" target="_blank" rel="noopener">LinkedIn ↗</a>
+  <a href="https://github.com/hylaea-miller" target="_blank" rel="noopener">GitHub ↗</a>
   <a href="mailto:hylaea@ucsb.edu">Email ↗</a>
+</div>
 
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".clickable-card[data-href]").forEach(card => {
+    card.addEventListener("click", function (event) {
+      if (event.target.closest("a")) return;
+
+      window.open(card.dataset.href, "_blank", "noopener,noreferrer");
+    });
+
+    card.setAttribute("role", "link");
+    card.setAttribute("tabindex", "0");
+
+    card.addEventListener("keydown", function (event) {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        window.open(card.dataset.href, "_blank", "noopener,noreferrer");
+      }
+    });
+  });
+});
+</script>

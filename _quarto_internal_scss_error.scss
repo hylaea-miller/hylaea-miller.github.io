@@ -1039,39 +1039,30 @@ $theme-name: null !default;
 
 // quarto-scss-analysis-annotation { "origin": "Defaults from user-defined SCSS" }
 
-// colors
-$payne_gray: #666A86;
-$slate_gray: #788AA3;
-$cambridge_blue: #92B6B1;
-$platinum: #E0E1DD;
-$floral_white: #FFFCF2;
-$fundo_branco: #FBFBFB;
-$black: #353535;
-$grey: #717171;
-$off_white: #FAFAFA;
-$text_dark: #2A2A2A;
 
-// import google font
-@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Archivo+Black&family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pathway+Gothic+One&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+$warm-ivory: #F7F5F0;
+$soft-sand: #EFEBE3;
+$dusty-blue: #7485AC;
+$dusty-blue-dark: #56698F;
+$terracotta: #B86E4D;
+$sage: #84947C;
+$slate: #343D4D;
+$body-text: #51545A;
+$muted: #777B7D;
+$line: #E1DED5;
 
-// fonts
-$archivo_black: "Archivo Black", sans-serif;
-$font-family-sans-serif: "Inter", -apple-system, sans-serif;
-$font-family-serif: "Lora", Georgia, serif;
-$headings-font-family: $font-family-sans-serif;
+$body-bg: $warm-ivory;
+$body-color: $body-text;
+$navbar-bg: $warm-ivory;
+$navbar-fg: $slate;
+$navbar-hl: $terracotta;
+$link-color: $dusty-blue-dark;
+$headings-color: $slate;
 
-// define quarto variables
-$body-bg: $off_white;
-$body-color: $text_dark;
-$navbar-bg: ##F3BBA1;
-$navbar-fg: $text_dark;
-$navbar-hl: $slate_gray;
-$link-color: $payne_gray;
+$font-family-sans-serif: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+$headings-font-family: "EB Garamond", Georgia, serif;
 
-// Set headings font family
-$headings-font-family: $archivo_black;
 
 
 // Heading font size customization
@@ -12851,27 +12842,466 @@ main.quarto-banner-title-block > section:first-child > h4 {
   justify-content: right;
 }
 
-h1, h2, h3, h4{
-  letter-spacing: 1px;
-  font-weight: 600 !important;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=EB+Garamond:wght@400;500;600;700&display=swap');
+
+
+/* GENERAL */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
 }
 
-.navbar-brand img {
-  max-height: 40px;
-  width: auto;
+body {
+  background: $warm-ivory;
+  color: $body-text;
 }
 
-.title {
-  color: $slate_gray;
+h1, h2, h3, h4 {
+  color: $slate;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-top: 2.2rem;
+  margin-bottom: .6rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+a {
+  color: $dusty-blue-dark;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: $terracotta;
+}
+
+
+/* NAVIGATION */
+
+.navbar {
+  background: rgba(247, 245, 240, .97) !important;
+  border-bottom: 1px solid $line;
+  backdrop-filter: blur(12px);
+}
+
+.navbar-brand,
+.navbar .nav-link {
+  color: $slate !important;
+}
+
+.navbar .nav-link:hover {
+  color: $terracotta !important;
+}
+
+
+/* HERO — COMPACT FIRST SCREEN */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: min(740px, calc(100vh - 65px));
+  margin: .5rem 0 1.2rem;
+  padding: clamp(2rem, 4vh, 3.2rem) clamp(2rem, 6vw, 4.5rem) 4rem;
+
+  background-color: $warm-ivory;
+background-image:
+  linear-gradient(
+    rgba(247, 245, 240, .62),
+    rgba(247, 245, 240, .68)
+  ),
+  url("images/topography.svg");
+
+background-repeat: repeat;
+background-size: auto, 700px;
+}
+
+.hero-kicker {
+  color: $sage;
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .13em;
+}
+
+.hero h1 {
+  max-width: 780px;
+  margin: .6rem 0 1rem;
+  font-size: clamp(36px, 5vw, 65px);
+  line-height: 1.1;
+}
+
+.hero h1 em {
+  color: $dusty-blue-dark;
+  font-weight: 500;
+}
+
+.hero-coordinate-note {
+  margin: 1.2rem 0 0;
+  color: $muted;
+  font-size: .58rem;
+  letter-spacing: .11em;
+}
+
+.geo-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3rem 1rem;
+  margin-top: .5rem;
+  color: $sage;
+  font-size: .63rem;
+  letter-spacing: .09em;
+}
+
+
+/* PROFILE INTRODUCTION */
+
+.more-about-grid {
+  display: grid;
+  grid-template-columns: minmax(180px, 260px) minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  align-items: center;
+  margin: 1.5rem 0 3rem;
+}
+
+.more-about-photo img,
+.profile-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 5px solid #FFFEFA;
+  box-shadow: 0 8px 25px rgba(52, 61, 77, .08);
+}
+
+.more-about-content {
+  color: $body-text;
+  line-height: 1.85;
+}
+
+.more-about-content p {
+  color: $body-text;
+  line-height: 1.85;
+}
+
+
+/* CONTACT LINKS */
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-top: .8rem;
+}
+
+.contact-links a {
+  display: inline-block;
+  padding: .4rem .7rem;
+  border: 1px solid $line;
+  color: $dusty-blue-dark;
+  font-size: .76rem;
+  text-decoration: none;
+  transition: all .2s ease;
+}
+
+.contact-links a:hover {
+  background: $soft-sand;
+  color: $slate;
+}
+
+
+/* SCROLL INDICATOR */
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 1.1rem;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .3rem;
+  transform: translateX(-50%);
+  color: $muted;
+  font-size: .62rem;
   font-weight: 600;
-}
-  
-.center-text {
-  text-align: center;
+  letter-spacing: .14em;
 }
 
-.orange-text {
-  color: orange;
+.scroll-arrow {
+  color: $dusty-blue-dark;
+  font-size: 1.2rem;
+  animation: scroll-down 1.6s ease-in-out infinite;
 }
+
+@keyframes scroll-down {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+
+/* PROJECT GRID */
+
+.more-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .8rem;
+  margin-top: 1rem;
+}
+
+.more-info-card {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: 1.1rem 1.2rem;
+  background: rgba(255, 254, 250, .5);
+  border: 1px solid $line;
+  transition: border-color .2s ease, transform .2s ease;
+}
+
+.more-info-card:hover {
+  border-color: $dusty-blue;
+  transform: translateY(-2px);
+}
+
+.more-info-number {
+  color: $sage;
+  font-size: .59rem;
+  font-weight: 700;
+  letter-spacing: .11em;
+}
+
+.more-info-card h3 {
+  margin-top: .65rem;
+  margin-bottom: .45rem;
+  font-size: 1.2rem;
+  line-height: 1.25;
+}
+
+.more-info-card p {
+  margin-bottom: .5rem;
+  font-size: .88rem;
+  line-height: 1.55;
+}
+
+.more-info-link {
+  display: inline-block;
+  margin-top: auto;
+  padding-top: .65rem;
+  color: $dusty-blue-dark;
+  font-size: .8rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.more-info-link:hover {
+  color: $terracotta;
+}
+
+
+/* SIMPLE PROJECT TAGS */
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .25rem .45rem;
+  margin-top: .55rem;
+  line-height: 1.4;
+}
+
+.project-tags span {
+  display: inline;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  color: $muted;
+  font-size: .68rem;
+  font-weight: 500;
+  white-space: normal;
+}
+
+.project-tags span:not(:last-child)::after {
+  content: "·";
+  margin-left: .45rem;
+  color: $sage;
+}
+
+
+/* PUBLICATIONS */
+
+.publication-card {
+  cursor: pointer;
+  padding: .5rem .5rem;
+  background: rgba(255, 254, 250, .55);
+  border: 1px solid $line;
+  border-left: 2px solid $dusty-blue;
+  margin-top: 0.4rem;
+}
+
+.publication-type {
+  color: $sage;
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+}
+
+.publication-card h3 {
+  margin-top: .2rem;
+  margin-bottom: .2rem;
+  font-size: 1.2rem;
+}
+
+.publication-card p {
+  margin-bottom: .5rem;
+  margin-top: 0.25rem;
+  font-size: .9rem;
+  line-height: .7;
+  
+
+/* TABSET */
+
+.nav-tabs {
+  border-bottom-color: $line;
+}
+
+.nav-tabs .nav-link {
+  color: $dusty-blue-dark;
+}
+
+.nav-tabs .nav-link.active {
+  color: $slate;
+  background: $warm-ivory;
+  border-color: $line $line $warm-ivory;
+}
+
+.tab-content {
+  border-color: $line;
+}
+
+
+/* SECTION SPACING */
+
+#experience,
+#publications,
+#selected-projects {
+  scroll-margin-top: 4rem;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+  .hero {
+    padding: 1.6rem;
+    background-size: auto, 440px 330px;
+  }
+
+  .hero-meta-row {
+    flex-direction: column;
+  }
+
+  .more-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .more-about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .more-about-photo img {
+    max-width: 220px;
+  }
+
+
+}
+
+.hero-project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .7rem;
+  margin-top: 1rem;
+  padding: .75rem 1.15rem;
+  background: $dusty-blue;
+  border: 1px solid $dusty-blue;
+  color: white !important;
+  font-size: .85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background .2s ease, transform .2s ease;
+}
+
+.hero-project-link:hover {
+  background: $warm-ivory;
+  border-color: $dusty-blue-dark;
+  color: $dusty-blue-dark !important;
+  transform: translateY(-2px);
+}
+
+.clickable-card {
+  cursor: pointer;
+  transition:
+    background .25s ease,
+    border-color .25s ease,
+    box-shadow .25s ease,
+    transform .25s ease;
+}
+
+.clickable-card:hover {
+  background: #FFFEFA;
+  border-color: $dusty-blue;
+  box-shadow: 0 5px 16px rgba(52, 61, 77, .06);
+  transform: translateY(-2px);
+}
+
+.clickable-card:focus-visible {
+  outline: 2px solid $dusty-blue;
+  outline-offset: 3px;
+}
+
+/* Visualization & Communication section */
+#vis {
+  .more-info-card {
+    margin-bottom: 1.0rem; // More space between cards
+    padding: .3rem .5rem; // Less internal card space
+
+    .more-info-number {
+      margin-bottom: 0.35rem;
+    }
+
+    h3 {
+      margin-top: 0.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      margin-top: 0.35rem;
+      margin-bottom: 0.6rem;
+      line-height: .5;
+    }
+
+    .project-tags {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .more-info-link {
+      margin-top: 0.4rem;
+    }
+  }
+}
+
+
 
 // quarto-scss-analysis-annotation { "origin": null }

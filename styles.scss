@@ -1,3 +1,4 @@
+
 /*-- scss:defaults --*/
 
 $warm-ivory: #F7F5F0;
@@ -27,9 +28,12 @@ $headings-font-family: "EB Garamond", Georgia, serif;
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=EB+Garamond:wght@400;500;600;700&display=swap');
 
+
+/* GENERAL */
+
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 5rem;
+  scroll-padding-top: 4rem;
 }
 
 body {
@@ -39,7 +43,16 @@ body {
 
 h1, h2, h3, h4 {
   color: $slate;
-  letter-spacing: .01em;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-top: 2.2rem;
+  margin-bottom: .6rem;
+}
+
+h3 {
+  font-size: 1.25rem;
 }
 
 a {
@@ -50,6 +63,9 @@ a {
 a:hover {
   color: $terracotta;
 }
+
+
+/* NAVIGATION */
 
 .navbar {
   background: rgba(247, 245, 240, .97) !important;
@@ -66,55 +82,40 @@ a:hover {
   color: $terracotta !important;
 }
 
-/* Hero and topographic SVG background */
+
+/* HERO — COMPACT FIRST SCREEN */
+
 .hero {
   position: relative;
   overflow: hidden;
-  margin: 0.5rem 0 1.0rem;
-  padding: clamp(2rem, 4vw, 4.1rem);
-  background-color: $warm-ivory;
-  background-image:
-    linear-gradient(rgba(247,245,240,.82), rgba(247,245,240,.90)),
-    url("images/topography.svg");
-  background-repeat: repeat;
-  background-size: auto, 620px 465px;
-}
+  min-height: min(740px, calc(100vh - 65px));
+  margin: .5rem 0 1.2rem;
+  padding: clamp(2rem, 4vh, 3.2rem) clamp(2rem, 6vw, 4.5rem) 4rem;
 
-.hero-meta-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: .75rem 1.5rem;
-  margin-bottom: 2.3rem;
+  background-color: $warm-ivory;
+background-image:
+  linear-gradient(
+    rgba(247, 245, 240, .62),
+    rgba(247, 245, 240, .68)
+  ),
+  url("images/topography.svg");
+
+background-repeat: repeat;
+background-size: auto, 700px;
 }
 
 .hero-kicker {
-  margin: 0;
   color: $sage;
-  font-size: .68rem;
+  font-size: .65rem;
   font-weight: 700;
   letter-spacing: .13em;
 }
 
-.geo-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .35rem 1rem;
-  margin: 0;
-  color: $sage;
-  font-size: .68rem;
-  letter-spacing: .10em;
-}
-
 .hero h1 {
-  max-width: 850px;
-  margin: 0 0 1rem;
-  color: $slate;
-  font-family: $headings-font-family;
-  font-size: clamp(2.5rem, 6vw, 4.8rem);
-  font-weight: 600;
-  line-height: 1.03;
+  max-width: 780px;
+  margin: .6rem 0 1rem;
+  font-size: clamp(36px, 5vw, 65px);
+  line-height: 1.1;
 }
 
 .hero h1 em {
@@ -122,41 +123,238 @@ a:hover {
   font-weight: 500;
 }
 
-.hero-description {
-  max-width: 620px;
+.hero-coordinate-note {
+  margin: 1.2rem 0 0;
   color: $muted;
-  font-size: 1.05rem;
-  line-height: 1.8;
+  font-size: .58rem;
+  letter-spacing: .11em;
 }
 
-.hero-project-link {
-  display: inline-flex;
-  gap: .7rem;
+.geo-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3rem 1rem;
+  margin-top: .5rem;
+  color: $sage;
+  font-size: .63rem;
+  letter-spacing: .09em;
+}
+
+
+/* PROFILE INTRODUCTION */
+
+.more-about-grid {
+  display: grid;
+  grid-template-columns: minmax(180px, 260px) minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 3.5rem);
   align-items: center;
-  margin-top: 1.1rem;
-  padding: .75rem 1.1rem;
-  background: $dusty-blue;
-  color: white;
-  font-size: .85rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background .2s ease, transform .2s ease;
+  margin: 1.5rem 0 3rem;
 }
 
-.hero-project-link:hover {
-  background: $dusty-blue-dark;
-  color: white;
+.more-about-photo img,
+.profile-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 5px solid #FFFEFA;
+  box-shadow: 0 8px 25px rgba(52, 61, 77, .08);
+}
+
+.more-about-content {
+  color: $body-text;
+  line-height: 1.85;
+}
+
+.more-about-content p {
+  color: $body-text;
+  line-height: 1.85;
+}
+
+
+/* CONTACT LINKS */
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-top: .8rem;
+}
+
+.contact-links a {
+  display: inline-block;
+  padding: .4rem .7rem;
+  border: 1px solid $line;
+  color: $dusty-blue-dark;
+  font-size: .76rem;
+  text-decoration: none;
+  transition: all .2s ease;
+}
+
+.contact-links a:hover {
+  background: $soft-sand;
+  color: $slate;
+}
+
+
+/* SCROLL INDICATOR */
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 1.1rem;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .3rem;
+  transform: translateX(-50%);
+  color: $muted;
+  font-size: .62rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+}
+
+.scroll-arrow {
+  color: $dusty-blue-dark;
+  font-size: 1.2rem;
+  animation: scroll-down 1.6s ease-in-out infinite;
+}
+
+@keyframes scroll-down {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+
+/* PROJECT GRID */
+
+.more-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .8rem;
+  margin-top: 1rem;
+}
+
+.more-info-card {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: 1.1rem 1.2rem;
+  background: rgba(255, 254, 250, .5);
+  border: 1px solid $line;
+  transition: border-color .2s ease, transform .2s ease;
+}
+
+.more-info-card:hover {
+  border-color: $dusty-blue;
   transform: translateY(-2px);
 }
 
-.hero-coordinate-note {
-  margin: 2.5rem 0 0;
+.more-info-number {
+  color: $sage;
+  font-size: .59rem;
+  font-weight: 700;
+  letter-spacing: .11em;
+}
+
+.more-info-card h3 {
+  margin-top: .65rem;
+  margin-bottom: .45rem;
+  font-size: 1.2rem;
+  line-height: 1.25;
+}
+
+.more-info-card p {
+  margin-bottom: .5rem;
+  font-size: .88rem;
+  line-height: 1.55;
+}
+
+.more-info-link {
+  display: inline-block;
+  margin-top: auto;
+  padding-top: .65rem;
+  color: $dusty-blue-dark;
+  font-size: .8rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.more-info-link:hover {
+  color: $terracotta;
+}
+
+
+/* SIMPLE PROJECT TAGS */
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .25rem .45rem;
+  margin-top: .55rem;
+  line-height: 1.4;
+}
+
+.project-tags span {
+  display: inline;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
   color: $muted;
-  font-size: .61rem;
+  font-size: .68rem;
+  font-weight: 500;
+  white-space: normal;
+}
+
+.project-tags span:not(:last-child)::after {
+  content: "·";
+  margin-left: .45rem;
+  color: $sage;
+}
+
+
+/* PUBLICATIONS */
+
+.publication-card {
+  cursor: pointer;
+  padding: .5rem .5rem;
+  background: rgba(255, 254, 250, .55);
+  border: 1px solid $line;
+  border-left: 2px solid $dusty-blue;
+  margin-top: 0.4rem;
+}
+
+.publication-type {
+  color: $sage;
+  font-size: .62rem;
+  font-weight: 700;
   letter-spacing: .12em;
 }
 
-/* Tabset */
+.publication-card h3 {
+  margin-top: .2rem;
+  margin-bottom: .2rem;
+  font-size: 1.2rem;
+}
+
+.publication-card p {
+  margin-bottom: .5rem;
+  margin-top: 0.25rem;
+  font-size: .9rem;
+  line-height: .7;
+}
+
+/* TABSET */
+
 .nav-tabs {
   border-bottom-color: $line;
 }
@@ -175,104 +373,17 @@ a:hover {
   border-color: $line;
 }
 
-/* More Information cards */
-.more-info-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-  margin-top: 1.8rem;
+
+/* SECTION SPACING */
+
+#experience,
+#publications,
+#selected-projects {
+  scroll-margin-top: 4rem;
 }
 
-.more-info-card {
-  min-height: 190px;
-  padding: 1.5rem;
-  background: #fffefa;
-  border: 1px solid $line;
-  transition: transform .2s ease, box-shadow .2s ease;
-}
 
-.more-info-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(52, 61, 77, .07);
-}
-
-.more-info-number {
-  color: $sage;
-  font-size: .62rem;
-  font-weight: 700;
-  letter-spacing: .12em;
-}
-
-.more-info-card h3 {
-  margin-top: 1rem;
-  font-size: 1.35rem;
-}
-
-.more-info-link {
-  display: inline-block;
-  margin-top: .8rem;
-  color: $dusty-blue-dark;
-  font-size: .85rem;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.more-info-link:hover {
-  color: $terracotta;
-}
-
-/* Final More about me section: photo and contact links */
-#about-me {
-  margin-top: 4rem;
-  padding-top: 2.5rem;
-  border-top: 1px solid $line;
-}
-
-.more-about-grid {
-  display: grid;
-  grid-template-columns: minmax(180px, 260px) minmax(0, 1fr);
-  gap: clamp(1.5rem, 4vw, 3.5rem);
-  align-items: center;
-  margin: 1.5rem 0 3rem;
-}
-
-.more-about-photo img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 50%;
-  border: 5px solid #fffefa;
-  box-shadow: 0 8px 28px rgba(52, 61, 77, .10);
-}
-
-.more-about-content p {
-  color: $body-text;
-  line-height: 1.85;
-}
-
-.contact-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .7rem;
-  margin-top: 1.4rem;
-}
-
-.contact-links a {
-  display: inline-block;
-  padding: .55rem .9rem;
-  border: 1px solid $dusty-blue;
-  color: $dusty-blue-dark;
-  text-decoration: none;
-  font-size: .85rem;
-  transition: all .2s ease;
-}
-
-.contact-links a:hover {
-  background: $dusty-blue;
-  color: white;
-}
+/* RESPONSIVE */
 
 @media (max-width: 700px) {
   .hero {
@@ -295,138 +406,82 @@ a:hover {
   .more-about-photo img {
     max-width: 220px;
   }
-}
 
 
-/* HERO METADATA */
-
-.hero {
-  background-color: #F7F5F0;
-  background-image:
-    linear-gradient(
-      rgba(247,245,240,.88),
-      rgba(247,245,240,.90)
-    ),
-    url("images/topography.svg");
-  background-size: auto, 800px;
-  background-repeat: repeat;
-  padding: 55px 7%;
-}
-
-.hero-meta-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-bottom: 45px;
-}
-
-.hero-kicker {
-  color: #84947C;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 2px;
-}
-
-.geo-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  color: #84947C;
-  font-size: 11px;
-  letter-spacing: 1.5px;
-}
-
-.hero h1 {
-  color: #343D4D;
-  font-size: clamp(36px, 5vw, 65px);
-  line-height: 1.1;
 }
 
 .hero-project-link {
-  display: inline-block;
-  background: #7485AC;
-  color: white;
-  padding: 12px 20px;
-  margin-top: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: .7rem;
+  margin-top: 1rem;
+  padding: .75rem 1.15rem;
+  background: $dusty-blue;
+  border: 1px solid $dusty-blue;
+  color: white !important;
+  font-size: .85rem;
+  font-weight: 600;
   text-decoration: none;
+  transition: background .2s ease, transform .2s ease;
 }
 
 .hero-project-link:hover {
-  background: #56698F;
-  color: white;
+  background: $warm-ivory;
+  border-color: $dusty-blue-dark;
+  color: $dusty-blue-dark !important;
+  transform: translateY(-2px);
 }
 
-.hero-coordinate-note {
-  margin-top: 35px;
-  color: #777B7D;
-  font-size: 10px;
-  letter-spacing: 1.5px;
+.clickable-card {
+  cursor: pointer;
+  transition:
+    background .25s ease,
+    border-color .25s ease,
+    box-shadow .25s ease,
+    transform .25s ease;
 }
 
-/* MORE ABOUT ME */
-
-.more-about-grid {
-  display: grid;
-  grid-template-columns: 260px 1fr;
-  align-items: center;
-  gap: 45px;
-  margin: 30px 0 60px;
+.clickable-card:hover {
+  background: #FFFEFA;
+  border-color: $dusty-blue;
+  box-shadow: 0 5px 16px rgba(52, 61, 77, .06);
+  transform: translateY(-2px);
 }
 
-.profile-photo {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 5px solid white;
-  box-shadow: 0 8px 25px rgba(52,61,77,.12);
+.clickable-card:focus-visible {
+  outline: 2px solid $dusty-blue;
+  outline-offset: 3px;
 }
 
-.more-about-content {
-  color: #51545A;
-  line-height: 1.8;
-}
+/* Visualization & Communication section */
+#vis {
+  .more-info-card {
+    margin-bottom: 1.0rem; // More space between cards
+    padding: .3rem .5rem; // Less internal card space
 
-.more-about-content h3 {
-  color: #343D4D;
-  font-size: 30px;
-}
+    .more-info-number {
+      margin-bottom: 0.35rem;
+    }
 
-.contact-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 20px;
-}
+    h3 {
+      margin-top: 0.4rem;
+      margin-bottom: 0.5rem;
+    }
 
-.contact-links a {
-  display: inline-block;
-  padding: 9px 15px;
-  border: 1px solid #7485AC;
-  color: #56698F;
-  text-decoration: none;
-  font-size: 13px;
-  transition: .2s;
-}
+    p {
+      margin-top: 0.35rem;
+      margin-bottom: 0.6rem;
+      line-height: .5;
+    }
 
-.contact-links a:hover {
-  background: #7485AC;
-  color: white;
-}
+    .project-tags {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
 
-@media (max-width: 700px) {
-  .hero-meta-row {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .more-about-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .profile-photo {
-    max-width: 220px;
+    .more-info-link {
+      margin-top: 0.4rem;
+    }
   }
 }
+
