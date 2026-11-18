@@ -1,0 +1,9 @@
+
+# Exclude Quarto extension source from language statistics
+_extensions/** linguist-vendored
+
+# Exclude generated website files
+docs/** linguist-generated
+
+# Exclude bibliography files from language statistics
+**/*.bib linguist-generated
