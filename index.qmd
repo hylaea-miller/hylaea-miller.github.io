@@ -250,8 +250,11 @@ I'm interested in opportunities involving environmental data science, geospatial
 
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".clickable-card[data-href]").forEach(card => {
+function initializeClickableCards() {
+  document.querySelectorAll("[data-href]").forEach(card => {
+    if (card.dataset.clickInitialized) return;
+    card.dataset.clickInitialized = "true";
+
     card.addEventListener("click", function (event) {
       if (event.target.closest("a")) return;
 
@@ -268,5 +271,11 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-});
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initializeClickableCards);
+} else {
+  initializeClickableCards();
+}
 </script>

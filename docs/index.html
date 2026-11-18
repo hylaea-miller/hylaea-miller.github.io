@@ -289,8 +289,11 @@ Scientific Initiation Research Fellowship | University of Brasília<br>
 <p><a href="https://www.linkedin.com/in/hylaea-miller/" target="_blank" rel="noopener">LinkedIn ↗</a> <a href="https://github.com/hylaea-miller" target="_blank" rel="noopener">GitHub ↗</a> <a href="mailto:hylaea@ucsb.edu">Email ↗</a></p>
 </div>
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".clickable-card[data-href]").forEach(card => {
+function initializeClickableCards() {
+  document.querySelectorAll("[data-href]").forEach(card => {
+    if (card.dataset.clickInitialized) return;
+    card.dataset.clickInitialized = "true";
+
     card.addEventListener("click", function (event) {
       if (event.target.closest("a")) return;
 
@@ -307,7 +310,13 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-});
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initializeClickableCards);
+} else {
+  initializeClickableCards();
+}
 </script>
 
 
